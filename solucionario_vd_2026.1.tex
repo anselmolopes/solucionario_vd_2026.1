@@ -1,0 +1,69 @@
+\documentclass[10pt]{article}
+
+% Importação do preâmbulo customizado
+\input{preambulo}
+
+\begin{document}
+	
+	% --- Cabeçalho Institucional ---
+	\begin{flushleft}
+		\textbf{PROGRAMA DE PÓS-GRADUAÇÃO EM MATEMÁTICA - UFCG\\
+			Unidade Acadêmica de Matemática - UAMat}\\
+		Variedades Diferenciáveis - Professor Marco Antonio Lázaro Velásquez \hfill Semestre 2026.1 \\
+		\textbf{Autor: Anselmo Ribeiro Lopes}
+	\end{flushleft}
+	
+	\vspace{0.5cm}
+	
+	% --- Prefácio / Notas de Aprimoramento ---
+	\begin{tcolorbox}[
+		enhanced, sharp corners, boxrule=0.5pt,
+		colback=gray!10!white, colframe=black, width=\textwidth,
+		fontupper=\normalfont % Fonte normal conforme solicitado
+		]
+		Este material está sendo desenvolvido como parte do estudo e apoio as atividades da disciplina de \textbf{Variedades Diferenciáveis} no semestre 2026.1, vinculada ao \textbf{Programa de Pós-Graduação em Matemática da UFCG}, sob a orientação do \textbf{Professor Marco Antonio Lázaro Velásquez}. 
+		
+		O objetivo deste solucionário é reunir ideias, construções geométricas e demonstrações discutidas ao longo do curso. Por se tratar de um registro de acompanhamento acadêmico, as soluções e notas aqui apresentadas estão em \textbf{constante processo de aprimoramento e revisão}, buscando sempre maior rigor, clareza e aprofundamento nos temas da Geometria Diferencial.
+	\end{tcolorbox}
+	
+	\vspace{0.8cm}
+	
+	\begin{center}
+		% Título dentro de um fbox como solicitado
+		\fbox{\huge \textbf{Solucionário de Variedades Diferenciáveis}}
+	\end{center}
+	
+	\vspace{1cm}
+	
+	% --- Sumário ---
+	\renewcommand{\contentsname}{Sumário}
+	\tableofcontents
+	\newpage
+	
+	% --- Inclusão das Listas ---
+	
+	% LISTA 01
+	\newpage
+	\def\listid{L1} % Identificador único para a Lista 1
+	\phantomsection 
+	\addcontentsline{toc}{section}{Soluções da Lista Exercício 1}
+	\setcounter{numquestao}{0} 
+	\input{solucao_lista1}
+	
+	% LISTA 02
+	\newpage
+	\def\listid{L2} % Identificador único para a Lista 2
+	\phantomsection
+	\addcontentsline{toc}{section}{Soluções da Lista Exercício 2}
+	\setcounter{numquestao}{0}
+	\input{solucao_lista2}
+	
+	% LISTA 03
+	\newpage
+	\def\listid{L3} % Identificador único para a Lista 3
+	\phantomsection
+	\addcontentsline{toc}{section}{Soluções da Lista Exercício 3}
+	\setcounter{numquestao}{0}
+	\input{solucao_lista3}
+	
+\end{document}

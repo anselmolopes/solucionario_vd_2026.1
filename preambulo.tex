@@ -1,0 +1,108 @@
+% --- Pacotes de Geometria e Tipografia ---
+\usepackage[a4paper,lmargin=1.5cm,rmargin=1.5cm,tmargin=1.2cm,bmargin=1.5cm]{geometry}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+% --- Matemática e Símbolos ---
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathtools}
+\usepackage{latexsym}
+\usepackage{esint}
+
+% --- Gráficos e Diagramas ---
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,shadings}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% --- Elementos Visuais e Layout ---
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\usepackage[Smaller]{cancel}
+\usepackage{xcolor}
+\usepackage[nodisplayskipstretch]{setspace}
+
+% --- Navegação e Links ---
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
+\usepackage{bookmark}
+
+% --- Configurações Globais de Estilo ---
+\setstretch{1.3}
+\setlength{\parindent}{0pt}
+\relpenalty=10000
+\binoppenalty=10000
+\everymath{\displaystyle}
+\pagestyle{empty}
+\renewcommand{\CancelColor}{\color{red}}
+\setlength{\overfullrule}{5pt} % Desenha uma barra de 5pt no final de hboxes
+
+% --- Contador e Comandos Customizados do Dr. Geometros ---
+\newcounter{numquestao}
+
+% Comando \questao: Enunciado em tcolorbox cinza
+% Altere a definição da \questao para isso:
+\newcommand{\questao}[1]{%
+	\stepcounter{numquestao}%
+	% 1. Criamos um destino único (ex: L1.1, L2.1) para a navegação não se perder
+	\hypertarget{dest.\listid.\arabic{numquestao}}{}%
+	% 2. Criamos o bookmark apontando explicitamente para esse destino
+	\bookmark[level=1, dest={dest.\listid.\arabic{numquestao}}]{Questão \arabic{numquestao}}%
+	\begin{tcolorbox}[
+		enhanced,
+		sharp corners,
+		boxrule=0.5pt,
+		colback=gray!6!white, 
+		colframe=black,         
+		left=1pt, right=1pt, top=1pt, bottom=1pt,
+		width=1\textwidth,
+		before skip=3pt,
+		after skip=3pt,
+		fontupper=\normalfont
+		]%
+		\mbox{\textbf{Questão \arabic{numquestao}.}}\hspace{0.3em}\ignorespaces#1%
+	\end{tcolorbox}%
+}
+
+% Comando \resultadoextra: Teoremas ou definições auxiliares
+\newcommand{\resultadoextra}[2]{%
+	\begin{tcolorbox}[
+		enhanced,
+		sharp corners,
+		boxrule=0.5pt,
+		colback=gray!6!white, 
+		colframe=black,         
+		left=1pt, right=1pt, top=1pt, bottom=1pt,
+		width=1\textwidth,
+		before skip=3pt,
+		after skip=3pt,
+		fontupper=\normalfont
+		]%
+		\mbox{\textbf{#1}}\hspace{0.3em}\ignorespaces#2%
+	\end{tcolorbox}%
+}
+
+% Comando \solucao: Resolução padrão terminando com quadradinho
+\newcommand{\solucao}[1]{%
+	\par\vspace{5pt}
+	\textbf{\underline{Solução}:} #1 \hfill$\blacksquare$
+	\par\vspace{5pt}
+}
+
+% Comando \solucaoalt: Soluções alternativas/estruturais
+\newcommand{\solucaoalt}[1]{%
+	\par\vspace{5pt}
+	\textbf{\underline{Solução Alternativa}}: #1 \hfill$\blacksquare$
+	\par\vspace{5pt}
+}
+
+% --- Operadores Matemáticos e Comandos Rápidos ---
+\newcommand{\cqd}{\hfill$\blacksquare$}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\dist}{dist}
+\newcommand{\subsubset}{\subset\subset}
+\DeclareMathOperator{\Inv}{Inv}

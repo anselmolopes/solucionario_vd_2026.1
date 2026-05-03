@@ -1,0 +1,713 @@
+	\begin{center}
+		\fbox{\textbf{Resolução da Lista 03}}
+	\end{center}
+	\begin{tcolorbox}[
+		enhanced,
+		sharp corners,
+		boxrule=0.5pt,
+		colback=white, 
+		colframe=black,         
+		width=1\textwidth,
+		]%
+		\textbf{Resumo:} Este documento apresenta a resolução detalhada da terceira lista de exercícios da disciplina de Variedades Diferenciáveis. O conteúdo aborda a teoria de fibrados vetoriais, incluindo a construção de estruturas suaves em fibrados, a análise de seções locais, a estrutura do fibrado cotangente e a teoria de integração de 1-formas em curvas.
+	\end{tcolorbox}
+	\questao{
+		Seja $M^{n}$ uma $n$-variedade suave. Suponha que
+		\begin{enumerate}[label=(\roman*)]
+			\item para cada $p \in M^{n}$, temos associado um $k$-espaço vetorial real $E_p$.
+		\end{enumerate}
+		Sejam $E = \coprod_{p \in M^n} E_p$ e $\pi : E \to M^n$ uma aplicação que faz corresponder cada elemento de $E_p$ ao ponto $p$. Suponha também que nos é dado:
+		\begin{enumerate}[label=(\roman*), resume]
+			\item uma cobertura aberta $\{U_\alpha\}_{\alpha \in \Gamma}$ de $M^n$;
+			\item para cada $\alpha \in \Gamma$, uma aplicação bijetora $\Phi_\alpha : \pi^{-1}(U_\alpha) \to U_\alpha \times \mathbb{R}^k$ cuja restrição a cada $E_p$ é um isomorfismo linear de $E_p$ em $\{p\} \times \mathbb{R}^k \cong \mathbb{R}^k$;
+			\item para cada $\alpha, \beta \in \Gamma$ tal que $U_\alpha \cap U_\beta \neq \emptyset$, uma aplicação suave $\tau_{\alpha\beta} : U_\alpha \cap U_\beta \to M(k, \mathbb{R})$ tal que a composta $\Phi_\alpha \circ \Phi_\beta^{-1} : (U_\alpha \cap U_\beta) \times \mathbb{R}^k \to (U_\alpha \cap U_\beta) \times \mathbb{R}^k$ é dada por $\Phi_\alpha \circ \Phi_\beta^{-1}(p, v) = (p, \tau_{\alpha\beta}(p)v)$.
+		\end{enumerate}
+		Mostre que $E$ admite uma única estrutura de variedade suave, tornando-se um fibrado vetorial suave de posto $k$ sobre $M^n$, com $\pi$ como projeção e as aplicações $\Phi_\alpha$ como trivializações locais suaves.
+	}
+	
+	\solucao{
+		\textbf{Análise do Enunciado}
+		\begin{itemize}
+			\item \textbf{Hipóteses:} $M^n$ é uma variedade suave; $E$ é a união disjunta de espaços vetoriais $E_p$; $\pi$ é a projeção canônica; $\Phi_\alpha$ são trivializações locais bijetivas; $\tau_{\alpha\beta}$ são funções de transição suaves com valores na álgebra de matrizes $M(k, \mathbb{R})$.
+			\item \textbf{Tese:} Provar que $E$ possui uma única estrutura de variedade suave de dimensão $n+k$ que torna $\pi$ suave e as $\Phi_\alpha$ trivializações suaves.
+		\end{itemize}
+		
+		\textbf{Fundamentação Teórica}
+		\begin{enumerate}
+			\item \textbf{Lema de Construção de Variedades (Questão 11, Lista 01):} Para dotar um conjunto $E$ de uma estrutura de variedade suave, é suficiente fornecer uma cobertura aberta $\{W_\alpha\}$ e bijeções $\Psi_\alpha : W_\alpha \to V_\alpha \subset \mathbb{R}^m$ tais que as funções de transição $\Psi_\alpha \circ \Psi_\beta^{-1}$ sejam difeomorfismos entre abertos de $\mathbb{R}^m$. 
+			\item \textbf{Fibrados Vetoriais (Lee, Cap. 5):} Um fibrado vetorial suave de posto $k$ é uma variedade suave $E$ munida de uma projeção suave $\pi: E \to M$ e trivializações locais $\Phi_\alpha$ que preservam a estrutura linear das fibras.
+			\item \textbf{Unicidade da Estrutura (Questão 1, Lista 01):} Qualquer atlas suave está contido em um único atlas suave maximal, o que define unicamente a estrutura suave da variedade.
+		\end{enumerate}
+		
+		\textbf{Desenvolvimento Formal}
+		
+		\textbf{1. Definição da Estrutura de Variedade Suave via Atlas}
+		
+		Adotamos a estratégia da \textbf{Questão 11 da Lista 01}. Para cada $\alpha \in \Gamma$, definimos o conjunto $W_\alpha = \pi^{-1}(U_\alpha)$. Visto que $\{U_\alpha\}$ cobre $M^n$, a coleção $\{W_\alpha\}$ cobre $E$. Definimos as cartas coordenadas como as trivializações fornecidas:
+		\begin{equation*}
+			\Psi_\alpha = \Phi_\alpha : W_\alpha \to U_\alpha \times \mathbb{R}^k.
+		\end{equation*}
+		Como $U_\alpha$ é um aberto de $M^n$, ele é homeomorfo a um aberto de $\mathbb{R}^n$. Logo, o produto $U_\alpha \times \mathbb{R}^k$ é homeomorfo a um aberto de $\mathbb{R}^n \times \mathbb{R}^k \cong \mathbb{R}^{n+k}$. A coleção $\mathcal{A} = \{(W_\alpha, \Psi_\alpha)\}_{\alpha \in \Gamma}$ constitui, portanto, um atlas topológico candidato para $E$.
+		
+		\textbf{2. Suavidade das Funções de Transição}
+		
+		Sejam $\alpha, \beta \in \Gamma$ tais que $U_\alpha \cap U_\beta \neq \emptyset$. A função de transição $\Theta_{\alpha\beta} = \Psi_\alpha \circ \Psi_\beta^{-1}$ atua sobre o domínio $(U_\alpha \cap U_\beta) \times \mathbb{R}^k$. Pela hipótese (iv), temos:
+		\begin{equation*}
+			\Theta_{\alpha\beta}(p, v) = (p, \tau_{\alpha\beta}(p)v).
+		\end{equation*}
+		Analisemos a suavidade desta aplicação em componentes:
+		\begin{itemize}
+			\item A primeira componente é a aplicação identidade no aberto $U_\alpha \cap U_\beta \subset M^n$, que é suave.
+			\item A segunda componente é a aplicação $(p, v) \mapsto \tau_{\alpha\beta}(p)v$. Como $\tau_{\alpha\beta} : U_\alpha \cap U_\beta \to M(k, \mathbb{R})$ é suave, cada entrada da matriz $\tau_{\alpha\beta}(p)$ é uma função suave de $p$. O resultado da multiplicação $\tau_{\alpha\beta}(p)v$ é uma combinação linear de $v$ com coeficientes suaves em $p$, o que constitui uma aplicação suave em $(p, v)$.
+		\end{itemize}
+		Sendo as funções de transição suaves, o atlas $\mathcal{A}$ define, pelo Lema de Construção de Variedades, uma estrutura de variedade suave em $E$ de dimensão $n+k$.
+		
+		\textbf{3. Verificação da Estrutura de Fibrado Vetorial}
+		
+		\begin{itemize}
+			\item \textbf{Projeção Suave:} A aplicação $\pi : E \to M^n$ em coordenadas locais é $\pi \circ \Psi_\alpha^{-1}(p, v) = p$. Esta é a projeção canônica de $U_\alpha \times \mathbb{R}^k$ sobre $U_\alpha$, que é suave.
+			\item \textbf{Linearidade das Fibras:} A hipótese (iii) garante que a restrição $\Phi_\alpha|_{E_p} : E_p \to \{p\} \times \mathbb{R}^k$ é um isomorfismo linear. Portanto, cada fibra $E_p$ é um espaço vetorial de dimensão $k$.
+			\item \textbf{Trivializações:} As aplicações $\Phi_\alpha$ são, por construção, as trivializações locais suaves.
+		\end{itemize}
+		
+		\textbf{4. Unicidade}
+		
+		Se existisse outra estrutura suave $\mathcal{A}'$ tal que as $\Phi_\alpha$ fossem cartas suaves, então $\mathcal{A} \subseteq \mathcal{A}'$. Pela \textbf{Questão 1 da Lista 01}, todo atlas suave está contido em um único atlas suave maximal. Logo, a estrutura suave é única.
+	}
+	\solucaoalt{
+		
+		\textbf{Abordagem Alternativa via Grupos de Lie e Ações Suaves}
+		
+		Nesta solução, evidenciamos a estrutura intrínseca do fibrado utilizando propriedades de Grupos de Lie e aprofundando o papel analítico da matriz de transição.
+		
+		\textbf{Fundamentação Teórica}
+		\begin{enumerate}
+			\item \textbf{Produto de Variedades (Questão 5, Lista 01):} O produto cartesiano $U_\alpha \times \mathbb{R}^k$ herda uma estrutura de variedade suave de dimensão $n+k$.
+			\item \textbf{Grupos de Lie (Questão 35, Lista 01):} O grupo linear geral $GL(k, \mathbb{R})$ é um grupo de Lie aberto em $M(k, \mathbb{R})$, cuja ação em $\mathbb{R}^k$ é suave.
+			\item \textbf{Atlas Maximal (Questão 1, Lista 01):} A compatibilidade suave de um atlas garante a existência de uma única estrutura suave maximal.
+		\end{enumerate}
+		
+		\textbf{Desenvolvimento Formal}
+		
+		\textbf{1. O Papel do Grupo de Lie $GL(k, \mathbb{R})$}
+		
+		Pela hipótese (iii), as aplicações $\Phi_\alpha$ e $\Phi_\beta$ são bijetivas. Deste modo, a aplicação de transição $\Theta_{\alpha\beta} = \Phi_\alpha \circ \Phi_\beta^{-1}$ é necessariamente bijetiva no seu domínio $(U_\alpha \cap U_\beta) \times \mathbb{R}^k$. Sabendo que $\Theta_{\alpha\beta}(p, v) = (p, \tau_{\alpha\beta}(p)v)$, para cada ponto $p$ fixado no domínio, a aplicação puramente linear $v \mapsto \tau_{\alpha\beta}(p)v$ tem de ser um isomorfismo em $\mathbb{R}^k$.
+		
+		Isto obriga que o determinante $\det(\tau_{\alpha\beta}(p))$ seja não nulo. Logo, a imagem da aplicação $\tau_{\alpha\beta}$ não reside apenas em $M(k, \mathbb{R})$, mas está estritamente contida no grupo linear geral $GL(k, \mathbb{R})$. Como provamos na \textbf{Questão 35 da Lista 01}, $GL(k, \mathbb{R})$ é um grupo de Lie. Em um grupo de Lie, a ação sobre o espaço vetorial subjacente (neste caso, a multiplicação matriz-vetor) é infinitamente diferenciável. Assim, a aplicação $(p, v) \mapsto \tau_{\alpha\beta}(p)v$ é suave por tratar-se da avaliação de uma aplicação suave com valores em um grupo de Lie atuando em $\mathbb{R}^k$.
+		
+		\textbf{2. Construção do Atlas e Topologia}
+		
+		Adotamos em $E$ a topologia induzida pelas bijeções $\Phi_\alpha^{-1}$. Formalmente, um subconjunto $W \subset E$ é declarado aberto se $\Phi_\alpha(W \cap \pi^{-1}(U_\alpha))$ é um conjunto aberto na topologia de $U_\alpha \times \mathbb{R}^k$ para todo $\alpha \in \Gamma$.
+		
+		As cartas de $E$ são compostas por $(W_\alpha, \Psi_\alpha)$, onde $W_\alpha = \pi^{-1}(U_\alpha)$ e $\Psi_\alpha = (\phi_i \times \text{Id}_{\mathbb{R}^k}) \circ \Phi_\alpha$, sendo $\phi_i$ cartas locais da variedade base $M^n$. Baseado na \textbf{Questão 5 da Lista 01}, o espaço de chegada $\mathbb{R}^n \times \mathbb{R}^k$ define rigorosamente a dimensão $n+k$ para o espaço total $E$.
+		
+		\textbf{3. Suavidade das Transições e Diagrama Lógico}
+		
+		A viabilidade do atlas reside na comprovação de que $\Theta_{\alpha\beta}(p, v) = (p, \tau_{\alpha\beta}(p)v)$ é um difeomorfismo. Separando em componentes:
+		\begin{align*}
+			(\Theta_{\alpha\beta})_1(p, v) &= p \quad (\text{Trata-se da identidade suave no aberto de } M^n) \\
+			(\Theta_{\alpha\beta})_2(p, v) &= \tau_{\alpha\beta}(p) \cdot v \quad (\text{Ação suave do Grupo de Lie } GL(k, \mathbb{R}))
+		\end{align*}
+		Sendo ambas as componentes compostas por operações de classe $C^\infty$, $\Theta_{\alpha\beta}$ é um difeomorfismo suave. Visualizamos a geometria destas transições com o diagrama:
+		
+		\begin{figure}[htbp]
+			\centering
+			\begin{tikzpicture}[node distance=2.5cm, auto, >=Stealth]
+				% Nodos
+				\node (E) {$ \pi^{-1}(U_\alpha \cap U_\beta) $};
+				\node (P1) [below left of=E, xshift=-1cm] {$ (U_\alpha \cap U_\beta) \times \mathbb{R}^k $};
+				\node (P2) [below right of=E, xshift=1cm] {$ (U_\alpha \cap U_\beta) \times \mathbb{R}^k $};
+				
+				% Setas
+				\draw[->, thick] (E) -- node[swap, yshift=2pt] {$\Phi_\beta$} (P1);
+				\draw[->, thick] (E) -- node[yshift=2pt] {$\Phi_\alpha$} (P2);
+				\draw[->, thick] (P1) -- node[below] {$\Theta_{\alpha\beta}(p,v) = (p, \tau_{\alpha\beta}(p)v)$} (P2);
+			\end{tikzpicture}
+			\caption{Diagrama de colagem local do Fibrado Vetorial via a matriz de transição do Grupo de Lie.}
+		\end{figure}
+		
+		\textbf{4. Estruturação do Fibrado e Unicidade}
+		
+		Sob esta estrutura suave estabelecida, a aplicação projeção $\pi$ é suave, pois na restrição dos abertos coincide com a projeção cartesiana $U_\alpha \times \mathbb{R}^k \to U_\alpha$. A integridade da estrutura de fibrado vetorial é asseverada pela restrição linear imposta por $\tau_{\alpha\beta}(p)$. Finalmente, a unicidade da referida estrutura suave em $E$ deriva diretamente da \textbf{Questão 1 da Lista 01}: uma vez que as cartas são suavemente compatíveis, elas pertencem e determinam um único atlas suave maximal para $E$.
+	}
+	\questao{Mostre que a seção zero de qualquer fibrado vetorial suave é suave.}
+	
+	\solucao{
+		
+		\textbf{Análise do Enunciado}
+		\begin{itemize}
+			\item \textbf{Hipóteses:} Seja $\pi: E \to M^n$ um fibrado vetorial suave de posto $k$ sobre uma variedade suave $M^n$. Definimos a \textbf{seção zero} $\sigma: M^n \to E$ como a aplicação global que associa a cada ponto $p \in M^n$ o elemento neutro (vetor nulo) $0_p$ da sua respectiva fibra vetorial $E_p = \pi^{-1}(p)$.
+			\item \textbf{Tese:} Demonstrar que a aplicação $\sigma$ é infinitamente diferenciável (suave) em todo o seu domínio $M^n$.
+		\end{itemize}
+		
+		\textbf{Fundamentação Teórica}
+		\begin{enumerate}
+			\item \textbf{Suavidade Local (Lee, Cap. 2):} Uma aplicação entre variedades suaves é suave se, e somente se, ela é suave na vizinhança de cada ponto do seu domínio. Isso nos permite verificar a suavidade restringindo a aplicação a abertos coordenados ou trivializantes.
+			\item \textbf{Trivialização Local (Lee, Cap. 5):} Por definição de fibrado vetorial suave, para todo ponto $p \in M^n$, existe uma vizinhança aberta $U \subset M^n$ contendo $p$ e um difeomorfismo $\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^k$ que preserva as fibras por isomorfismos lineares.
+			\item \textbf{Variedades Produto (Questão 5 da Lista 01):} Como provamos exaustivamente na referida questão (que demonstra que o produto de variedades suaves é uma variedade suave e que as projeções canônicas são suaves), o produto de variedades suaves $U \times \mathbb{R}^k$ é uma variedade suave, e uma aplicação que chega nesse produto é suave se, e somente se, suas componentes projetadas o forem.
+			\item \textbf{Unicidade e Atlas Maximal (Questão 1 da Lista 01):} A estrutura suave de $E$ (o espaço total) é aquela determinada pelo atlas suave maximal que contém as trivializações locais, garantindo que $\Phi$ seja, de fato, um difeomorfismo suave.
+		\end{enumerate}
+		
+		\textbf{Desenvolvimento Formal}
+		
+		A suavidade é uma propriedade eminentemente local. Para provar que a aplicação global $\sigma: M^n \to E$ é suave, é suficiente e necessário demonstrar que, para um ponto arbitrário $p \in M^n$, existe um conjunto aberto $U \ni p$ tal que a restrição $\sigma|_U : U \to \pi^{-1}(U) \subset E$ é uma aplicação suave entre essas variedades.
+		
+		\textbf{1. Representação na Trivialização Local}
+		
+		Seja $p \in M^n$ um ponto qualquer e escolha um aberto trivializante $U \ni p$ munido do difeomorfismo de trivialização local garantido pela definição de fibrado:
+		\begin{equation*}
+			\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^k.
+		\end{equation*}
+		A condição de estrutura vetorial do fibrado exige que, para cada $q \in U$, a restrição da trivialização à fibra $E_q$, denotada por $\Phi|_{E_q} : E_q \to \{q\} \times \mathbb{R}^k$, atue como um isomorfismo linear entre espaços vetoriais reais de dimensão $k$. 
+		
+		Sabemos da álgebra linear elementar que todo isomorfismo linear deve mapear, obrigatoriamente, o vetor nulo do domínio no vetor nulo do contradomínio. O vetor nulo do espaço vetorial $E_q$ é, por definição, precisamente a imagem da seção zero no ponto $q$, isto é, $\sigma(q) = 0_q$. Por outro lado, o vetor nulo do espaço vetorial produto $\{q\} \times \mathbb{R}^k$ é o par ordenado $(q, 0)$, onde $0 \in \mathbb{R}^k$ representa o vetor cujas $k$ coordenadas são simultaneamente nulas. Consequentemente, obtemos a seguinte identidade rigorosa para todo $q \in U$:
+		\begin{equation*}
+			\Phi(\sigma(q)) = (q, 0).
+		\end{equation*}
+		
+		\textbf{2. Análise da Composição Local no Produto de Variedades}
+		
+		Consideremos agora a aplicação composta $\hat{\sigma} = \Phi \circ \sigma|_U : U \to U \times \mathbb{R}^k$. De acordo com a estrutura de variedade produto validada na \textbf{Questão 5 da Lista 01}, a aplicação $\hat{\sigma}$ pode ser decomposta através de projeções cartesianas em suas duas componentes fundamentais:
+		\begin{align*}
+			\pi_1 \circ \hat{\sigma}(q) &= q \\
+			\pi_2 \circ \hat{\sigma}(q) &= 0
+		\end{align*}
+		Analisemos a suavidade de cada uma independentemente:
+		\begin{itemize}
+			\item A primeira componente, $q \mapsto q$, é a aplicação identidade do aberto $U$ nele mesmo ($\text{Id}_U$). A aplicação identidade em qualquer variedade suave é, por definição fundamental (Lee, Cap. 2), infinitamente diferenciável.
+			\item A segunda componente, $q \mapsto 0$, é uma aplicação constante nula de $U$ no espaço euclidiano $\mathbb{R}^k$. Toda aplicação constante entre variedades é infinitamente diferenciável, visto que suas derivadas em cartas locais são identicamente nulas de todas as ordens.
+		\end{itemize}
+		Como ambas as funções componentes de $\hat{\sigma}$ são comprovadamente suaves, segue do Lema das Funções em Produtos (novamente ancorado em nossos resultados da \textbf{Questão 5 da Lista 01}) que a aplicação produto $\hat{\sigma}$ é uma aplicação globalmente suave de $U$ no produto $U \times \mathbb{R}^k$.
+		
+		\begin{figure}[htbp]
+			\centering
+			\begin{tikzpicture}[node distance=3cm, auto, >=Stealth]
+				% Nodos
+				\node (U) {$U \subset M^n$};
+				\node (E) [right of=U, xshift=2cm] {$\pi^{-1}(U) \subset E$};
+				\node (R) [below right of=U, xshift=1cm, yshift=-1.5cm] {$U \times \mathbb{R}^k$};
+				
+				% Setas
+				\draw[->, thick] (U) -- node {$\sigma|_U$} (E);
+				\draw[->, thick] (E) -- node {$\Phi$} (R);
+				\draw[->, thick] (U) -- node[swap, yshift=-4pt] {$\hat{\sigma}(q) = (q, 0)$} (R);
+			\end{tikzpicture}
+			\caption{Diagrama comutativo da representação local da seção zero $\sigma$ no fibrado trivializado.}
+		\end{figure}
+		
+		\textbf{3. Conclusão da Suavidade Global da Seção Zero}
+		
+		Temos estabelecida a relação de composição $\Phi \circ \sigma|_U = \hat{\sigma}$. Uma vez que a trivialização local $\Phi$ é um difeomorfismo entre $\pi^{-1}(U)$ e $U \times \mathbb{R}^k$ (conforme a definição de fibrado vetorial no Capítulo 5 do Lee), ela possui uma inversa $\Phi^{-1} : U \times \mathbb{R}^k \to \pi^{-1}(U)$ que é estritamente suave. 
+		
+		Podemos então isolar a restrição da seção zero compondo ambos os lados à esquerda por esta inversa suave:
+		\begin{equation*}
+			\sigma|_U = \Phi^{-1} \circ \hat{\sigma}.
+		\end{equation*}
+		Pelo Teorema da Composição de Funções Suaves (Lee, Cap. 2), a composição de duas aplicações suaves ($\Phi^{-1}$ e $\hat{\sigma}$) resulta necessariamente em uma aplicação suave. Assim, demonstramos conclusivamente que $\sigma|_U$ é suave. 
+		
+		Visto que o ponto $p$ foi tomado arbitrariamente em $M^n$, a aplicação $\sigma$ é localmente suave na vizinhança de absolutamente todos os pontos de $M^n$. Logo, a seção zero $\sigma: M^n \to E$ é globalmente suave em todo o fibrado.
+	}
+	
+	\questao{Seja $\pi:E\rightarrow M^{n}$ um fibrado vetorial suave de posto k. Mostre que todo referencial local suave $(\sigma_{1},...,\sigma_{k})$ para E em U é associado com alguma trivialização local $\Phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^{k}$.}
+	
+	\solucao{
+		
+		\textbf{Análise do Enunciado}
+		\begin{itemize}
+			\item \textbf{Hipóteses:} $\pi: E \to M^n$ é um fibrado vetorial suave de posto $k$. Temos um conjunto aberto $U \subset M^n$ e uma coleção de $k$ seções locais suaves $\sigma_1, \dots, \sigma_k : U \to \pi^{-1}(U)$ que formam um referencial local. Isso significa que, para todo ponto $p \in U$, o conjunto de vetores $\{\sigma_1(p), \dots, \sigma_k(p)\}$ constitui uma base para a fibra vetorial $E_p = \pi^{-1}(p)$.
+			\item \textbf{Tese:} Demonstrar a existência de uma trivialização local suave $\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^k$ que corresponda a este referencial.
+		\end{itemize}
+		
+		\textbf{Desenvolvimento Formal}
+		
+		A demonstração consiste em construir uma parametrização local $\Psi$ a partir do referencial dado, provar que ela é bijetora e suave e, em seguida, mostrar que a sua inversa $\Phi = \Psi^{-1}$ é a trivialização suave procurada.
+		
+		\textbf{1. Construção da Parametrização Trivializante $\Psi$}
+		
+		Definimos uma aplicação $\Psi: U \times \mathbb{R}^k \to \pi^{-1}(U)$. Para qualquer par $(p, v) \in U \times \mathbb{R}^k$, onde o vetor $v$ é dado por suas coordenadas $v = (v^1, \dots, v^k) \in \mathbb{R}^k$, definimos $\Psi$ utilizando a \textbf{Notação de Einstein}:
+		\begin{equation*}
+			\Psi(p, v) = v^i \sigma_i(p).
+		\end{equation*}
+		
+		Para verificar a suavidade de $\Psi$, tomamos um ponto arbitrário $p_0 \in U$. Como $\pi: E \to M^n$ é um fibrado vetorial suave, existe por definição um aberto $W \subset U$ contendo $p_0$ e uma trivialização local suave $\Theta: \pi^{-1}(W) \to W \times \mathbb{R}^k$. Na trivialização $\Theta$, cada seção suave $\sigma_i$ restrita a $W$ é expressa como $\Theta(\sigma_i(p)) = (p, s_i(p))$, onde $s_i: W \to \mathbb{R}^k$ são aplicações suaves. 
+		
+		Avaliando $\Psi$ nesta trivialização local e usando a linearidade nas fibras:
+		\begin{equation*}
+			\Theta \circ \Psi(p, v) = \Theta( v^i \sigma_i(p) ) = ( p, v^i s_i(p) ).
+		\end{equation*}
+		Como as componentes $v^i$ são projeções suaves e as aplicações $s_i(p)$ são suaves, a combinação linear acima é suave em $W \times \mathbb{R}^k$. Logo, $\Psi$ é suave.
+		
+		\textbf{2. Bijectividade e Definição de $\Phi$}
+		
+		Para cada $p \in U$, a restrição $\Psi_p : \mathbb{R}^k \to E_p$ é dada por $\Psi_p(v) = v^i \sigma_i(p)$. Como $\{\sigma_i(p)\}$ é uma base de $E_p$, $\Psi_p$ é um isomorfismo linear. Assim, $\Psi$ é uma bijeção e definimos a trivialização como:
+		\begin{equation*}
+			\Phi = \Psi^{-1} : \pi^{-1}(U) \to U \times \mathbb{R}^k.
+		\end{equation*}
+		
+		\textbf{3. Demonstração da Suavidade da Inversa $\Phi$}
+		
+		Para provar que $\Phi$ é suave, analisamos sua representação local em $W$. Definimos a matriz $A(p)$ cujas colunas são os vetores $s_1(p), \dots, s_k(p)$. A componente $j$ do vetor $v^i s_i(p)$ é escrita em notação de Einstein como $A^j_i(p) v^i$. Assim, a representação local de $\Phi$ é $(p, w) \mapsto (p, [A(p)]^{-1} w)$. Apresentamos agora duas formas de concluir a suavidade desta inversão:
+		
+		\textit{\textbf{Via I: Abordagem por Grupos de Lie (Elegância Estrutural)}}
+		\solucaoalt{
+			A suavidade de $\Phi$ é garantida pois a representação local da aplicação $\Psi$ em uma trivialização pré-existente $\Theta$ é dada por $\Theta \circ \Psi(p, v) = (p, A(p)v)$. Conforme demonstrado na \textbf{Questão 35 da Lista 01}, o conjunto $GL(k, \mathbb{R})$ das matrizes inversíveis é um \textbf{Grupo de Lie}. Como tal, a aplicação de inversão $\text{Inv}: GL(k, \mathbb{R}) \to GL(k, \mathbb{R})$, dada por $A \mapsto A^{-1}$, é comprovadamente suave. 
+			
+			Visto que as seções $\sigma_i$ são suaves, a aplicação $A: W \to GL(k, \mathbb{R})$ é suave. Portanto, a representação de $\Phi$ via $\Theta$, dada por $(p, w) \mapsto (p, A(p)^{-1}w)$, é a composição de aplicações suaves entre variedades. Esta estrutura assegura que a inversão matricial preserva a suavidade, tornando $\Phi$ um difeomorfismo local.
+		}
+		
+		\textit{\textbf{Via II: Abordagem Analítica (Regra de Cramer)}}
+		Pela Regra de Cramer, as entradas da matriz inversa são dadas por:
+		\begin{equation*}
+			(A^{-1})^j_i(p) = \frac{1}{\det(A(p))} \text{Adj}(A(p))^j_i.
+		\end{equation*}
+		O determinante e a matriz adjunta são polinômios nas entradas $A^a_b(p)$. Como as entradas são suaves e $\det(A(p)) \neq 0$, o quociente é suave. O produto $[A(p)]^{-1} w$ em notação de Einstein é $(A^{-1})^j_i(p) w^i$, que é uma soma de produtos de funções suaves, logo, suave.
+		
+		\textbf{4. Conclusão}
+		
+		Em ambas as abordagens, $\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^k$ é um difeomorfismo suave que preserva as fibras e age como isomorfismo linear nelas. Portanto, $\Phi$ é a trivialização local associada ao referencial $(\sigma_i)$.
+	}
+\questao{
+	Seja $M^{n}$ uma $n$-variedade suave. Então a estrutura suave já construída no fibrado tangente $TM$ é a única com respeito a qual $\pi : TM \to M^n$ é um fibrado vetorial suave de posto $n$ sobre $M^n$ e cujos campos vetoriais coordenados são seções locais suaves.
+}
+
+\solucao{
+	\textbf{Análise do Enunciado}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\pi: TM \to M^n$ é dotada de uma estrutura de fibrado vetorial suave de posto $n$. Os campos vetoriais coordenados $\left\{ \frac{\partial}{\partial x^1}, \dots, \frac{\partial}{\partial x^n} \right\}$, associados a qualquer carta de $M^n$, são exigidos como seções locais suaves.
+		\item \textbf{Tese:} Provar que esta exigência força a estrutura suave de $TM$ a coincidir com a estrutura canônica.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica}
+	\begin{enumerate}
+		\item \textbf{Referenciais e Trivializações (Questão 3, Lista 03):} Estabelecemos que qualquer referencial local suave $(\sigma_1, \dots, \sigma_k)$ em um fibrado vetorial induz univocamente uma trivialização local suave $\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^k$.
+		\item \textbf{Unicidade de Atlas (Questão 1, Lista 01):} A estrutura suave de uma variedade é univocamente determinada por seu atlas maximal. Dois atlas suavemente compatíveis definem a mesma estrutura.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal}
+	
+	Seja $\mathcal{E}$ qualquer estrutura de variedade suave em $TM$ que satisfaça as condições do enunciado. Consideremos uma carta coordenada $(U, (x^1, \dots, x^n))$ em $M^n$. 
+	
+	Por definição de espaço tangente, os campos vetoriais coordenados $\left\{ \frac{\partial}{\partial x^1}, \dots, \frac{\partial}{\partial x^n} \right\}$ formam uma base de $T_p M$ para todo $p \in U$. Pela hipótese do enunciado, esses campos são seções locais suaves sob a estrutura $\mathcal{E}$. Portanto, eles constituem, rigorosamente, um \textbf{referencial local suave} para o fibrado vetorial $(TM, \mathcal{E})$ sobre o aberto $U$.
+	
+	Aplicando o resultado da \textbf{Questão 3 desta Lista}, a existência deste referencial local suave implica a existência de uma única trivialização local suave $\Phi : \pi^{-1}(U) \to U \times \mathbb{R}^n$ associada a ele, tal que:
+	\begin{equation*}
+		\Phi\left( \sum_{i=1}^n v^i \frac{\partial}{\partial x^i} \right) = (p, (v^1, \dots, v^n)).
+	\end{equation*}
+	Esta aplicação $\Phi$ é precisamente a trivialização canônica utilizada na construção da estrutura suave padrão de $TM$ (conforme detalhado na Questão 13 da Lista 02 e reafirmado na Questão 1 desta Lista). 
+	
+	Sendo assim, para qualquer carta de $M^n$, a estrutura $\mathcal{E}$ deve admitir as mesmas trivializações locais que a estrutura canônica. Isso implica que o atlas de trivializações de $\mathcal{E}$ é suavemente compatível com o atlas canônico de $TM$, pois as funções de transição serão idênticas.
+	
+	Pela \textbf{Questão 1 da Lista 01}, dois atlas suavemente compatíveis pertencem ao mesmo atlas maximal. Portanto, a estrutura suave $\mathcal{E}$ deve coincidir com a estrutura suave canônica de $TM$. Esta prova demonstra a rigidez da estrutura do fibrado tangente: ela é inteiramente determinada pela suavidade dos campos coordenados da base.
+}
+
+\questao{
+	Seja $\pi : E \to M$ um fibrado vetorial suave de posto $k$ e suponha que $\sigma_{1}, \dots, \sigma_{m}$ sejam seções locais suaves independentes sobre um conjunto aberto $U \subset M$. Mostre que, para cada $p \in U$, existem seções suaves $\sigma_{m+1}, \dots, \sigma_{k}$ definidas em alguma vizinhança $V$ de $p$ tal que $(\sigma_{1}, \dots, \sigma_{k})$ é um referencial local suave para $E$ em $U \cap V$.
+}
+
+\solucao{
+	\textbf{Análise do Enunciado}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\pi: E \to M$ é um fibrado vetorial suave de posto $k$. As seções locais $\sigma_1, \dots, \sigma_m \in \Gamma(U, E)$ são linearmente independentes em cada fibra $E_q$ para todo $q \in U$.
+		\item \textbf{Tese:} Para cada ponto $p \in U$, provar a existência de seções suaves $\sigma_{m+1}, \dots, \sigma_k$ em uma vizinhança $V \ni p$ tais que o conjunto total $\{\sigma_1, \dots, \sigma_k\}$ constitua um referencial local suave (base suave) para $E$ sobre $U \cap V$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica}
+	\begin{enumerate}
+		\item \textbf{Completamento de Base (Álgebra Linear):} Dado que $E_p$ é um espaço vetorial de dimensão $k$, qualquer conjunto de $m < k$ vetores linearmente independentes pode ser estendido a uma base de $E_p$.
+		\item \textbf{Estrutura de Fibrados (Lee, Cap. 5):} A existência de trivializações locais garante que podemos expressar qualquer seção suave como uma combinação linear de seções de um referencial local pré-existente com coeficientes suaves.
+		\item \textbf{Estabilidade da Independência Linear:} A condição de que um conjunto de vetores seja linearmente independente é equivalente a a não-anulação do determinante de sua matriz de representação. Como o determinante é uma função contínua, a independência linear é uma propriedade aberta.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal}
+	
+	\textbf{1. Extensão Pontual em $p$}
+	Seja $p \in U$. Por hipótese, o conjunto $\{\sigma_1(p), \dots, \sigma_m(p)\}$ é linearmente independente no espaço vetorial $E_p$. Pelo Teorema do Completamento de Base, existem vetores $v_{m+1}, \dots, v_k \in E_p$ tais que o conjunto $\{\sigma_1(p), \dots, \sigma_m(p), v_{m+1}, \dots, v_k\}$ seja uma base de $E_p$.
+	
+	\textbf{2. Construção de Seções Suaves Globais}
+	Para propagar esses vetores $v_j$ para a vizinhança de $p$, utilizamos a estrutura de fibrado. Seja $(\tau_1, \dots, \tau_k)$ um referencial local suave definido em um aberto $W \ni p$. Cada vetor $v_j$ pode ser escrito univocamente como:
+	\begin{equation*}
+		v_j = \sum_{i=1}^k C_j^i \tau_i(p), \quad \text{com } C_j^i \in \mathbb{R}.
+	\end{equation*}
+	Definimos as seções $\sigma_j : W \to E$ para $j = m+1, \dots, k$ por:
+	\begin{equation*}
+		\sigma_j(q) = \sum_{i=1}^k C_j^i \tau_i(q), \quad \forall q \in W.
+	\end{equation*}
+	Visto que cada $\tau_i$ é uma seção suave e os $C_j^i$ são constantes, as seções $\sigma_j$ são, por definição, suaves em $W$. Note que, por construção, $\sigma_j(p) = v_j$.
+	
+	\textbf{3. Verificação da Independência Linear na Vizinhança}
+	Seja $\mathcal{S}(q) = (\sigma_1(q), \dots, \sigma_k(q))$ o conjunto de seções em $U \cap W$. Para analisar a independência linear, expressamos cada $\sigma_\alpha$ em termos do referencial $\tau_\beta$:
+	\begin{equation*}
+		\sigma_\alpha(q) = A^\beta_\alpha(q) \tau_\beta(q), \quad \alpha, \beta \in \{1, \dots, k\}.
+	\end{equation*}
+	As funções $A^\beta_\alpha : U \cap W \to \mathbb{R}$ são as componentes coordenadas das seções $\sigma_\alpha$, logo são suaves. A matriz $[A^\beta_\alpha(q)]$ é a matriz de transição entre os referenciais. 
+	
+	No ponto $p$, o conjunto $\{\sigma_\alpha(p)\}$ é uma base de $E_p$, o que implica que $\det[A^\beta_\alpha(p)] \neq 0$. Sendo a função $\det[A^\beta_\alpha(\cdot)]$ contínua, existe uma vizinhança aberta $V \subset U \cap W$ de $p$ tal que $\det[A^\beta_\alpha(q)] \neq 0$ para todo $q \in V$. 
+	
+	Nesse aberto $V$, o determinante não nulo garante que as seções $\{\sigma_1(q), \dots, \sigma_k(q)\}$ permanecem linearmente independentes em cada fibra $E_q$. Como são $k$ vetores independentes em um espaço de dimensão $k$, eles formam um referencial local suave para $E$ em $V$.
+}
+
+\solucaoalt{
+	\textbf{Demonstração via Topologia do Grupo de Lie $GL(k, \mathbb{R})$}
+	
+	A matriz de transição define uma aplicação suave $\mathcal{A}: U \cap W \to M(k, \mathbb{R})$ dada por $q \mapsto [A^\beta_\alpha(q)]$. O conjunto das matrizes inversíveis $GL(k, \mathbb{R})$ é um Grupo de Lie e, portanto, um subconjunto aberto de $M(k, \mathbb{R})$.
+	
+	Como $\{\sigma_\alpha(p)\}$ é base, temos $\mathcal{A}(p) \in GL(k, \mathbb{R})$. Pela continuidade de $\mathcal{A}$, a pré-imagem $\mathcal{A}^{-1}(GL(k, \mathbb{R}))$ é um aberto em $U \cap W$. Definindo $V$ como esse aberto, garantimos que $\mathcal{A}(q)$ é invertível para todo $q \in V$, o que assegura que as seções formam um referencial local suave.
+}
+
+% --- Texto de transição integrado ---
+\vspace{10pt}
+Antes de procedermos à resolução da Questão, convém notar que a análise de certos problemas geométricos pode ser significativamente enriquecida se abordada sob uma perspectiva estrutural. Para viabilizar as \textbf{soluções alternativas} que apresentaremos a seguir, e para evitar a redundância de definições algébricas no corpo das provas, estabelecemos previamente o seguinte resultado fundamental. Este servirá como o suporte teórico necessário para que a transição entre a álgebra e a geometria ocorra de forma natural e rigorosa.
+\vspace{5pt}
+
+% =============================================================================
+% INSTRUMENTO ALGÉBRICO: DEFINIÇÃO DOS QUATÉRNIOS
+% =============================================================================
+
+\resultadoextra{Álgebra dos Quatérnios ($\mathbb{H}$)}{
+	O corpo dos quatérnios $\mathbb{H}$ é uma álgebra de divisão sobre os reais com 4 dimensões. Um quatérnio $q \in \mathbb{H}$ é escrito como:
+	\begin{equation*}
+		q = a + b\mathbf{i} + c\mathbf{j} + d\mathbf{k}, \quad a, b, c, d \in \mathbb{R}
+	\end{equation*}
+	
+	As unidades imaginárias $\mathbf{i}$, $\mathbf{j}$, $\mathbf{k}$ obedecem às regras fundamentais:
+	\begin{equation*}
+		\mathbf{i}^2 = \mathbf{j}^2 = \mathbf{k}^2 = \mathbf{i}\mathbf{j}\mathbf{k} = -1
+	\end{equation*}
+	Desta definição, derivam-se as relações de anticomutatividade: $\mathbf{ij} = \mathbf{k}, \mathbf{jk} = \mathbf{i}, \mathbf{ki} = \mathbf{j}$ e $\mathbf{ji} = -\mathbf{k}, \mathbf{kj} = -\mathbf{i}, \mathbf{ik} = -\mathbf{j}$.
+	
+	A norma de um quatérnio é definida por $|q|^2 = a^2 + b^2 + c^2 + d^2$. Uma propriedade fundamental é que a norma é multiplicativa: $|q \cdot p| = |q| \cdot |p|$ para quaisquer $q, p \in \mathbb{H}$.
+	
+	Consequentemente, o conjunto de quatérnios unitários $\mathbb{S}^3 = \{q \in \mathbb{H} : |q| = 1\}$ forma um grupo sob a multiplicação de quatérnios, sendo, portanto, um Grupo de Lie de dimensão 3.
+}
+% =============================================================================
+% RESOLUÇÃO DA QUESTÃO 06
+% =============================================================================
+
+\questao{
+	Considere os seguintes campos vetoriais em $\mathbb{R}^{4}$:
+	$$X_{1}=-x^{2}\frac{\partial}{\partial x^{1}}+x^{1}\frac{\partial}{\partial x^{2}}+x^{4}\frac{\partial}{\partial x^{3}}-x^{3}\frac{\partial}{\partial x^{4}}$$
+	$$X_{2}=-x^{3}\frac{\partial}{\partial x^{1}}-x^{4}\frac{\partial}{\partial x^{2}}+x^{1}\frac{\partial}{\partial x^{3}}+x^{2}\frac{\partial}{\partial x^{4}}$$
+	$$X_{3}=-x^{4}\frac{\partial}{\partial x^{1}}+x^{3}\frac{\partial}{\partial x^{2}}-x^{2}\frac{\partial}{\partial x^{3}}+x^{1}\frac{\partial}{\partial x^{4}}$$
+	Mostre que existem campos vetoriais suaves $V_{1}, V_{2}, V_{3}$ em $\mathbb{S}^{3}$ tais que $V_{j}$ é $\iota$-relacionado a $X_{j}$ para $j=1,2,3,$ onde $\iota:\mathbb{S}^{3}\rightarrow\mathbb{R}^{4}$ é a aplicação inclusão.
+	Conclua que $\mathbb{S}^{3}$ é paralelizável.
+}
+
+\solucao{
+	\textbf{Análise do Enunciado}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $X_1, X_2, X_3 \in \mathfrak{X}(\mathbb{R}^4)$. $\mathbb{S}^3 \subset \mathbb{R}^4$ é a subvariedade mergulhada definida pela inclusão $\iota$.
+		\item \textbf{Tese 1:} Provar que $X_j$ são tangentes a $\mathbb{S}^3$, garantindo a existência de $V_j \in \mathfrak{X}(\mathbb{S}^3)$.
+		\item \textbf{Tese 2:} Provar que $\{V_1, V_2, V_3\}$ formam um referencial global suave para $\mathbb{S}^3$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica}
+	\begin{enumerate}
+		\item \textbf{Tangencialidade:} Um campo $X \in \mathfrak{X}(\mathbb{R}^4)$ é tangente a $\mathbb{S}^3$ se, para todo $p \in \mathbb{S}^3$, $\langle X(p), p \rangle = 0$.
+		\item \textbf{Paralelizabilidade:} $\mathbb{S}^3$ é paralelizável se admite 3 campos suaves globais que são linearmente independentes em cada ponto.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal}
+	
+	\textbf{1. Verificação da Tangencialidade}
+	Seja $p = (x^1, x^2, x^3, x^4) \in \mathbb{S}^3$. O produto escalar entre $p$ e os campos $X_j$ é:
+	\begin{align*}
+		\langle X_1, p \rangle &= (-x^2)(x^1) + (x^1)(x^2) + (x^4)(x^3) + (-x^3)(x^4) = 0. \\
+		\langle X_2, p \rangle &= (-x^3)(x^1) + (-x^4)(x^2) + (x^1)(x^3) + (x^2)(x^4) = 0. \\
+		\langle X_3, p \rangle &= (-x^4)(x^1) + (x^3)(x^2) + (-x^2)(x^3) + (x^1)(x^4) = 0.
+	\end{align*}
+	Como $\langle X_j, p \rangle = 0$ para todo $j \in \{1, 2, 3\}$, os campos $X_j$ são tangentes a $\mathbb{S}^3$. Logo, existem campos $V_j \in \mathfrak{X}(\mathbb{S}^3)$ tais que $\iota_* V_j = X_j$.
+	
+	\textbf{2. Independência Linear Global}
+	Calculamos a ortogonalidade dos campos no ambiente $\mathbb{R}^4$:
+	\begin{align*}
+		\langle X_1, X_2 \rangle &= (-x^2)(-x^3) + (x^1)(-x^4) + (x^4)(x^1) + (-x^3)(x^2) = 0. \\
+		\langle X_1, X_3 \rangle &= (-x^2)(-x^4) + (x^1)(x^3) + (x^4)(-x^2) + (-x^3)(x^1) = 0. \\
+		\langle X_2, X_3 \rangle &= (-x^3)(-x^4) + (-x^4)(x^3) + (x^1)(-x^2) + (x^2)(x^1) = 0.
+	\end{align*}
+	As normas são $\|X_1\|^2 = \|X_2\|^2 = \|X_3\|^2 = \sum (x^i)^2 = 1$ para $p \in \mathbb{S}^3$.
+	
+	Visto que $\{V_1(p), V_2(p), V_3(p)\}$ formam um conjunto ortonormal em $T_p\mathbb{S}^3$ para todo $p$, eles são linearmente independentes. Como $\dim(\mathbb{S}^3) = 3$, eles constituem um referencial global suave. Portanto, $\mathbb{S}^3$ é paralelizável.
+}
+
+\solucaoalt{
+	\textbf{Abordagem via Estrutura de Grupo de Lie ($\mathbb{H}$)}
+	
+	Utilizando a estrutura de Quatérnios definida no \textbf{Resultado Extra anterior}, identificamos $\mathbb{S}^3$ como o Grupo de Lie dos quatérnios unitários.
+	
+	Os campos $X_j$ são gerados pela translação à direita de $x \in \mathbb{S}^3$ pelas unidades imaginárias $\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}$ da base de $\mathbb{H}$:
+	\begin{align*}
+		X_1(x) &= x \cdot \mathbf{i} = (-x^2, x^1, x^4, -x^3) \\
+		X_2(x) &= x \cdot \mathbf{j} = (-x^3, -x^4, x^1, x^2) \\
+		X_3(x) &= x \cdot \mathbf{k} = (-x^4, x^3, -x^2, x^1)
+	\end{align*}
+	Sendo a multiplicação de quatérnios uma operação suave, os campos $X_j$ são suaves. Como a multiplicação por unidades imaginárias preserva a norma ($|x \cdot \mathbf{i}| = |x| \cdot 1 = 1$), os vetores $X_j(x)$ são tangentes a $\mathbb{S}^3$ (pois a derivada de $\|x\|^2=1$ em qualquer direção de translação de grupo é nula).
+	
+	Como $\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}$ é uma base para o espaço tangente à identidade $T_1\mathbb{S}^3$, e a translação à direita em um Grupo de Lie é um difeomorfismo que preserva a independência linear, os campos $\{V_1, V_2, V_3\}$ formam obrigatoriamente um referencial global suave para $T\mathbb{S}^3$. Assim, a paralelizabilidade de $\mathbb{S}^3$ decorre da sua estrutura de Grupo de Lie.
+}
+\questao{Seja $M^{n}$ uma n-variedade suave e $T^{*}M$ seu fibrado cotangente. Com sua projeção natural e com a estrutura vetorial de cada fibra, mostre que TM é o único fibrado vetorial suave de posto n sobre $M^{n}$ para o qual todos os campos de covetores coordenados são seções locais suaves.}
+
+\solucao{
+	
+	\textbf{Análise do Enunciado}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma variedade suave. O conjunto $T^*M = \coprod_{p \in M} T_p^*M$ é o fibrado cotangente munido de sua projeção natural $\pi: T^*M \to M^n$. (Nota analítica: o enunciado original grafa "TM" na segunda proposição, mas o contexto de "campos de covetores coordenados" e a premissa inicial definem inequivocamente que a tese se refere ao espaço total $T^*M$).
+		\item \textbf{Tese:} Provar que a estrutura suave padrão de $T^*M$ é a única estrutura de variedade que torna $\pi$ um fibrado vetorial suave sob a condição de que, para qualquer carta, os diferenciais coordenados $(dx^1, \dots, dx^n)$ atuem como seções locais suaves.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica}
+	\begin{enumerate}
+		\item \textbf{Atlas do Fibrado Cotangente:} A estrutura suave padrão de $T^*M$ é fundamentada nas cartas naturais $(T^*U, \tilde{\phi})$. Para uma carta $(U, \phi)$ de $M^n$ com coordenadas $(x^1, \dots, x^n)$, um covetor $\omega_p \in T_p^*M$ escreve-se, em notação de Einstein, como $\omega_p = \omega_i dx^i|_p$. A carta natural é dada por $\tilde{\phi}(\omega_p) = (x^1(p), \dots, x^n(p), \omega_1, \dots, \omega_n)$.
+		\item \textbf{Referenciais e Trivializações (Questão 3):} Todo referencial local suave determina univocamente uma trivialização local suave para o fibrado.
+		\item \textbf{Atlas Maximal (Questão 1 da Lista 01):} Atlas suavemente compatíveis definem uma única estrutura suave.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal}
+	
+	Suponha que exista uma estrutura de variedade suave $\mathcal{E}$ no conjunto $T^*M$ com respeito à qual $\pi: T^*M \to M^n$ seja um fibrado vetorial suave e tal que, para qualquer carta suave $(U, (x^1, \dots, x^n))$ da variedade base $M^n$, os campos de covetores coordenados $(dx^1, \dots, dx^n)$ sejam seções locais estritamente suaves.
+	
+	Para cada ponto $p \in U$, os covetores $dx^1|_p, \dots, dx^n|_p$ formam a base dual do espaço cotangente $T_p^*M$. Como assumimos por hipótese que estas seções são suaves na estrutura $\mathcal{E}$, a coleção ordenada $(dx^1, \dots, dx^n)$ constitui um referencial local suave para $T^*M$ sobre o aberto $U$.
+	
+	Pela equivalência demonstrada rigorosamente na \textbf{Questão 3}, este referencial local suave induz uma única trivialização local suave na estrutura $\mathcal{E}$. Denotemos esta trivialização por $\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^n$. Atuando sobre um covetor genérico $\omega_p = \omega_i dx^i|_p$, a trivialização extrai as coordenadas:
+	\begin{equation*}
+		\Phi(\omega_i dx^i|_p) = (p, (\omega_1, \dots, \omega_n)).
+	\end{equation*}
+	
+	Sendo $\mathcal{E}$ uma estrutura de fibrado vetorial, $\Phi$ é um difeomorfismo local em relação a $\mathcal{E}$.
+	
+	Analisemos a relação desta trivialização $\Phi$ com a carta padrão $\tilde{\phi}$ do fibrado cotangente. A aplicação de transição é dada por:
+	\begin{equation*}
+		\tilde{\phi} \circ \Phi^{-1}(p, (\omega_1, \dots, \omega_n)) = \tilde{\phi}(\omega_i dx^i|_p) = (\phi(p), \omega_1, \dots, \omega_n).
+	\end{equation*}
+	Esta composição é essencialmente o produto direto $\phi \times \text{Id}_{\mathbb{R}^n}$. Sendo $\phi: U \to \mathbb{R}^n$ um difeomorfismo suave da variedade base, a aplicação produto preserva o difeomorfismo.
+	
+	Logo, as cartas geradas pelas trivializações na estrutura $\mathcal{E}$ são suavemente compatíveis com as cartas naturais que definem a estrutura padrão de $T^*M$. Conclui-se, pelo Lema do Atlas Maximal, que as estruturas são idênticas. A estrutura suave padrão é, portanto, única.
+}
+
+\solucaoalt{
+	
+	\textbf{Demonstração via Transições no Grupo de Lie $GL(n, \mathbb{R})$}
+	
+	A unicidade da estrutura do fibrado pode ser atestada analisando o comportamento das funções de transição no Grupo de Lie associado ao fibrado.
+	
+	Sejam $(U, (x^i))$ e $(V, (y^j))$ duas cartas coordenadas suaves superpostas em $M^n$. Na interseção $U \cap V$, a mudança de base no espaço cotangente é regida pela matriz Jacobiana transposta inversa. Em notação de Einstein, a transição entre os referenciais é:
+	\begin{equation*}
+		dy^j = \frac{\partial y^j}{\partial x^i} dx^i.
+	\end{equation*}
+	A matriz de transição $\mathcal{A}(p)$ cujas entradas são $A^j_i(p) = \frac{\partial y^j}{\partial x^i}(p)$ é, em cada ponto, não-singular. Portanto, a aplicação $p \mapsto \mathcal{A}(p)$ mapeia pontos da variedade no Grupo de Lie $GL(n, \mathbb{R})$.
+	
+	Como as cartas da base são difeomorfismos, as derivadas parciais $\frac{\partial y^j}{\partial x^i}$ são funções de classe $C^\infty$. Assim, a aplicação de transição para $GL(n, \mathbb{R})$ é estritamente suave.
+	
+	Qualquer estrutura de fibrado vetorial $\mathcal{E}$ em $T^*M$ que torne as seções coordenadas $(dx^i)$ suaves será obrigatoriamente "colada" pelas mesmas funções de transição suaves avaliadas em $GL(n, \mathbb{R})$. Como provamos na \textbf{Questão 1}, a identidade dessas funções de transição dita uma única estrutura de fibrado vetorial suave. Portanto, a estrutura $\mathcal{E}$ coincide topológica e algebricamente com a estrutura padrão.
+}
+\questao{Sejam $M^{n}$ uma $n$-variedade suave e $\omega:M^{n}\rightarrow T^{*}M$ uma seção áspera.
+	\begin{enumerate}[label=(\alph*)]
+		\item Se $\omega=\sum_{i=1}^{n}\omega_{i}dx^{i}$ é a representação coordenada para $\omega$ em uma carta coordenada suave arbitrária $(U,(x^{i}))$, então mostre que $\omega$ é suave em $U$ se, e somente se, suas funções componentes são suaves.
+		\item Mostre que $\omega$ é suave se, e somente se, para qualquer campo de vetores suave $X$ sobre um conjunto aberto $U\subset M^{n}$, a função $\omega(X): U \to \mathbb{R}$, definida por $\omega(X)(p)=\omega_{p}(X_{p})$ para todo $p\in U$, é suave.
+	\end{enumerate}
+}
+
+\solucao{
+	\textbf{Análise Detalhada do Enunciado}
+	\begin{itemize}
+		\item \textbf{Configuração Geométrica:} $M^n$ é uma variedade suave e $T^*M$ é o seu fibrado cotangente. Uma seção áspera $\omega$ associa a cada ponto $p \in M$ um covetor $\omega_p \in T_p^*M$, sem assumir a priori a suavidade da aplicação $\omega: M \to T^*M$.
+		\item \textbf{Objetivo:} Estabelecer a equivalência entre a suavidade da seção (como mapa entre variedades) e a suavidade de suas componentes locais (a) e a suavidade de sua contração com campos vetoriais (b).
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica}
+	\begin{enumerate}
+		\item \textbf{Trivializações do Fibrado Cotangente:} A estrutura suave de $T^*M$ é definida por cartas $\tilde{\phi}$ que mapeia $\omega_p = \omega_i dx^i|_p$ para $(x(p), \omega_1, \dots, \omega_n)$. Uma seção é suave se sua representação local $\hat{\omega} = \tilde{\phi} \circ \omega$ for suave (Lee, Cap. 5).
+		\item \textbf{Referenciais Suaves (Questão 3, Lista 03):} a coleção $\{dx^i\}$ constitui um referencial local suave para $T^*M$. Qualquer seção $\omega$ pode ser escrita como combinação linear deste referencial.
+		\item \textbf{Dualidade e Contrações:} A função $\omega(X)$ é a avaliação do covetor $\omega_p$ no vetor $X_p$, denotada pelo pareamento dual $\langle \omega_p, X_p \rangle$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal - Parte (a)}
+	
+	Seja $(U, (x^i))$ uma carta coordenada suave. A trivialização canônica $\Phi: T^*U \to \varphi(U) \times \mathbb{R}^n$ associa a cada covetor $\xi_p = \xi_i dx^i|_p$ o par $(\phi(p), (\xi_1, \dots, \xi_n))$.
+	
+	A seção $\omega$ é suave se, e somente se, a aplicação $\hat{\omega} = \Phi \circ \omega : U \to \varphi(U) \times \mathbb{R}^n$ for suave. A representação de $\hat{\omega}$ é:
+	\begin{equation*}
+		\hat{\omega}(p) = (\phi(p), \omega_1(p), \dots, \omega_n(p)).
+	\end{equation*}
+	As primeiras $n$ componentes são as coordenadas da própria variedade $M$, que são suaves por definição. Portanto, a suavidade de $\hat{\omega}$ depende exclusivamente da suavidade das funções componentes $\omega_i : U \to \mathbb{R}$. Assim, $\omega$ é suave em $U$ se, e somente se, cada $\omega_i$ é de classe $C^\infty$.
+	
+	\textbf{Desenvolvimento Formal - Parte (b)}
+	
+	\textit{Condição Necessária ($\implies$):} Assumimos que $\omega$ é uma seção suave. Seja $X = X^j \frac{\partial}{\partial x^j}$ um campo de vetores suave em $U$. A função $\omega(X): U \to \mathbb{R}$ é dada pela contração:
+	\begin{equation*}
+		\omega(X)(p) = \langle \omega_p, X_p \rangle = \langle \omega_i dx^i|_p, X^j \tfrac{\partial}{\partial x^j} \Big|_p \rangle = \omega_i(p) X^j(p) \delta^i_j = \omega_i(p) X^i(p).
+	\end{equation*}
+	Visto que $\omega_i$ e $X^i$ são funções suaves em $U$, a soma de seus produtos $\sum \omega_i X^i$ é também uma função suave.
+	
+	\textit{Condição Suficiente ($\impliedby$):} Assumimos que a função $\omega(X)$ é suave para todo campo de vetores suave $X \in \mathfrak{X}(U)$.
+	
+	Para provar que $\omega$ é suave, utilizaremos a estratégia de "testar" a seção com os campos de vetores coordenados. Para cada $j \in \{1, \dots, n\}$, definimos o campo $X_{(j)} = \frac{\partial}{\partial x^j}$. Como estes são campos coordenados, são necessariamente suaves. Pela nossa hipótese, a função $\omega(X_{(j)})$ deve ser suave:
+	\begin{equation*}
+		\omega(X_{(j)})(p) = \langle \omega_i dx^i|_p, \tfrac{\partial}{\partial x^j} \Big|_p \rangle = \omega_i(p) \delta^i_j = \omega_j(p).
+	\end{equation*}
+	Isso demonstra que cada função componente $\omega_j$ é suave. Pelo resultado provado na \textbf{Parte (a)}, a suavidade de todas as componentes $\omega_j$ implica a suavidade da seção $\omega$.
+}
+
+\solucaoalt{
+	\textbf{Justificativa Estrutural via Dualidade de Fibrados}
+	
+	A suavidade de $\omega$ pode ser interpretada como uma propriedade da estrutura de fibrados. Como $M$ é suave, o fibrado tangente $TM$ possui funções de transição suaves (Jacobianas). O fibrado $T^*M$ é o dual de $TM$, e suas funções de transição são as transpostas das inversas das Jacobianas de $M$.
+	
+	A equivalência $\omega \text{ suave} \iff \omega(X) \text{ suave}$ reflete o fato de que a dualidade entre $TM$ e $T^*M$ é um isomorfismo suave de feixes. Em termos concretos, a avaliação de uma seção do fibrado dual em seções do fibrado original recupera a topologia da variedade base, permitindo a caracterização da suavidade de $\omega$ através da sua ação em campos vetoriais.
+}
+\questao{Se $M^{n}$ é uma $n$-variedade suave, mostre que $T^*M$ é trivial se, e somente se, $TM$ é trivial.}
+
+\solucao{
+	\textbf{Análise do Enunciado}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma variedade suave. $TM$ é o fibrado tangente e $T^*M$ é o seu fibrado dual (cotangente).
+		\item \textbf{Tese:} Provar a equivalência $\text{Trivialidade}(TM) \iff \text{Trivialidade}(T^*M)$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica}
+	\begin{enumerate}
+		\item \textbf{Trivialidade de Fibrados (Lee, Cap. 5):} Um fibrado vetorial de posto $n$ é trivial se, e somente se, admite um referencial global suave, isto é, um conjunto de $n$ seções suaves $\{\sigma_1, \dots, \sigma_n\}$ que formam uma base de cada fibra em todo o domínio.
+		\item \textbf{Base Dual (Álgebra Linear):} Para qualquer base $\{X_i\}$ de um espaço vetorial $V$, existe uma única base dual $\{\omega^j\}$ de $V^*$ tal que $\omega^j(X_i) = \delta^j_i$.
+		\item \textbf{Reflexividade:} Para espaços vetoriais de dimensão finita, existe um isomorfismo canônico $\Psi : V \to V^{**}$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal}
+	
+	\textit{Ida ($\impliedby$):} Assuma que $TM$ é trivial. Então, existe um referencial global suave $\{X_1, \dots, X_n\}$ para $TM$. Para cada $p \in M$, definimos a base dual $\{\omega^1(p), \dots, \omega^n(p)\}$ em $T_p^*M$ tal que $\omega^j(p)(X_i(p)) = \delta^j_i$.
+	
+	Para provar que cada $\omega^j$ é uma seção suave de $T^*M$, tomemos um campo vetorial suave qualquer $Y \in \mathfrak{X}(M)$. Podemos escrever $Y$ na base $\{X_i\}$ como $Y = \sum_{k=1}^n Y^k X_k$, onde as funções $Y^k: M \to \mathbb{R}$ são suaves, pois $X_i$ formam um referencial suave. A ação de $\omega^j$ sobre $Y$ é:
+	\begin{equation*}
+		\omega^j(Y) = \omega^j(\sum_{k=1}^n Y^k X_k) = \sum_{k=1}^n Y^k \omega^j(X_k) = \sum_{k=1}^n Y^k \delta^j_k = Y^j.
+	\end{equation*}
+	Visto que $\omega^j(Y) = Y^j$ e $Y^j$ é uma função suave para qualquer $Y \in \mathfrak{X}(M)$, segue da caracterização de suavidade de seções do fibrado cotangente (\textbf{Questão 8b da Lista 03}) que $\omega^j$ é uma seção suave. Logo, $\{\omega^j\}$ é um referencial global suave para $T^*M$, tornando-o trivial.
+	
+	\textit{Volta ($\implies$):} Assuma que $T^*M$ é trivial com referencial global suave $\{\theta^1, \dots, \theta^n\}$. Pela reflexividade de espaços de dimensão finita, cada $\theta^i(p) \in T_p^*M$ pode ser vista como um elemento de $(T_p^*M)^* \cong T_p M$.
+	
+	Definimos os campos vetoriais $V_j$ tais que $\theta^i(V_j) = \delta^i_j$. De forma análoga à prova anterior, para qualquer 1-forma suave $\omega = \sum \omega_k \theta^k$, temos que a contração $\omega(V_j) = \omega_j$. Como as componentes $\omega_j$ são suaves por hipótese de suavidade de $\omega$, a aplicação $p \mapsto V_j(p)$ é uma seção suave de $TM$. Assim, $\{V_j\}$ é um referencial global suave para $TM$, tornando-o trivial.
+}
+
+\solucaoalt{
+	\textbf{Demonstração via Funções de Transição e Grupos de Lie}
+	
+	Um fibrado vetorial é trivial se, e somente se, suas funções de transição podem ser reduzidas à identidade $I \in GL(n, \mathbb{R})$ através de uma mudança de referencial.
+	
+	Sejam $\tau_{\alpha\beta}: U_\alpha \cap U_\beta \to GL(n, \mathbb{R})$ as funções de transição de $TM$. As funções de transição $\tilde{\tau}_{\alpha\beta}$ de $T^*M$ são dadas pela transposta da inversa:
+	\begin{equation*}
+		\tilde{\tau}_{\alpha\beta}(p) = (\tau_{\alpha\beta}(p)^{-1})^T.
+	\end{equation*}
+	Se $TM$ é trivial, existe um atlas cujas transições são $\tau_{\alpha\beta} = I$. Substituindo na fórmula acima:
+	\begin{equation*}
+		\tilde{\tau}_{\alpha\beta} = (I^{-1})^T = I^T = I.
+	\end{equation*}
+	A identidade das matrizes de transição implica que $T^*M$ também é trivial. Como a operação de inversão e transposição em $GL(n, \mathbb{R})$ é um difeomorfismo (Questão 35, Lista 01), a trivialidade de um fibrado implica a do seu dual.
+}
+
+\questao{
+	Considere $f : \mathbb{R}^3 \to \mathbb{R}$, $f(x,y,z) = x^2 + y^2 + z^2$ e a aplicação $F : \mathbb{R}^2 \to \mathbb{R}^3$ (inversa da projeção estereográfica). Calcule $F^* df$ e $d(f \circ F)$ separadamente, e verifique que são iguais.
+}
+
+\solucao{
+	\textbf{Análise do Enunciado}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $f$ é uma função suave em $\mathbb{R}^3$ definida por $f(x,y,z) = x^2 + y^2 + z^2$. $F$ é a aplicação inversa da projeção estereográfica, que mapeia o plano $\mathbb{R}^2$ na esfera unitária $\mathbb{S}^2 \subset \mathbb{R}^3$.
+		\item \textbf{Tese:} Calcular analiticamente a diferencial da composição $d(f \circ F)$ e o pullback $F^* df$, demonstrando a igualdade entre ambos.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica}
+	Conforme a teoria de variedades suaves (Lee, Cap. 3 e 8), utilizamos:
+	\begin{enumerate}
+		\item \textbf{Diferencial de uma função:} Para $f \in C^\infty(M)$, a diferencial $df$ é a aplicação que associa a cada ponto $p \in M$ um covetor $df_p \in T_p^* M$. Localmente, $df = \sum \frac{\partial f}{\partial x^i} dx^i$.
+		\item \textbf{Pullback de diferenciais:} Seja $F : M \to N$ uma aplicação suave. O pullback $F^* df$ é definido tal que, para qualquer vetor $X \in T_p M$, temos $\langle (F^* df)_p, X \rangle = \langle df_{F(p)}, F_{*,p} X \rangle$. Em coordenadas, se $df = \sum a_j dy^j$, então $F^* df = \sum (a_j \circ F) d(F^j)$.
+		\item \textbf{Aplicação $F$:} A inversa da projeção estereográfica é dada por:
+		\begin{equation*}
+			F(u, v) = \left( \frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1}, \frac{u^2+v^2-1}{u^2+v^2+1} \right).
+		\end{equation*}
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal}
+	
+	Seja $D = u^2 + v^2 + 1$. As componentes de $F(u,v) = (F_1, F_2, F_3)$ são $F_1 = \frac{2u}{D}$, $F_2 = \frac{2v}{D}$ e $F_3 = \frac{u^2+v^2-1}{D}$.
+	
+	\textbf{Cálculo 1: A diferencial da composição $d(f \circ F)$}
+	
+	Substituímos as componentes de $F$ na função $f$:
+	\begin{align*}
+		(f \circ F)(u,v) &= (F_1)^2 + (F_2)^2 + (F_3)^2 \\
+		&= \left( \frac{2u}{D} \right)^2 + \left( \frac{2v}{D} \right)^2 + \left( \frac{u^2+v^2-1}{D} \right)^2 \\
+		&= \frac{4u^2 + 4v^2 + (u^2+v^2-1)^2}{D^2}.
+	\end{align*}
+	Expandindo o termo quadrático $(u^2+v^2-1)^2 = (u^2+v^2)^2 - 2(u^2+v^2) + 1$:
+	\begin{align*}
+		(f \circ F)(u,v) &= \frac{4(u^2+v^2) + (u^2+v^2)^2 - 2(u^2+v^2) + 1}{D^2} \\
+		&= \frac{(u^2+v^2)^2 + 2(u^2+v^2) + 1}{D^2} \\
+		&= \frac{(u^2+v^2+1)^2}{D^2} = \frac{D^2}{D^2} = 1.
+	\end{align*}
+	Como a composição $f \circ F$ é a função constante $1$ em todo o domínio $\mathbb{R}^2$, sua diferencial é nula:
+	\begin{equation*}
+		\boxed{d(f \circ F) = 0}.
+	\end{equation*}
+	
+	\textbf{Cálculo 2: O pullback $F^* df$}
+	
+	Calculamos a diferencial de $f$ em $\mathbb{R}^3$:
+	\begin{equation*}
+		df = 2x\,dx + 2y\,dy + 2z\,dz.
+	\end{equation*}
+	Aplicamos a definição de pullback $F^* df = 2 F_1 dF_1 + 2 F_2 dF_2 + 2 F_3 dF_3$. Calculamos as diferenciais de cada componente de $F$:
+	\begin{align*}
+		dF_1 &= \frac{\partial F_1}{\partial u} du + \frac{\partial F_1}{\partial v} dv = \frac{2(D) - 2u(2u)}{D^2} du + \frac{2u(-2v)}{D^2} dv = \frac{2(1+v^2-u^2)}{D^2} du - \frac{4uv}{D^2} dv, \\
+		dF_2 &= \frac{\partial F_2}{\partial u} du + \frac{\partial F_2}{\partial v} dv = \frac{2v(-2u)}{D^2} du + \frac{2(D) - 2v(2v)}{D^2} dv = -\frac{4uv}{D^2} du + \frac{2(1+u^2-v^2)}{D^2} dv, \\
+		dF_3 &= \frac{\partial F_3}{\partial u} du + \frac{\partial F_3}{\partial v} dv = \frac{2u(D) - (u^2+v^2-1)(2u)}{D^2} du + \frac{2v(D) - (u^2+v^2-1)(2v)}{D^2} dv \\
+		&= \frac{4u}{D^2} du + \frac{4v}{D^2} dv.
+	\end{align*}
+	
+	Somamos os termos para obter a componente de $du$:
+	\begin{align*}
+		(F^* df)_u &= 2 F_1 \frac{\partial F_1}{\partial u} + 2 F_2 \frac{\partial F_2}{\partial u} + 2 F_3 \frac{\partial F_3}{\partial u} \\
+		&= 2\left( \frac{2u}{D} \right) \left( \frac{2(1+v^2-u^2)}{D^2} \right) + 2\left( \frac{2v}{D} \right) \left( \frac{-4uv}{D^2} \right) + 2\left( \frac{u^2+v^2-1}{D} \right) \left( \frac{4u}{D^2} \right) \\
+		&= \frac{8u + 8uv^2 - 8u^3 - 16uv^2 + 8u^3 + 8uv^2 - 8u}{D^3} = 0.
+	\end{align*}
+	
+	Calculamos a componente de $dv$:
+	\begin{align*}
+		(F^* df)_v &= 2 F_1 \frac{\partial F_1}{\partial v} + 2 F_2 \frac{\partial F_2}{\partial v} + 2 F_3 \frac{\partial F_3}{\partial v} \\
+		&= 2\left( \frac{2u}{D} \right) \left( \frac{-4uv}{D^2} \right) + 2\left( \frac{2v}{D} \right) \left( \frac{2(1+u^2-v^2)}{D^2} \right) + 2\left( \frac{u^2+v^2-1}{D} \right) \left( \frac{4v}{D^2} \right) \\
+		&= \frac{-16u^2v + 8v + 8u^2v - 8v^3 + 8u^2v + 8v^3 - 8v}{D^3} = 0.
+	\end{align*}
+	
+	Portanto, temos que:
+	\begin{equation*}
+		\boxed{F^* df = 0}.
+	\end{equation*}
+	
+	\textbf{Conclusão}
+	Ambos os cálculos resultam em zero, verificando a identidade.
+}
+
+\solucaoalt{
+	\textbf{Demonstração via Operadores de Derivação}
+	
+	Seguindo a lógica de que vetores tangentes são derivações, podemos provar a igualdade sem a expansão algébrica do pullback.
+	
+	\textbf{1. Análise da função composta:}
+	Como demonstrado na solução principal, a composição $(f \circ F)(u,v) = 1$. Sendo esta uma função constante, sua diferencial é nula:
+	\begin{equation*}
+		d(f \circ F) = 0.
+	\end{equation*}
+	
+	\textbf{2. Análise do pullback via derivações:}
+	Seja $X \in T_p \mathbb{R}^2$ um vetor tangente qualquer. Pela definição de pullback e pela propriedade do diferencial como derivação:
+	\begin{align*}
+		\langle (F^* df)_p, X \rangle &= \langle df_{F(p)}, F_{*,p} X \rangle \\
+		&= (F_{*,p} X)(f) \\
+		&= X(f \circ F).
+	\end{align*}
+	Como $f \circ F$ é a função constante $1$, e qualquer derivação $X$ aplicada a uma constante resulta em zero, temos:
+	\begin{equation*}
+		\langle (F^* df)_p, X \rangle = X(1) = 0.
+	\end{equation*}
+	Visto que a contração de $F^* df$ com qualquer vetor tangente $X$ é nula, concluímos que:
+	\begin{equation*}
+		F^* df = 0.
+	\end{equation*}
+	Ambos os resultados coincidem, validando a identidade.
+}
