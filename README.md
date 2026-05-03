@@ -1,2 +1,3 @@
-Este material está sendo desenvolvido como parte do estudo e apoio as atividades da disciplina de \textbf{Variedades Diferenciáveis} no semestre 2026.1, vinculada ao \textbf{Programa de Pós-Graduação em Matemática da UFCG}, sob a orientação do \textbf{Professor Marco Antonio Lázaro Velásquez}. 
+Este material está sendo desenvolvido como parte do estudo e apoio as atividades da disciplina de **Variedades Diferenciáveis** no semestre 2026.1, vinculada ao **Programa de Pós-Graduação em Matemática da UFCG**, sob a orientação do **Professor Marco Antonio Lázaro Velásquez**.
+
 O objetivo deste solucionário é reunir ideias, construções geométricas e demonstrações discutidas ao longo do curso. Por se tratar de um registro de acompanhamento acadêmico, as soluções e notas aqui apresentadas estão em \textbf{constante processo de aprimoramento e revisão}, buscando sempre maior rigor, clareza e aprofundamento nos temas da Geometria Diferencial.
