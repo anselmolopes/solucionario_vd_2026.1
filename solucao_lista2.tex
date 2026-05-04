@@ -776,7 +776,7 @@
 %%%% RESULTADO EXTRA %%%%
 Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este teorema demonstra que a estrutura algébrica de um grupo, quando compatível com a estrutura de variedade suave, impõe uma rigidez geométrica ao fibrado tangente, tornando-o globalmente trivial. Este resultado será utilizado como base para as \textbf{Soluções Alternativas} das Questões 14 e 15, permitindo que a prova de trivialidade do fibrado tangente seja reduzida a uma propriedade de simetria do grupo.
 
-\resultadoextra{Trivialidade do Fibrado Tangente de Grupos de Lie}{
+\resultadoextra{Trivialidade do Fibrado Tangente de Grupos de Lie.}{
 	Seja $G$ um Grupo de Lie de dimensão $n$. Então $TG$ é difeomorfo a $G \times \mathbb{R}^n$.
 }
 \solucao{
@@ -836,7 +836,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\end{equation*}
 	Sendo $\Psi^{-1}$ a inversa de um homeomorfismo que define a estrutura suave de $T\mathbb{R}^n$, ela é, por definição, suave.
 	
-	\textbf{Conclusão}
+	\textbf{Conclusão:}
 	Como $\Psi$ é uma bijecção suave com inversa suave, ela é um difeomorfismo. Portanto, $T\mathbb{R}^n \cong \mathbb{R}^{2n}$.
 }
 \solucaoalt{
@@ -1004,7 +1004,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	
 	Visto que $T\mathbb{S}^{n-1}$ possui a estrutura de variedade suave induzida por seu atlas (Questão 13), e $M$ possui a estrutura de subvariedade induzida pelo Teorema do Valor Regular, a aplicação $\Psi$ é um difeomorfismo.
 	
-	\textbf{Conclusão}
+	\textbf{Conclusão:}
 	O conjunto nível $F^{-1}(0,0)$ é a representação extrínseca do fibrado tangente da esfera, e ambos são difeomorfos.
 }
 %%%% QUESTÃO 17 %%%%
@@ -1143,10 +1143,8 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	
 	Seja $p = (x_1, x_2, x_3, x_4) \in \mathbb{S}^3$. O vetor $F(p)$ é dado por $(x_2, -x_1, x_4, -x_3)$. Calculamos o produto escalar entre o vetor posição $p$ e o vetor $F(p)$:
 	\begin{align*}
-		\langle p, F(p) \rangle &= \langle (x_1, x_2, x_3, x_4), (x_2, -x_1, x_4, -x_3) \rangle \\
-		&= x_1(x_2) + x_2(-x_1) + x_3(x_4) + x_4(-x_3) \\
-		&= x_1x_2 - x_1x_2 + x_3x_4 - x_3x_4 \\
-		&= 0.
+		\langle p, F(p) \rangle &= \langle (x_1, x_2, x_3, x_4), (x_2, -x_1, x_4, -x_3) \rangle = x_1(x_2) + x_2(-x_1) + x_3(x_4) + x_4(-x_3) \\
+		&= x_1x_2 - x_1x_2 + x_3x_4 - x_3x_4	= 0.
 	\end{align*}
 	Como o produto escalar é nulo para todo $p \in \mathbb{S}^3$, concluímos que $F(p) \in T_p\mathbb{S}^3$. Portanto, a restrição $X = F|_{\mathbb{S}^3}$ é, por definição, um campo de vetores em $\mathbb{S}^3$.
 	
@@ -1154,8 +1152,8 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	
 	Calculamos a norma euclidiana de $X(p)$ para qualquer $p \in \mathbb{S}^3$:
 	\begin{align*}
-		\|X(p)\|^2 &= \|F(p)\|^2 = (x_2)^2 + (-x_1)^2 + (x_4)^2 + (-x_3)^2 \\
-		&= x_1^2 + x_2^2 + x_3^2 + x_4^2.
+		\|X(p)\|^2 = \|F(p)\|^2 = (x_2)^2 + (-x_1)^2 + (x_4)^2 + (-x_3)^2 
+		= x_1^2 + x_2^2 + x_3^2 + x_4^2.
 	\end{align*}
 	Visto que $p \in \mathbb{S}^3$, sabemos que $\|p\|^2 = 1$, logo:
 	\begin{equation*}
@@ -1184,17 +1182,14 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\textbf{1. Prova de Tangencialidade}
 	Seja $p = (x_1, x_2, \dots, x_{2n-1}, x_{2n}) \in \mathbb{S}^{2n-1}$. O vetor $F(p)$ é dado por $$(x_2, -x_1, \dots, x_{2n}, -x_{2n-1}).$$ O produto escalar é:
 	\begin{align*}
-		\langle p, F(p) \rangle &= \sum_{k=1}^{n} (x_{2k-1} x_{2k} + x_{2k} (-x_{2k-1})) \\
-		&= \sum_{k=1}^{n} (x_{2k-1} x_{2k} - x_{2k} x_{2k-1}) \\
-		&= \sum_{k=1}^{n} 0 = 0.
+		\langle p, F(p) \rangle = \sum_{k=1}^{n} (x_{2k-1} x_{2k} + x_{2k} (-x_{2k-1}))= \sum_{k=1}^{n} (x_{2k-1} x_{2k} - x_{2k} x_{2k-1}) = \sum_{k=1}^{n} 0 = 0.
 	\end{align*}
 	Como $\langle p, F(p) \rangle = 0$ para todo $p \in \mathbb{S}^{2n-1}$, $X$ é um campo de vetores em $\mathbb{S}^{2n-1}$.
 	
 	\textbf{2. Prova da ausência de singularidades}
 	A norma de $X(p)$ ao quadrado é:
 	\begin{align*}
-		\|X(p)\|^2 &= \sum_{k=1}^n (x_{2k}^2 + (-x_{2k-1})^2) \\
-		&= \sum_{i=1}^{2n} x_i^2 = \|p\|^2.
+		\|X(p)\|^2 = \sum_{k=1}^n (x_{2k}^2 + (-x_{2k-1})^2)= \sum_{i=1}^{2n} x_i^2 = \|p\|^2.
 	\end{align*}
 	Dado que $p \in \mathbb{S}^{2n-1}$, temos $\|p\|^2 = 1$. Logo, $\|X(p)\| = 1$ para todo $p \in \mathbb{S}^{2n-1}$, o que implica que $X$ não possui singularidades.
 }
@@ -1225,14 +1220,14 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\end{equation*}
 	Calculamos o produto escalar $\langle p, F(p) \rangle$:
 	\begin{align*}
-		\langle p, F(p) \rangle &= \left( \sum_{i=1}^n x_i (-x_i x_{n+1}) \right) + x_{n+1}(1 - x_{n+1}^2) \\
-		&= -x_{n+1} \left( \sum_{i=1}^n x_i^2 \right) + x_{n+1} - x_{n+1}^3.
+		\langle p, F(p) \rangle = \left( \sum_{i=1}^n x_i (-x_i x_{n+1}) \right) + x_{n+1}(1 - x_{n+1}^2) 
+	= -x_{n+1} \left( \sum_{i=1}^n x_i^2 \right) + x_{n+1} - x_{n+1}^3.
 	\end{align*}
 	Como $\sum_{i=1}^n x_i^2 = 1 - x_{n+1}^2$, substituímos:
 	\begin{align*}
-		\langle p, F(p) \rangle &= -x_{n+1}(1 - x_{n+1}^2) + x_{n+1} - x_{n+1}^3 \\
-		&= -x_{n+1} + x_{n+1}^3 + x_{n+1} - x_{n+1}^3 \\
-		&= 0.
+		\langle p, F(p) \rangle = -x_{n+1}(1 - x_{n+1}^2) + x_{n+1} - x_{n+1}^3 
+		= -x_{n+1} + x_{n+1}^3 + x_{n+1} - x_{n+1}^3 
+		= 0.
 	\end{align*}
 	Portanto, $X$ é um campo de vetores em $\mathbb{S}^n$.
 	
@@ -1245,10 +1240,10 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\end{enumerate}
 	Da equação (2), temos que $x_{n+1}^2 = 1$, logo $x_{n+1} = 1$ ou $x_{n+1} = -1$.
 	
-	\textbf{Caso I: $x_{n+1} = 1$}
+	\textbf{Caso I: $x_{n+1} = 1$}.
 	Substituindo na equação (1), temos $-x_i(1) = 0 \implies x_i = 0$ para todo $i \in \{1, \dots, n\}$. O ponto é $p = (0, 0, \dots, 0, 1)$, que é o \textbf{polo norte} $N$.
 	
-	\textbf{Caso II: $x_{n+1} = -1$}
+	\textbf{Caso II: $x_{n+1} = -1$}.
 	Substituindo na equação (1), temos $-x_i(-1) = 0 \implies x_i = 0$ para todo $i \in \{1, \dots, n\}$. O ponto é $p = (0, 0, \dots, 0, -1)$, que é o \textbf{polo sul} $S$.
 	
 	Como esses são os únicos pontos que satisfazem o sistema, o campo de vetores $X$ possui exatamente duas singularidades: $\{N, S\}$.
@@ -1258,6 +1253,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	Sejam $F : M^n \to N^k$ uma aplicação suave, $V_1, V_2 \in \mathfrak{X}(M)$ e $W_1, W_2 \in \mathfrak{X}(N)$. Suponha que $V_i$ é $F$-relacionado com $W_i$ para $i \in \{1,2\}$. Mostre que $[V_1, V_2]$ é $F$-relacionado a $[W_1, W_2]$.
 }
 \solucao{
+	
 	\textbf{Análise do Enunciado}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $F$ é suave. $V_1, V_2$ são campos em $M$; $W_1, W_2$ são campos em $N$. A relação de $F$-relacionamento implica que para todo $p \in M$, $F_{*,p}(V_{1,p}) = W_{1,F(p)}$ e $F_{*,p}(V_{2,p}) = W_{2,F(p)}$.
@@ -1298,9 +1294,9 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\end{align*}
 	Substituindo estas expressões de volta na equação original:
 	\begin{align*}
-		[V_1, V_2](g \circ F) &= (W_1(W_2 g)) \circ F - (W_2(W_1 g)) \circ F \\
-		&= (W_1(W_2 g) - W_2(W_1 g)) \circ F \\
-		&= ([W_1, W_2]g) \circ F.
+		[V_1, V_2](g \circ F) = (W_1(W_2 g)) \circ F - (W_2(W_1 g)) \circ F 
+		= (W_1(W_2 g) - W_2(W_1 g)) \circ F 
+		= ([W_1, W_2]g) \circ F.
 	\end{align*}
 	A igualdade foi provada. Portanto, $[V_1, V_2]$ é $F$-relacionado a $[W_1, W_2]$.
 }
@@ -1309,6 +1305,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	Seja $F : M^n \to N^k$ um difeomorfismo e considere $V_1, V_2 \in \mathfrak{X}(M)$. Mostre que $F_*[V_1, V_2] = [F_*V_1, F_*V_2]$.
 }
 \solucao{
+	
 	\textbf{Análise do Enunciado}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $F$ é um difeomorfismo. $V_1, V_2$ são campos suaves em $M$.
@@ -1341,6 +1338,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	Sejam $M^n$ e $N^k$ variedades suaves e $f : M^n \to N^k$ uma aplicação suave. Defina a aplicação $F : M^n \to M^n \times N^k$ por $F(x) = (x, f(x))$. Mostre que para cada $V \in \mathfrak{X}(M)$, existe um campo vetorial suave em $M^n \times N^k$ que é $F$-relacionado com $V$.
 }
 \solucao{
+	
 	\textbf{Análise do Enunciado}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $f: M \to N$ é suave. $F(x) = (x, f(x))$ é a aplicação grafo.
@@ -1377,9 +1375,9 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\textbf{2. Verificação do $F$-relacionamento:}
 	Para qualquer $p \in M$:
 	\begin{align*}
-		\mathcal{V}_{F(p)} &= \mathcal{V}_{(p, f(p))} \\
-		&= (V_p, f_{*,p}(V_p)) \\
-		&= F_{*,p}(V_p).
+		\mathcal{V}_{F(p)} = \mathcal{V}_{(p, f(p))}
+		= (V_p, f_{*,p}(V_p)) 
+		= F_{*,p}(V_p).
 	\end{align*}
 	
 	Isso prova que $\mathcal{V}$ é $F$-relacionado com $V$.
@@ -1389,6 +1387,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	Sejam $M_1^{n_1}, \dots, M_k^{n_k}$ variedades suaves. Para cada $i \in \{1, \dots, k\}$, considere a projeção $$\pi_i : M_1 \times \dots \times M_k \to M_i$$ sobre o $i$-ésimo fator. Mostre que para cada $X \in \mathfrak{X}(M_i)$, existe um campo vetorial suave sobre $M_1 \times \dots \times M_k$ que é $\pi_i$-relacionado com $X$.
 }
 \solucao{
+	
 	\textbf{Análise do Enunciado}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $M = \prod M_j$ é a variedade produto. $\pi_i$ é a projeção no fator $i$. $X$ é um campo suave em $M_i$.
@@ -1415,9 +1414,9 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\textbf{2. Verificação do $\pi_i$-relacionamento:}
 	Para qualquer $p \in M$, temos:
 	\begin{align*}
-		(\pi_i)_* \mathcal{X}_p &= (\pi_i)_* (0, \dots, X_{p_i}, \dots, 0) \\
-		&= X_{p_i} \\
-		&= X_{\pi_i(p)}.
+		(\pi_i)_* \mathcal{X}_p = (\pi_i)_* (0, \dots, X_{p_i}, \dots, 0) 
+		= X_{p_i} 
+		= X_{\pi_i(p)}.
 	\end{align*}
 	Isso prova que $\mathcal{X}$ é $\pi_i$-relacionado com $X$.
 }
@@ -1426,6 +1425,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	Seja $F : M \to N$ um difeomorfismo local. Mostre que para cada $Y \in \mathfrak{X}(N)$, existe um único campo vetorial suave em $M$ que é $F$-relacionado com $Y$.
 }
 \solucao{
+	
 	\textbf{Análise do Enunciado}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $F$ é um difeomorfismo local. $Y$ é um campo suave em $N$.
@@ -1462,17 +1462,15 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\end{equation*}
 	Como as funções $\hat{F}^j$ são suaves, as entradas de $J_F(p)$ são suaves. Pela fórmula de Cramer, a inversa de uma matriz cujas entradas são suaves também possui entradas suaves (sendo o quociente do determinante por cofatores). Como $Y^j$ e $F$ são suaves, o produto matricial resulta em funções $X^i$ que são suaves.
 	
-	\textbf{Conclusão}
+	\textbf{Conclusão:}
 	O campo $X$ é suave e é o único campo $F$-relacionado a $Y$.
 }
 % =============================================================================
 % SEÇÃO DE COLCHETES DE LIE COM NOTAÇÃO DE EINSTEIN
 % =============================================================================
 %%%% RESULTADO EXTRA %%%%
-\resultadoextra{Convenção de Notação: Soma de Einstein}{
-	Para simplificar as expressões algébricas em cálculos de alta densidade, adotamos a \textbf{Notação de Einstein}. Nesta convenção, sempre que um índice aparece repetido em um único termo (uma vez como sobrescrito e outra como subscrito), assume-se a soma automática sobre a dimensão da variedade. 
-	
-	Exemplo: $V^i \partial_i f \equiv \sum_{i=1}^n V^i \frac{\partial f}{\partial x^i}$.
+\resultadoextra{Convenção de Notação (Soma de Einstein).}{
+	Para simplificar as expressões algébricas em cálculos de alta densidade, adotamos a \textbf{Notação de Einstein}. Nesta convenção, sempre que um índice aparece repetido em um único termo (uma vez como sobrescrito e outra como subscrito), assume-se a soma automática sobre a dimensão da variedade. Assim, por exemplo, $V^i \partial_i f \equiv \sum_{i=1}^n V^i \frac{\partial f}{\partial x^i}$.
 }
 %%%% QUESTÃO 27 %%%%
 \questao{
@@ -1484,6 +1482,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 	\end{enumerate}
 }
 \solucao{
+	
 	\textbf{Análise do Enunciado}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $V$ e $W$ são campos vetoriais suaves em $\mathbb{R}^3$.
@@ -1508,7 +1507,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 		[V, W]^y &= V^i \partial_i W^y - W^i \partial_i V^y = 0 - (1 \cdot \partial_y(-2xy^2)) = -(-4xy) = 4xy. \\
 		[V, W]^z &= V^i \partial_i W^z - W^i \partial_i V^z = 0 - (1 \cdot \partial_y(y)) = -1.
 	\end{align*}
-	Logo: $\boxed{[V, W] = 4xy \frac{\partial}{\partial y} - \frac{\partial}{\partial z}}$.
+	Logo: $$\boxed{[V, W] = 4xy \frac{\partial}{\partial y} - \frac{\partial}{\partial z}.}$$
 	
 	\textbf{(b)} $V = -y \partial_x + x \partial_y + 0 \partial_z$ e $W = 0 \partial_x - z \partial_y + y \partial_z$.
 	
@@ -1520,7 +1519,7 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 		[V, W]^z &= V^i \partial_i W^z - W^i \partial_i V^z = (V^x \partial_x W^z + V^y \partial_y W^z) - (W^y \partial_y V^z + W^z \partial_z V^z) \\
 		&= (-y(0) + x(1)) - (0) = x.
 	\end{align*}
-	Logo: $\boxed{[V, W] = -z \frac{\partial}{\partial x} + x \frac{\partial}{\partial z}}$.
+	Logo: $$\boxed{[V, W] = -z \frac{\partial}{\partial x} + x \frac{\partial}{\partial z}.}$$
 	
 	\textbf{(c)} $V = -y \partial_x + x \partial_y + 0 \partial_z$ e $W = y \partial_x + x \partial_y + 0 \partial_z$.
 	
@@ -1532,5 +1531,5 @@ Abaixo, estabelecemos um resultado fundamental da teoria de Grupos de Lie. Este 
 		&= (-y(1) + x(0)) - (y(1) + x(0)) = -y - y = -2y. \\
 		[V, W]^z &= 0 - 0 = 0.
 	\end{align*}
-	Logo: $\boxed{[V, W] = 2x \frac{\partial}{\partial x} - 2y \frac{\partial}{\partial y}}$.
+	Logo: $$\boxed{[V, W] = 2x \frac{\partial}{\partial x} - 2y \frac{\partial}{\partial y}.}$$
 }

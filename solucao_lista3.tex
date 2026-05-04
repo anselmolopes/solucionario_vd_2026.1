@@ -26,6 +26,7 @@
 	Mostre que $E$ admite uma única estrutura de variedade suave, tornando-se um fibrado vetorial suave de posto $k$ sobre $M^n$, com $\pi$ como projeção e as aplicações $\Phi_\alpha$ como trivializações locais suaves.
 }
 \solucao{
+	
 	\textbf{Análise do Enunciado}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $M^n$ é uma variedade suave; $E$ é a união disjunta de espaços vetoriais $E_p$; $\pi$ é a projeção canônica; $\Phi_\alpha$ são trivializações locais bijetivas; $\tau_{\alpha\beta}$ são funções de transição suaves com valores na álgebra de matrizes $M(k, \mathbb{R})$.
@@ -622,15 +623,15 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	Substituímos as componentes de $F$ na função $f$:
 	\begin{align*}
-		(f \circ F)(u,v) &= (F_1)^2 + (F_2)^2 + (F_3)^2 \\
-		&= \left( \frac{2u}{D} \right)^2 + \left( \frac{2v}{D} \right)^2 + \left( \frac{u^2+v^2-1}{D} \right)^2 \\
-		&= \frac{4u^2 + 4v^2 + (u^2+v^2-1)^2}{D^2}.
+		(f \circ F)(u,v) = (F_1)^2 + (F_2)^2 + (F_3)^2 
+		= \left( \frac{2u}{D} \right)^2 + \left( \frac{2v}{D} \right)^2 + \left( \frac{u^2+v^2-1}{D} \right)^2 
+		= \frac{4u^2 + 4v^2 + (u^2+v^2-1)^2}{D^2}.
 	\end{align*}
 	Expandindo o termo quadrático $(u^2+v^2-1)^2 = (u^2+v^2)^2 - 2(u^2+v^2) + 1$:
 	\begin{align*}
-		(f \circ F)(u,v) &= \frac{4(u^2+v^2) + (u^2+v^2)^2 - 2(u^2+v^2) + 1}{D^2} \\
-		&= \frac{(u^2+v^2)^2 + 2(u^2+v^2) + 1}{D^2} \\
-		&= \frac{(u^2+v^2+1)^2}{D^2} = \frac{D^2}{D^2} = 1.
+		(f \circ F)(u,v) = \frac{4(u^2+v^2) + (u^2+v^2)^2 - 2(u^2+v^2) + 1}{D^2} 
+		= \frac{(u^2+v^2)^2 + 2(u^2+v^2) + 1}{D^2} 
+		= \frac{(u^2+v^2+1)^2}{D^2} = \frac{D^2}{D^2} = 1.
 	\end{align*}
 	Como a composição $f \circ F$ é a função constante $1$ em todo o domínio $\mathbb{R}^2$, sua diferencial é nula:
 	\begin{equation*}
@@ -670,7 +671,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 		\boxed{F^* df = 0}.
 	\end{equation*}
 	
-	\textbf{Conclusão}
+	\textbf{Conclusão:}
 	Ambos os cálculos resultam em zero, verificando a identidade.
 }
 \solucaoalt{
@@ -680,26 +681,16 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	Seguindo a lógica de que vetores tangentes são derivações, podemos provar a igualdade sem a expansão algébrica do pullback.
 	
 	\textbf{1. Análise da função composta:}
-	Como demonstrado na solução principal, a composição $(f \circ F)(u,v) = 1$. Sendo esta uma função constante, sua diferencial é nula:
-	\begin{equation*}
-		d(f \circ F) = 0.
-	\end{equation*}
+	Como demonstrado na solução principal, a composição $(f \circ F)(u,v) = 1$. Sendo esta uma função constante, sua diferencial é nula, ou seja, $d(f \circ F) = 0$.
 	
 	\textbf{2. Análise do pullback via derivações:}
 	Seja $X \in T_p \mathbb{R}^2$ um vetor tangente qualquer. Pela definição de pullback e pela propriedade do diferencial como derivação:
 	\begin{align*}
-		\langle (F^* df)_p, X \rangle &= \langle df_{F(p)}, F_{*,p} X \rangle \\
-		&= (F_{*,p} X)(f) \\
-		&= X(f \circ F).
+		\langle (F^* df)_p, X \rangle = \langle df_{F(p)}, F_{*,p} X \rangle 
+		= (F_{*,p} X)(f) 
+		= X(f \circ F) = X(1) = 0.
 	\end{align*}
-	Como $f \circ F$ é a função constante $1$, e qualquer derivação $X$ aplicada a uma constante resulta em zero, temos:
-	\begin{equation*}
-		\langle (F^* df)_p, X \rangle = X(1) = 0.
-	\end{equation*}
-	Visto que a contração de $F^* df$ com qualquer vetor tangente $X$ é nula, concluímos que:
-	\begin{equation*}
-		F^* df = 0.
-	\end{equation*}
-	Ambos os resultados coincidem, validando a identidade.
+	Assim, $F^* df = 0$.
+	Concluímos que, ambos os resultados coincidem, validando a identidade.
 }
 %%%% QUESTÃO 11 %%%%
