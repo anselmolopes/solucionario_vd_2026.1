@@ -290,7 +290,9 @@
 	
 	\textbf{2. Hausdorff e Base Enumerável}
 	
-	Sabemos que, se $X$ é um espaço compacto Hausdorff e a relação de equivalência $R \subset X \times X$ é um conjunto fechado, então o espaço quociente $X/R$ é Hausdorff. Aqui, $X = \mathbb{S}^n$ e $R = \{(x, -x) : x \in \mathbb{S}^n\}$. A aplicação $\alpha: \mathbb{S}^n \times \mathbb{S}^n \to \mathbb{R}^{n+1}$ dada por $\alpha(x,y) = x+y$ é contínua, e $R = \alpha^{-1}(\{0\})$. Como $\{0\}$ é fechado em $\mathbb{R}^{n+1}$, $R$ é fechado em $\mathbb{S}^n \times \mathbb{S}^n$. Logo, $\mathbb{RP}^n$ é Hausdorff. 
+	Sabemos que, se $X$ é um espaço compacto Hausdorff e a relação de equivalência $R \subset X \times X$ é um conjunto fechado, então o espaço quociente $X/R$ é Hausdorff. Aqui, $X = \mathbb{S}^n$ e $R = \{ (x, x) : x \in \mathbb{S}^n \} \cup \{ (x, -x) : x \in \mathbb{S}^n \} \subset \mathbb{S}^n \times \mathbb{S}^n$.
+	
+	Consideremos as aplicações \textbf{contínuas} $\alpha, \beta: \mathbb{S}^n \times \mathbb{S}^n \to \mathbb{R}^{n+1}$, dadas por dada por $\alpha(x,y) = x - y$ e $\beta(x,y) = x + y$. Como $\{0\}$ é um conjunto fechado em $\mathbb{R}^{n+1}$, suas pré-imagens $\alpha^{-1}(\{0\})$ e $\beta^{-1}(\{0\})$ são fechadas em $\mathbb{S}^n \times \mathbb{S}^n$. Assim, a relação $R=\alpha^{-1}(\{0\}) \cup \beta^{-1}(\{0\})$ é a união finita de conjuntos fechados, e portanto fechado em $\mathbb{S}^n \times \mathbb{S}^n$. Logo, $\mathbb{RP}^n$ herda a propriedade de ser Hausdorff.
 	
 	A base enumerável é herdada de $\mathbb{S}^n$ via a aplicação de quociente aberta $\pi$.
 	
