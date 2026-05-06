@@ -525,19 +525,21 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	\textbf{Desenvolvimento Formal - Parte (b)}
 	
-	\textit{Condição Necessária ($\implies$):} Assumimos que $\omega$ é uma seção suave. Seja $X = X^j \frac{\partial}{\partial x^j}$ um campo de vetores suave em $U$. A função $\omega(X): U \to \mathbb{R}$ é dada pela contração:
-	\begin{equation*}
-		\omega(X)(p) = \langle \omega_p, X_p \rangle = \left\langle \omega_i dx^i|_p, X^j \tfrac{\partial}{\partial x^j} \Big|_p \right\rangle = \omega_i(p) X^j(p) \delta^i_j = \omega_i(p) X^i(p).
-	\end{equation*}
-	Visto que $\omega_i$ e $X^i$ são funções suaves em $U$, a soma de seus produtos $\sum \omega_i X^i$ é também uma função suave.
+	\textbf{Condição Necessária ($\implies$):} Assumimos que $\omega$ é uma seção suave. Seja $X$ um campo de vetores suave em $U$, expresso na base coordenada como $X = X^j \tfrac{\partial}{\partial x^j}$. A função $\omega(X): U \to \mathbb{R}$ é definida pela avaliação do covetor $\omega_p$ sobre o vetor $X_p$ para cada $p \in U$:
 	
-	\textit{Condição Suficiente ($\impliedby$):} Assumimos que a função $\omega(X)$ é suave para todo campo de vetores suave $X \in \mathfrak{X}(U)$.
-	
-	Para provar que $\omega$ é suave, utilizaremos a estratégia de "testar" a seção com os campos de vetores coordenados. Para cada $j \in \{1, \dots, n\}$, definimos o campo $X_{(j)} = \frac{\partial}{\partial x^j}$. Como estes são campos coordenados, são necessariamente suaves. Pela nossa hipótese, a função $\omega(X_{(j)})$ deve ser suave:
 	\begin{equation*}
-		\omega(X_{(j)})(p) = \left\langle \omega_i dx^i|_p, \tfrac{\partial}{\partial x^j} \Big|_p \right\rangle = \omega_i(p) \delta^i_j = \omega_j(p).
+		\omega(X)(p) = \omega_p(X_p) = \left( \omega_i(p) dx^i|_p \right) \left( X^j(p) \tfrac{\partial}{\partial x^j} \Big|_p \right) = \omega_i(p) X^j(p) \delta^i_j = \omega_i(p) X^i(p),
 	\end{equation*}
-	Isso demonstra que cada função componente $\omega_j$ é suave. Pelo resultado provado na \textbf{Parte (a)}, a suavidade de todas as componentes $\omega_j$ implica a suavidade da seção $\omega$.
+	
+	onde utilizamos a convenção de soma de Einstein e o fato de que $\{dx^i\}$ e $\left\{\tfrac{\partial}{\partial x^j}\right\}$ são bases duais, satisfazendo $dx^i \left( \tfrac{\partial}{\partial x^j} \right) = \delta^i_j$. Como as funções componentes $\omega_i$ e $X^i$ são suaves em $U$, o produto $\omega_i X^i$ também é uma função suave, provando que $\omega(X)$ é suave.
+	
+	\textbf{Condição Suficiente ($\impliedby$):} Assumimos que, para qualquer campo de vetores suave $X$ em $U$, a função $\omega(X): U \to \mathbb{R}$ é suave. Para extrair a suavidade das funções componentes $\omega_j$, consideramos os campos de vetores coordenados $\tfrac{\partial}{\partial x^j}$ para cada $j \in \{1, \dots, n\}$. Como estes são campos suaves por construção, a hipótese garante que a função $\omega\left(\tfrac{\partial}{\partial x^j}\right)$ é suave em $U$. Calculando a sua representação em cada ponto $p \in U$, temos:
+	
+	\begin{equation*}
+		\omega\left(\tfrac{\partial}{\partial x^j}\right)(p) = \omega_p \left( \left. \tfrac{\partial}{\partial x^j} \right|_p \right) = \left( \omega_i(p) dx^i|_p \right) \left( \left. \tfrac{\partial}{\partial x^j} \right|_p \right) = \omega_i(p) \delta^i_j = \omega_j(p).
+	\end{equation*}
+	
+	Como $\omega\left(\tfrac{\partial}{\partial x^j}\right)$ é uma função suave, conclui-se que cada função componente $\omega_j$ é suave em $U$. Pela fundamentação estabelecida na \textbf{Parte (a)}, a suavidade de todas as funções componentes $\omega_j$ é a condição necessária e suficiente para que a seção $\omega$ seja suave.
 }
 \solucaoalt{
 	\textbf{Justificativa Estrutural via Dualidade de Fibrados}
