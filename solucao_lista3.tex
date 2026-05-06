@@ -269,15 +269,14 @@
 	Em ambas as abordagens, $\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^k$ é um difeomorfismo suave que preserva as fibras e age como isomorfismo linear nelas. Portanto, $\Phi$ é a trivialização local associada ao referencial $(\sigma_i)$.
 }
 %%%% QUESTÃO 04 %%%%
-\questao{
-	Seja $M^{n}$ uma $n$-variedade suave. Então a estrutura suave já construída no fibrado tangente $TM$ é a única com respeito a qual $\pi : TM \to M^n$ é um fibrado vetorial suave de posto $n$ sobre $M^n$ e cujos campos vetoriais coordenados são seções locais suaves.
-}
+\questao{Seja $M^n$ uma $n$-variedade suave. Então a estrutura suave já construída no fibrado tangente $TM$ é a única com respeito a qual $\pi : TM \to M^n$ é um fibrado vetorial suave de posto $n$ sobre $M^n$ e cujos campos vetoriais coordenados são seções locais suaves.}
+
 \solucao{
 	
-	\textbf{Análise do Enunciado}
+	\textbf{Análise do Enunciado:}
 	\begin{itemize}
-		\item \textbf{Hipóteses:} $\pi: TM \to M^n$ é dotada de uma estrutura de fibrado vetorial suave de posto $n$. Os campos vetoriais coordenados $\left\{ \frac{\partial}{\partial x^1}, \dots, \frac{\partial}{\partial x^n} \right\}$, associados a qualquer carta de $M^n$, são exigidos como seções locais suaves.
-		\item \textbf{Tese:} Provar que esta exigência força a estrutura suave de $TM$ a coincidir com a estrutura canônica.
+		\item \textbf{Hipóteses:} $M^n$ é uma $n$-variedade suave; $TM$ é o seu fibrado tangente; $\pi: TM \to M^n$ é a projeção natural.
+		\item \textbf{Tese:} A estrutura suave de fibrado vetorial em $TM$ é única sob a condição de que os campos coordenados $\tfrac{\partial}{\partial x^i}$ sejam seções locais suaves.
 	\end{itemize}
 	
 	\textbf{Fundamentação Teórica}
@@ -290,11 +289,11 @@
 	
 	Seja $\mathcal{E}$ qualquer estrutura de variedade suave em $TM$ que satisfaça as condições do enunciado. Consideremos uma carta coordenada $(U, (x^1, \dots, x^n))$ em $M^n$. 
 	
-	Por definição de espaço tangente, os campos vetoriais coordenados $\left\{ \frac{\partial}{\partial x^1}, \dots, \frac{\partial}{\partial x^n} \right\}$ formam uma base de $T_p M$ para todo $p \in U$. Pela hipótese do enunciado, esses campos são seções locais suaves sob a estrutura $\mathcal{E}$. Portanto, eles constituem, rigorosamente, um \textbf{referencial local suave} para o fibrado vetorial $(TM, \mathcal{E})$ sobre o aberto $U$.
+	Por definição de espaço tangente, os campos vetoriais coordenados $\left\{ \tfrac{\partial}{\partial x^1}, \dots, \tfrac{\partial}{\partial x^n} \right\}$ formam uma base de $T_p M$ para todo $p \in U$. Pela hipótese do enunciado, esses campos são seções locais suaves sob a estrutura $\mathcal{E}$. Portanto, eles constituem, rigorosamente, um \textbf{referencial local suave} para o fibrado vetorial $(TM, \mathcal{E})$ sobre o aberto $U$.
 	
 	Aplicando o resultado da \textbf{Questão 3 desta Lista}, a existência deste referencial local suave implica a existência de uma única trivialização local suave $\Phi : \pi^{-1}(U) \to U \times \mathbb{R}^n$ associada a ele, tal que:
 	\begin{equation*}
-		\Phi\left( \sum_{i=1}^n v^i \frac{\partial}{\partial x^i} \right) = (p, (v^1, \dots, v^n)).
+		\Phi\left( \sum_{i=1}^n v^i \tfrac{\partial}{\partial x^i} \right) = (p, (v^1, \dots, v^n)).
 	\end{equation*}
 	Esta aplicação $\Phi$ é precisamente a trivialização canônica utilizada na construção da estrutura suave padrão de $TM$ (conforme detalhado na Questão 13 da Lista 02 e reafirmado na Questão 1 desta Lista). 
 	
@@ -377,9 +376,9 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 %%%% QUESTÃO 06 %%%%
 \questao{
 	Considere os seguintes campos vetoriais em $\mathbb{R}^{4}$:
-	$$X_{1}=-x^{2}\frac{\partial}{\partial x^{1}}+x^{1}\frac{\partial}{\partial x^{2}}+x^{4}\frac{\partial}{\partial x^{3}}-x^{3}\frac{\partial}{\partial x^{4}}$$
-	$$X_{2}=-x^{3}\frac{\partial}{\partial x^{1}}-x^{4}\frac{\partial}{\partial x^{2}}+x^{1}\frac{\partial}{\partial x^{3}}+x^{2}\frac{\partial}{\partial x^{4}}$$
-	$$X_{3}=-x^{4}\frac{\partial}{\partial x^{1}}+x^{3}\frac{\partial}{\partial x^{2}}-x^{2}\frac{\partial}{\partial x^{3}}+x^{1}\frac{\partial}{\partial x^{4}}$$
+	$$X_{1}=-x^{2}t\frac{\partial}{\partial x^{1}}+x^{1}\tfrac{\partial}{\partial x^{2}}+x^{4}\tfrac{\partial}{\partial x^{3}}-x^{3}\tfrac{\partial}{\partial x^{4}}$$
+	$$X_{2}=-x^{3}\tfrac{\partial}{\partial x^{1}}-x^{4}\tfrac{\partial}{\partial x^{2}}+x^{1}\tfrac{\partial}{\partial x^{3}}+x^{2}\tfrac{\partial}{\partial x^{4}}$$
+	$$X_{3}=-x^{4}\tfrac{\partial}{\partial x^{1}}+x^{3}\tfrac{\partial}{\partial x^{2}}-x^{2}\tfrac{\partial}{\partial x^{3}}+x^{1}\tfrac{\partial}{\partial x^{4}}$$
 	Mostre que existem campos vetoriais suaves $V_{1}, V_{2}, V_{3}$ em $\mathbb{S}^{3}$ tais que $V_{j}$ é $\iota$-relacionado a $X_{j}$ para $j=1,2,3,$ onde $\iota:\mathbb{S}^{3}\rightarrow\mathbb{R}^{4}$ é a aplicação inclusão.
 	Conclua que $\mathbb{S}^{3}$ é paralelizável.
 }
@@ -483,13 +482,13 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	Sejam $(U, (x^i))$ e $(V, (y^j))$ duas cartas coordenadas suaves superpostas em $M^n$. Na interseção $U \cap V$, a mudança de base no espaço cotangente é regida pela matriz Jacobiana transposta inversa. Em notação de Einstein, a transição entre os referenciais é:
 	\begin{equation*}
-		dy^j = \frac{\partial y^j}{\partial x^i} dx^i.
+		dy^j = \tfrac{\partial y^j}{\partial x^i} dx^i.
 	\end{equation*}
-	A matriz de transição $\mathcal{A}(p)$ cujas entradas são $A^j_i(p) = \frac{\partial y^j}{\partial x^i}(p)$ é, em cada ponto, não-singular. Portanto, a aplicação $p \mapsto \mathcal{A}(p)$ mapeia pontos da variedade no Grupo de Lie $GL(n, \mathbb{R})$.
+	A matriz de transição $\mathcal{A}(p)$ cujas entradas são $A^j_i(p) = \tfrac{\partial y^j}{\partial x^i}(p)$ é, em cada ponto, não-singular. Portanto, a aplicação $p \mapsto \mathcal{A}(p)$ mapeia pontos da variedade no Grupo de Lie $GL(n, \mathbb{R})$.
 	
-	Como as cartas da base são difeomorfismos, as derivadas parciais $\frac{\partial y^j}{\partial x^i}$ são funções de classe $C^\infty$. Assim, a aplicação de transição para $GL(n, \mathbb{R})$ é estritamente suave.
+	Como as cartas da base são difeomorfismos, as derivadas parciais $\tfrac{\partial y^j}{\partial x^i}$ são funções de classe $C^\infty$. Assim, a aplicação de transição para $GL(n, \mathbb{R})$ é estritamente suave.
 	
-	Qualquer estrutura de fibrado vetorial $\mathcal{E}$ em $T^*M$ que torne as seções coordenadas $(dx^i)$ suaves será obrigatoriamente "colada" pelas mesmas funções de transição suaves avaliadas em $GL(n, \mathbb{R})$. Como provamos na \textbf{Questão 1}, a identidade dessas funções de transição dita uma única estrutura de fibrado vetorial suave. Portanto, a estrutura $\mathcal{E}$ coincide topológica e algebricamente com a estrutura padrão.
+	Qualquer estrutura de fibrado vetorial $\mathcal{E}$ em $T^*M$ que torne as seções coordenadas $(dx^i)$ suaves será obrigatoriamente \textbf{colada} pelas mesmas funções de transição suaves avaliadas em $GL(n, \mathbb{R})$. Como provamos na \textbf{Questão 1}, a identidade dessas funções de transição dita uma única estrutura de fibrado vetorial suave. Portanto, a estrutura $\mathcal{E}$ coincide topológica e algebricamente com a estrutura padrão.
 }
 %%%% QUESTÃO 08 %%%%
 \questao{Sejam $M^{n}$ uma $n$-variedade suave e $\omega:M^{n}\rightarrow T^{*}M$ uma seção áspera.
@@ -609,90 +608,85 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	\textbf{Fundamentação Teórica}
 	Conforme a teoria de variedades suaves (Lee, Cap. 3 e 8), utilizamos:
 	\begin{enumerate}
-		\item \textbf{Diferencial de uma função:} Para $f \in C^\infty(M)$, a diferencial $df$ é a aplicação que associa a cada ponto $p \in M$ um covetor $df_p \in T_p^* M$. Localmente, $df = \sum \frac{\partial f}{\partial x^i} dx^i$.
-		\item \textbf{Pullback de diferenciais:} Seja $F : M \to N$ uma aplicação suave. O pullback $F^* df$ é definido tal que, para qualquer vetor $X \in T_p M$, temos $\langle (F^* df)_p, X \rangle = \langle df_{F(p)}, F_{*,p} X \rangle$. Em coordenadas, se $df = \sum a_j dy^j$, então $F^* df = \sum (a_j \circ F) d(F^j)$.
-		\item \textbf{Aplicação $F$:} A inversa da projeção estereográfica é dada por:
+		\item \textbf{Diferencial de uma função (Lista 02):} Para $f \in C^\infty(M)$, a diferencial $df$ é a 1-forma única que, em cada ponto $p \in M$, atua sobre um vetor tangente $X \in T_p M$ como a derivação de $f$ na direção de $X$, isto é, $df_p(X) = X(f)$.
+		\item \textbf{Pullback de diferenciais:} Seja $F : M \to N$ uma aplicação suave. O pullback $F^* df$ é definido tal que, para qualquer vetor $X \in T_p M$, temos $(F^* df)_p(X) = df_{F(p)}(dF_p X)$.
+		\item \textbf{Diferencial como Derivação (Lista 02):} A ação da diferencial de $F$ no ponto $p$, $dF_p X$, sobre uma função $f$ é dada por $(dF_p X)(f) = X(f \circ F)$.
+		\item \textbf{Inversa da Aplicação $F$ (Questão 3, Lista 01):} A inversa da projeção estereográfica é dada por:
 		\begin{equation*}
 			F(u, v) = \left( \frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1}, \frac{u^2+v^2-1}{u^2+v^2+1} \right).
 		\end{equation*}
 	\end{enumerate}
+	\textbf{Desenvolvimento Formal:}
 	
-	\textbf{Desenvolvimento Formal}
-	
-	Seja $D = u^2 + v^2 + 1$. As componentes de $F(u,v) = (F_1, F_2, F_3)$ são $F_1 = \frac{2u}{D}$, $F_2 = \frac{2v}{D}$ e $F_3 = \frac{u^2+v^2-1}{D}$.
-	
-	\textbf{Cálculo 1: A diferencial da composição $d(f \circ F)$}
-	
-	Substituímos as componentes de $F$ na função $f$:
+	Primeiro, calculamos a função composta $f \circ F$. Definindo $S = u^2 + v^2 + 1$, temos:
 	\begin{align*}
-		(f \circ F)(u,v) = (F_1)^2 + (F_2)^2 + (F_3)^2 
-		= \left( \frac{2u}{D} \right)^2 + \left( \frac{2v}{D} \right)^2 + \left( \frac{u^2+v^2-1}{D} \right)^2 
-		= \frac{4u^2 + 4v^2 + (u^2+v^2-1)^2}{D^2}.
+		(f \circ F)(u,v) &=\left( \tfrac{2u}{S} \right)^2 + \left( \tfrac{2v}{S} \right)^2 + \left( \tfrac{u^2+v^2-1 \color{red}{+1-1}}{S} \right)^2 = \left( \tfrac{2u}{S} \right)^2 + \left( \tfrac{2v}{S} \right)^2 + \left( \tfrac{S-2}{S} \right)^2 \\
+		& = \tfrac{4(u^2+v^2) + S^2 - 4S + 4}{S^2} = \tfrac{4(S-1) + S^2 - 4S + 4}{S^2} = \tfrac{S^2}{S^2} \\ 
+		& = 1.
 	\end{align*}
-	Expandindo o termo quadrático $(u^2+v^2-1)^2 = (u^2+v^2)^2 - 2(u^2+v^2) + 1$:
+	Como a composta é a função constante $1$, sua diferencial é $d(f \circ F) = 0$.
+	
+	Para provar que $F^* df = 0$, tomamos um vetor tangente qualquer $X \in T_p \mathbb{R}^2$. Utilizando as definições de pullback e push-forward (estudadas na \textbf{Lista 02}), temos:
 	\begin{align*}
-		(f \circ F)(u,v) = \frac{4(u^2+v^2) + (u^2+v^2)^2 - 2(u^2+v^2) + 1}{D^2} 
-		= \frac{(u^2+v^2)^2 + 2(u^2+v^2) + 1}{D^2} 
-		= \frac{(u^2+v^2+1)^2}{D^2} = \frac{D^2}{D^2} = 1.
+		(F^* df)_p(X) = df_{F(p)}(dF_p X) = (dF_p X)(f) = X(f \circ F) = X(1) = 0.
 	\end{align*}
-	Como a composição $f \circ F$ é a função constante $1$ em todo o domínio $\mathbb{R}^2$, sua diferencial é nula:
-	\begin{equation*}
-		\boxed{d(f \circ F) = 0}.
-	\end{equation*}
-	
-	\textbf{Cálculo 2: O pullback $F^* df$}
-	
-	Calculamos a diferencial de $f$ em $\mathbb{R}^3$:
-	\begin{equation*}
-		df = 2x\,dx + 2y\,dy + 2z\,dz.
-	\end{equation*}
-	Aplicamos a definição de pullback $F^* df = 2 F_1 dF_1 + 2 F_2 dF_2 + 2 F_3 dF_3$. Calculamos as diferenciais de cada componente de $F$:
-	\begin{align*}
-		dF_1 &= \frac{\partial F_1}{\partial u} du + \frac{\partial F_1}{\partial v} dv = \frac{2(D) - 2u(2u)}{D^2} du + \frac{2u(-2v)}{D^2} dv = \frac{2(1+v^2-u^2)}{D^2} du - \frac{4uv}{D^2} dv, \\
-		dF_2 &= \frac{\partial F_2}{\partial u} du + \frac{\partial F_2}{\partial v} dv = \frac{2v(-2u)}{D^2} du + \frac{2(D) - 2v(2v)}{D^2} dv = -\frac{4uv}{D^2} du + \frac{2(1+u^2-v^2)}{D^2} dv, \\
-		dF_3 &= \frac{\partial F_3}{\partial u} du + \frac{\partial F_3}{\partial v} dv = \frac{2u(D) - (u^2+v^2-1)(2u)}{D^2} du + \frac{2v(D) - (u^2+v^2-1)(2v)}{D^2} dv \\
-		&= \frac{4u}{D^2} du + \frac{4v}{D^2} dv.
-	\end{align*}
-	
-	Somamos os termos para obter a componente de $du$:
-	\begin{align*}
-		(F^* df)_u &= 2 F_1 \frac{\partial F_1}{\partial u} + 2 F_2 \frac{\partial F_2}{\partial u} + 2 F_3 \frac{\partial F_3}{\partial u} \\
-		&= 2\left( \frac{2u}{D} \right) \left( \frac{2(1+v^2-u^2)}{D^2} \right) + 2\left( \frac{2v}{D} \right) \left( \frac{-4uv}{D^2} \right) + 2\left( \frac{u^2+v^2-1}{D} \right) \left( \frac{4u}{D^2} \right) \\
-		&= \frac{8u + 8uv^2 - 8u^3 - 16uv^2 + 8u^3 + 8uv^2 - 8u}{D^3} = 0.
-	\end{align*}
-	
-	Calculamos a componente de $dv$:
-	\begin{align*}
-		(F^* df)_v &= 2 F_1 \frac{\partial F_1}{\partial v} + 2 F_2 \frac{\partial F_2}{\partial v} + 2 F_3 \frac{\partial F_3}{\partial v} \\
-		&= 2\left( \frac{2u}{D} \right) \left( \frac{-4uv}{D^2} \right) + 2\left( \frac{2v}{D} \right) \left( \frac{2(1+u^2-v^2)}{D^2} \right) + 2\left( \frac{u^2+v^2-1}{D} \right) \left( \frac{4v}{D^2} \right) \\
-		&= \frac{-16u^2v + 8v + 8u^2v - 8v^3 + 8u^2v + 8v^3 - 8v}{D^3} = 0.
-	\end{align*}
-	
-	Portanto, temos que:
-	\begin{equation*}
-		\boxed{F^* df = 0}.
-	\end{equation*}
-	
-	\textbf{Conclusão:}
-	Ambos os cálculos resultam em zero, verificando a identidade.
+	Como a igualdade $(F^* df)_p(X) = 0$ vale para qualquer ponto $p$ e qualquer vetor $X$, concluímos que $F^* df = 0$. Portanto, $F^* df = d(f \circ F)$.
 }
-\solucaoalt{
+
+%%%% RESULTADO EXTRA %%%%
+\resultadoextra{Propriedades da Diferencial e Funções com Diferencial Nula}{
 	
-	\textbf{Demonstração via Operadores de Derivação}
+	\textbf{Proposição 6.9 (Propriedades da Diferencial).} Sejam $f, g \in C^\infty(M)$. Para provar as identidades abaixo, tomamos um ponto $p \in M$ e um vetor tangente $X \in T_p M$ qualquer. Utilizaremos a definição de diferencial: $df_p(X) = X(f)$.
 	
-	Seguindo a lógica de que vetores tangentes são derivações, podemos provar a igualdade sem a expansão algébrica do pullback.
+	\begin{enumerate}[label=(\alph*)]
+		\item \textbf{Linearidade:} $d(af + bg) = a \, df + b \, dg$.
+		\begin{align*}
+			(d(af + bg))_p(X) &= X(af + bg) \\
+			&= a X(f) + b X(g) \quad \text{(pela linearidade de $X$ como derivação)} \\
+			&= a \, df_p(X) + b \, dg_p(X) = (a \, df + b \, dg)_p(X).
+		\end{align*}
+		
+		\item \textbf{Regra do Produto (Leibniz):} $d(fg) = f \, dg + g \, df$.
+		\begin{align*}
+			(d(fg))_p(X) &= X(fg) \\
+			&= f(p) X(g) + g(p) X(f) \quad \text{(pela regra do produto para derivações)} \\
+			&= f(p) dg_p(X) + g(p) df_p(X) = (f \, dg + g \, df)_p(X).
+		\end{align*}
+		
+		\item \textbf{Regra do Quociente:} $d(f/g) = (g \, df - f \, dg)/g^2$ onde $g \neq 0$.
+		\begin{align*}
+			(d(f/g))_p(X) &= X(f/g) \\
+			&= \frac{g(p) X(f) - f(p) X(g)}{(g(p))^2} \quad \text{(pela regra do quociente para derivações)} \\
+			&= \frac{g(p) df_p(X) - f(p) dg_p(X)}{(g(p))^2} = \left( \frac{g \, df - f \, dg}{g^2} \right)_p(X).
+		\end{align*}
+		
+		\item \textbf{Regra da Cadeia:} $d(h \circ f) = (h' \circ f) \, df$.
+		\begin{align*}
+			(d(h \circ f))_p(X) &= X(h \circ f) \\
+			&= h'(f(p)) X(f) \quad \text{(pela regra da cadeia para derivações)} \\
+			&= (h' \circ f)(p) \, df_p(X) = ((h' \circ f) \, df)_p(X).
+		\end{align*}
+		
+		\item \textbf{Função Constante:} Se $f$ é constante, então $df = 0$.
+		
+		Como $f$ é constante, para qualquer curva $\gamma$ tal que $\gamma(0)=p$ e $\gamma'(0)=X$, a função $(f \circ \gamma)(t)$ é constante. Logo, $X(f) = \tfrac{d}{dt}(f \circ \gamma)(t) \big|_{t=0} = 0$. Assim, $df_p(X) = 0$ para todo $X$, logo $df = 0$.
+	\end{enumerate}
+	\textbf{Proposição 6.10 (Funções com Diferenciais Nulas).} Se $f$ é uma função suave em $M$, então $df = 0$ se, e somente se, $f$ é constante em cada componente conexa de $M$.
 	
-	\textbf{1. Análise da função composta:}
-	Como demonstrado na solução principal, a composição $(f \circ F)(u,v) = 1$. Sendo esta uma função constante, sua diferencial é nula, ou seja, $d(f \circ F) = 0$.
+	\textbf{Prova:}
 	
-	\textbf{2. Análise do pullback via derivações:}
-	Seja $X \in T_p \mathbb{R}^2$ um vetor tangente qualquer. Pela definição de pullback e pela propriedade do diferencial como derivação:
-	\begin{align*}
-		\langle (F^* df)_p, X \rangle = \langle df_{F(p)}, F_{*,p} X \rangle 
-		= (F_{*,p} X)(f) 
-		= X(f \circ F) = X(1) = 0.
-	\end{align*}
-	Assim, $F^* df = 0$.
-	Concluímos que, ambos os resultados coincidem, validando a identidade.
+	$(\impliedby)$ Se $f$ é constante em uma componente conexa, então pela Proposição 6.9(e), $df = 0$ nessa componente. Como a diferencial é definida pontualmente, se $f$ é constante em todas as componentes, $df = 0$ em todo $M$.
+	
+	$(\implies)$ Suponha que $df = 0$. Seja $C$ uma componente conexa de $M$. Queremos mostrar que $f$ é constante em $C$. 
+	Sejam $p, q \in C$. Como as componentes conexas de uma variedade suave são conexas por caminhos (\textbf{Questão 02 da Lista 01}), existe uma curva suave $\gamma : [0,1] \to C$ tal que $\gamma(0)=p$ e $\gamma(1)=q$.
+	
+	Considere a função real $h(t) = f(\gamma(t))$. Pela regra da cadeia (Proposição 6.9(d)), temos que	$\tfrac{dh}{dt} = df_{\gamma(t)}(\gamma'(t))$.
+	
+	Como, por hipótese, $df = 0$, temos $\tfrac{dh}{dt} = 0$ para todo $t \in [0,1]$. Do cálculo elementar, sabemos que uma função com derivada nula em um intervalo é constante. Logo, $h(0) = h(1)$, ou seja, $f(p) = f(q)$. Como $p$ e $q$ foram escolhidos arbitrariamente em $C$, $f$ é constante em $C$.\hfill\cqd
+	
+	\vspace{0.3cm}
+	\textbf{\underline{Observação}:} Vale ressaltar que qualquer variedade suave $M$ pode ser decomposta como a união disjunta de suas componentes conexas, $M = \sqcup_{i \in I} C_i$. Como $M$ é localmente conexa, cada componente $C_i$ é, simultaneamente, um subconjunto aberto e fechado de $M$, herdando a estrutura de variedade suave. Portanto, a conclusão de que $f$ é constante em cada componente conexa $C_i$ estende a validade do resultado para a totalidade de $M$.
 }
+
+
 %%%% QUESTÃO 11 %%%%
