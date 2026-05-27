@@ -10,7 +10,7 @@
 	colframe=black,         
 	width=1\textwidth,
 	]%
-	\textbf{Resumo:} Este documento apresenta a resolução detalhada da terceira lista de exercícios da disciplina de Variedades Diferenciáveis. O conteúdo aborda a teoria de fibrados vetoriais, incluindo a construção de estruturas suaves em fibrados, a análise de seções locais, a estrutura do fibrado cotangente e a teoria de integração de 1-formas em curvas.
+	\textbf{Resumo:} Este documento apresenta a resolução detalhada da terceira lista de exercícios da disciplina de Variedades Diferenciáveis. O conteúdo abrange a teoria de fibrados vetoriais (incluindo a construção de estruturas suaves e a análise de seções locais), a estrutura do fibrados cotangentes e a teoria de integração de campos de covetores em curvas. Adicionalmente, são exploradas a teoria de imersões, submersões e a caracterização de subvariedades mergulhadas via Teorema do Posto e Teorema do Valor Regular.
 \end{tcolorbox}
 
 %%%% QUESTÃO 01 %%%%
@@ -260,7 +260,7 @@
 		
 		Visto que as seções $\sigma_i$ são suaves, a aplicação $A: W \to GL(k, \mathbb{R})$ é suave. Portanto, a representação de $\Phi$ via $\Theta$, dada por $(p, w) \mapsto (p, A(p)^{-1}w)$, é a composição de aplicações suaves entre variedades. Esta estrutura assegura que a inversão matricial preserva a suavidade, tornando $\Phi$ um difeomorfismo local.
 	}
-		
+	
 	\textit{\textbf{Via II: Abordagem Analítica (Regra de Cramer)}}
 	Pela Regra de Cramer, as entradas da matriz inversa são dadas por:
 	\begin{equation*}
@@ -365,7 +365,7 @@
 Antes de procedermos à resolução da Questão, convém notar que a análise de certos problemas geométricos pode ser significativamente enriquecida se abordada sob uma perspectiva estrutural. Para viabilizar as \textbf{soluções alternativas} que apresentaremos a seguir, e para evitar a redundância de definições algébricas no corpo das provas, estabelecemos previamente o seguinte resultado fundamental. Este servirá como o suporte teórico necessário para que a transição entre a álgebra e a geometria ocorra de forma natural e rigorosa.
 
 %%%% RESULTADO EXTRA %%%%
-\resultadoextra{Álgebra dos Quatérnios ($\mathbb{H}$)}{
+\resultadoextra{Álgebra dos Quatérnios ($\mathbb{H}$).}{
 	O corpo dos quatérnios $\mathbb{H}$ é uma álgebra de divisão sobre os reais com 4 dimensões. Um quatérnio $q \in \mathbb{H}$ é escrito como:
 	\begin{equation*}
 		q = a + b\mathbf{i} + c\mathbf{j} + d\mathbf{k}, \quad a, b, c, d \in \mathbb{R}
@@ -945,7 +945,6 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 		\int_\gamma df &= (f \circ \gamma)(b) - (f \circ \gamma)(a) \\
 		&= f(\gamma(b)) - f(\gamma(a)).
 	\end{align*}
-	A tese está provada.
 }
 
 %%%% QUESTÃO 16 %%%%
@@ -1162,7 +1161,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 			\fill[blue!20] (0,0) circle (0.02);
 			
 			% 5. Legenda
-				% Legenda
+			% Legenda
 			\node at (0, -1.3) {\small $\gamma(t) = \left( \frac{1}{t}\cos(2\pi t), \frac{1}{t}\sin(2\pi t) \right)$};
 			
 		\end{tikzpicture}
@@ -1594,7 +1593,6 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	\begin{equation*}
 		\psi \circ F \circ \varphi^{-1}(x^1, \dots, x^m) = (x^1, \dots, x^k, 0, \dots, 0).
 	\end{equation*}
-	A tese está provada.
 }
 
 %%%% QUESTÃO 26 %%%%
@@ -1649,7 +1647,6 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	\begin{equation*}
 		\overline{\psi} \circ F \circ \overline{\varphi}^{-1}(x^1, \dots, x^m) = (x^1, \dots, x^k, 0, \dots, 0).
 	\end{equation*}
-	A tese está provada.
 }
 
 %%%% QUESTÃO 27 %%%%
@@ -2288,7 +2285,7 @@ Diferente do caso de difeomorfismos locais (\textbf{Questão 26, Lista 02}), ond
 			df_A(H) = \det(A) \text{tr}(A^{-1}H).
 		\end{equation*}
 	\end{enumerate}
-		
+	
 	\textbf{Desenvolvimento Formal:}
 	
 	Seja $A \in SL(n, \mathbb{R})$. Por definição, $\det A = 1$. Substituindo este valor na fórmula da diferencial, temos que para qualquer matriz $H \in M(n, \mathbb{R})$:
@@ -2346,4 +2343,207 @@ Diferente do caso de difeomorfismos locais (\textbf{Questão 26, Lista 02}), ond
 		\dim(\ker \Phi_*) = \dim T_p M - \text{posto}(\Phi_*) = n - \dim N.
 	\end{equation*}
 	Como $T_p S \subseteq \ker(\Phi_*)$ e ambos possuem a mesma dimensão finita, eles coincidem.
+}
+
+%%%% QUESTÃO 37 %%%%
+\questao{Sejam $O(n) = \{ A \in M(n, \mathbb{R}) \mid AA^t = I \}$ e $S(n) = \{ A \in M(n, \mathbb{R}) \mid A = A^t \}$ o grupo das matrizes ortogonais reais e o conjunto das matrizes simétricas reais de ordem $n$, respectivamente.
+	\begin{enumerate}[label=(\alph*)]
+		\item Mostre que $\Phi : M(n, \mathbb{R}) \to S(n)$, dada por $\Phi(A) = AA^t$, é uma aplicação que define $O(n)$.
+		\item Mostre que o espaço tangente a $O(n)$ na matriz identidade $I$ é o espaço vetorial das matrizes anti-simétricas reais de ordem $n$.
+\end{enumerate}}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M(n, \mathbb{R})$ é a variedade de matrizes; $O(n)$ é o conjunto de matrizes tais que $\Phi(A) = I$; $S(n)$ é o espaço das matrizes simétricas.
+		\item \textbf{Tese:} 
+		\begin{enumerate}[label=(\roman*)]
+			\item Provar que $\Phi$ é uma submersão em $O(n)$, tornando-o uma subvariedade mergulhada.
+			\item Caracterizar $T_I O(n)$ utilizando o resultado da Questão 36.
+		\end{enumerate}
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Teorema do Valor Regular (Lee, Cap. 7):} Se $I$ é um valor regular de $\Phi$, então $O(n) = \Phi^{-1}(I)$ é uma subvariedade mergulhada de $M(n, \mathbb{R})$.
+		\item \textbf{Espaço Tangente a Subvariedades (Questão 36, Lista 03):} Se uma subvariedade $S$ é definida localmente por uma aplicação $\Phi$, então o espaço tangente em $p$ é dado pelo núcleo da diferencial: $T_p S = \ker(\Phi_{*,p})$.
+		\item \textbf{Diferencial de Produtos de Matrizes:} Para $A, B \in M(n, \mathbb{R})$, a derivada de $A(t)B(t)$ é dada por 
+		$$\frac{d}{dt}(AB) = A'B + AB'.$$
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textit{Parte (a): Prova de que $\Phi$ define $O(n)$.}
+	Para provar que $\Phi$ define $O(n)$, devemos mostrar que $\Phi_{*,A}$ é sobrejetiva para todo $A \in O(n)$. Seja $H \in M(n, \mathbb{R})$. A diferencial de $\Phi(A) = AA^t$ é:
+	\begin{equation*}
+		\Phi_{*,A}(H) = \lim_{t \to 0} \frac{(A + tH)(A + tH)^t - AA^t}{t} = AH^t + HA^t.
+	\end{equation*}
+	Para qualquer matriz simétrica $S \in S(n)$, escolhemos $H = \tfrac{1}{2} SA$. 
+	
+	Como $A \in O(n) \implies AA^t = I$ e $S \in S(n) \implies S^t = S$, temos:
+	\begin{equation*}
+		\Phi_{*,A}(\tfrac{1}{2} SA) = A(\tfrac{1}{2} SA)^t + (\tfrac{1}{2} SA)A^t = \tfrac{1}{2} A(A^t S) + \tfrac{1}{2} S(AA^t) = \tfrac{1}{2} S + \tfrac{1}{2} S = S.
+	\end{equation*}
+	Sendo $\Phi_{*,A}$ sobrejetiva, $I$ é um valor regular e $O(n)$ é uma subvariedade mergulhada.
+	
+	\textit{Parte (b): Espaço Tangente em $I$.}
+	Pelo resultado da \textbf{Questão 36 desta Lista}, como $O(n)$ é definido pela aplicação $\Phi$, o seu espaço tangente no ponto $I$ é o núcleo da diferencial $\Phi_{*,I}$:
+	\begin{equation*}
+		T_I O(n) = \ker(\Phi_{*,I}).
+	\end{equation*}
+	Calculamos a ação de $\Phi_{*,I}$ sobre um vetor tangente $H \in T_I M(n, \mathbb{R})$:
+	\begin{equation*}
+		\Phi_{*,I}(H) = IH^t + HI^t = H^t + H.
+	\end{equation*}
+	O vetor $H$ pertence ao espaço tangente se, e somente se, $\Phi_{*,I}(H) = 0$, o que implica:
+	\begin{equation*}
+		H^t + H = 0 \implies H^t = -H.
+	\end{equation*}
+	Esta é precisamente a definição de matrizes anti-simétricas. Portanto, $T_I O(n)$ é o espaço vetorial das matrizes anti-simétricas reais de ordem $n$.
+}
+
+%%%% QUESTÃO 38 %%%%
+\questao{Seja $F : N \to M$ uma imersão. Mostre que $F$ é localmente um mergulho, isto é, para cada $p \in N$, existe uma vizinhança $U$ de $p$ em $N$ tal que $F|_U : U \to M$ é um mergulho suave.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $F: N \to M$ é uma imersão. Isso implica que, para todo $p \in N$, a diferencial $dF_p : T_p N \to T_{F(p)} M$ é injetiva.
+		\item \textbf{Tese:} Provar que para cada $p \in N$, existe um aberto $U \subset N$ tal que a restrição $F|_U$ seja injetiva e a aplicação $F|_U : U \to F(U)$ seja um homeomorfismo.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Teorema do Posto (Lee, Cap. 7):} Se $F: N \to M$ tem posto constante $k = \dim N$ em uma vizinhança de $p$, existem cartas coordenadas $(U, \varphi)$ em torno de $p$ e $(V, \psi)$ em torno de $F(p)$ tais que a representação local $\hat{F} = \psi \circ F \circ \varphi^{-1}$ é a inclusão canônica:
+		\begin{equation*}
+			\hat{F}(x^1, \dots, x^k) = (x^1, \dots, x^k, 0, \dots, 0).
+		\end{equation*}
+		\item \textbf{Definição de Mergulho Suave (Lee, Cap. 7):} Uma imersão injetiva $F$ é um mergulho se for um homeomorfismo sobre sua imagem.
+		\item \textbf{Topologia de Cubos em $\mathbb{R}^n$:} Definimos o cubo de lado $2\varepsilon$ centrado na origem como 
+		$$C_\varepsilon^n = \{ (x^1, \dots, x^n) \in \mathbb{R}^n \mid |x^i| < \varepsilon \text{ para todo } i \}.$$
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Seja $p \in N$. Como $F$ é uma imersão, seu posto é constantemente igual a $k = \dim N$ em cada ponto. Pelo Teorema do Posto, existem cartas coordenadas $(U_1, \varphi)$ e $(V_1, \psi)$ tais que a representação local $\hat{F}$ é a inclusão canônica $\hat{F}(x) = (x, 0)$.
+	
+	Seja $\varepsilon > 0$ um valor tal que o cubo $C_\varepsilon^k \subset \mathbb{R}^k$ esteja contido na imagem $\varphi(U_1)$. Definimos agora o aberto $U \subset N$ como a imagem inversa desse cubo:
+	\begin{equation*}
+		U = \varphi^{-1}(C_\varepsilon^k).
+	\end{equation*}
+	Analisamos agora a aplicação $\hat{F}$ restrita a $C_\varepsilon^k$:
+	\begin{equation*}
+		\hat{F}|_{C_\varepsilon^k} : C_\varepsilon^k \to C_\varepsilon^n, \quad (x^1, \dots, x^k) \mapsto (x^1, \dots, x^k, 0, \dots, 0).
+	\end{equation*}
+	
+	A aplicação $\hat{F}|_{C_\varepsilon^k}$ é claramente injetiva. Além disso, sua inversa $\hat{F}^{-1}$ é a projeção sobre as primeiras $k$ coordenadas:
+	\begin{equation*}
+		\hat{F}^{-1}(x^1, \dots, x^k, 0, \dots, 0) = (x^1, \dots, x^k).
+	\end{equation*}
+	Como a projeção é uma aplicação linear, ela é suave. Portanto, $\hat{F}|_{C_\varepsilon^k}$ é um difeomorfismo entre $C_\varepsilon^k$ e sua imagem $\hat{F}(C_\varepsilon^k) \subset C_\varepsilon^n$.
+	
+	Visto que $\hat{F} = \psi \circ F \circ \varphi^{-1}$, podemos escrever a restrição de $F$ a $U$ como:
+	\begin{equation*}
+		F|_U = \psi^{-1} \circ \hat{F} \circ \varphi.
+	\end{equation*}
+	Como $\varphi$ é um difeomorfismo, $\hat{F}|_{C_\varepsilon^k}$ é um difeomorfismo e $\psi^{-1}$ é um difeomorfismo, a composição $F|_U$ é a composição de três difeomorfismos. Logo, $F|_U : U \to F(U)$ é um difeomorfismo, o que implica que é, em particular, um homeomorfismo sobre sua imagem.
+	
+	Sendo $F|_U$ uma imersão injetiva e um homeomorfismo sobre sua imagem, concluímos que $F|_U$ é um mergulho suave.
+}
+
+%%%% QUESTÃO 39 %%%%%
+\resultadoextra{Definição (Campos Vetoriais Tangentes).}{
+	Seja $M$ uma variedade suave e $S \subset M$ uma subvariedade mergulhada. Um campo vetorial $Y \in \mathfrak{X}(M)$ é dito ser \textbf{tangente a $S$} se, para todo ponto $p \in S$, o vetor $Y_p$ pertence ao espaço tangente de $S$ no ponto $p$, isto é, $Y_p \in T_p S \subset T_p M$.
+}
+
+\questao{Sejam $M^n$ uma $n$-variedade suave, $S \subset M^n$ uma subvariedade mergulhada e $Y$ um campo vetorial suave em $M^n$. Mostre que $Y$ é tangente a $S$ se, e somente se, $Y f$ se anula em $S$, para qualquer $f \in C^\infty(M)$ tal que $f|_S \equiv 0$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma variedade suave; $S$ é uma subvariedade mergulhada de $M^n$; $Y$ é um campo de vetores suave em $M^n$.
+		\item \textbf{Tese:} Provar a equivalência lógica: $Y$ é tangente a $S \iff \forall f \in C^\infty(M)$ tal que $f|_S = 0$, temos $Y f |_S = 0$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Caracterização de $T_p S$ (Lee, Cap. 8):} Para uma subvariedade mergulhada $S \subset M$, o espaço tangente $T_p S$ é precisamente o subespaço de $T_p M$ definido por:
+		\begin{equation*}
+			T_p S = \{ v \in T_p M \mid v(f) = 0 \text{ para toda função } f \in C^\infty(M) \text{ tal que } f|_S = 0 \}.
+		\end{equation*}
+		\item \textbf{Definição de Ação de Campo Vetorial:} Para qualquer $Y \in \mathfrak{X}(M)$ e $f \in C^\infty(M)$, a função $Yf$ é definida pontualmente por $(Yf)(p) = Y_p(f)$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	A prova consiste em demonstrar a equivalência em ambas as direções.
+	
+	\textit{Direção ($\implies$):}
+	Suponha que $Y$ seja tangente a $S$. Por definição, isso significa que, para todo $p \in S$, temos $Y_p \in T_p S$.
+	Seja $f \in C^\infty(M)$ uma função tal que $f|_S \equiv 0$. Para qualquer ponto $p \in S$, a avaliação da função $Yf$ no ponto $p$ é:
+	\begin{equation*}
+		(Yf)(p) = Y_p(f).
+	\end{equation*}
+	Como $Y_p \in T_p S$, e a definição de $T_p S$ (citada na fundamentação) afirma que qualquer vetor em $T_p S$ anula funções que desaparecem em $S$, segue que:
+	\begin{equation*}
+		Y_p(f) = 0 \quad \forall p \in S.
+	\end{equation*}
+	Portanto, $Yf$ se anula em $S$, o que prova a primeira parte da equivalência.
+	
+	\textit{Direção ($\impliedby$):}
+	Suponhamos agora que, para toda função $f \in C^\infty(M)$ tal que $f|_S = 0$, a função $Yf$ se anula em $S$. Isso implica que:
+	\begin{equation*}
+		(Yf)(p) = 0 \quad \forall p \in S, \forall f \in C^\infty(M) \text{ tal que } f|_S = 0.
+	\end{equation*}
+	Lembrando que $(Yf)(p) = Y_p(f)$, a condição acima pode ser reescrita como:
+	\begin{equation*}
+		Y_p(f) = 0 \quad \forall f \in C^\infty(M) \text{ tal que } f|_S = 0.
+	\end{equation*}
+	Comparando esta expressão com a definição de $T_p S$, observamos que $Y_p$ satisfaz precisamente a condição necessária e suficiente para pertencer ao espaço tangente $T_p S$. Como isso vale para todo $p \in S$, concluímos que $Y$ é tangente a $S$.
+}
+
+%%%% QUESTÃO 40 %%%%
+\questao{Sejam $M^n$ uma $n$-variedade suave, $S \subset M^n$ uma subvariedade imersa e $\iota : S \hookrightarrow M^n$ a aplicação inclusão. Se $Y \in \mathfrak{X}(M)$ é tangente a $S$, mostre que existe um único campo vetorial suave em $S$, denotado por $Y|_S$, que é $\iota$-relacionado com $Y$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma variedade suave; $S$ é uma subvariedade imersa; $\iota: S \to M^n$ é a aplicação inclusão; $Y$ é um campo vetorial suave em $M$ tal que, para todo $p \in S$, $Y(p) \in T_p S$ (tangente a $S$).
+		\item \textbf{Tese:} Provar a existência e a unicidade de um campo $Y|_S \in \mathfrak{X}(S)$ tal que $\iota_{*,p}((Y|_S)(p)) = Y(p)$ para todo $p \in S$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definição de $\iota$-relacionamento (Lee, Cap. 4):} Um campo $X \in \mathfrak{X}(S)$ é $\iota$-relacion도 a $Y \in \mathfrak{X}(M)$ se, para todo $p \in S$, temos $\iota_{*,p} X(p) = Y(p)$.
+		\item \textbf{Propriedade de Subvariedades Imersas (Lee, Cap. 8):} Para uma subvariedade imersa, a aplicação $\iota : S \to M$ é uma imersão. Por definição, a diferencial $\iota_{*,p} : T_p S \to T_p M$ é injetiva para todo $p \in S$.
+		\item \textbf{Suavidade de Campos Vetoriais:} Um campo de vetores é suave se suas componentes em qualquer carta coordenada local são funções suaves.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textit{1. Existência e Unicidade Pontual:}
+	Fixemos um ponto $p \in S$. Por hipótese, o campo $Y$ é tangente a $S$, o que significa que $Y(p) \in T_p S$. 
+	Sabemos que a aplicação $\iota_{*,p} : T_p S \to T_p M$ é um isomorfismo entre $T_p S$ e sua imagem em $T_p M$. Como $Y(p)$ pertence a essa imagem, existe um único vetor $v \in T_p S$ tal que:
+	\begin{equation*}
+		\iota_{*,p}(v) = Y(p).
+	\end{equation*}
+	Definimos, então, o campo $(Y|_S)$ pontualmente por $(Y|_S)(p) = v$. A unicidade de $v$ decorre da injetividade de $\iota_{*,p}$. Assim, o campo $(Y|_S)$ está unicamente definido como a aplicação que associa a cada $p \in S$ o único vetor em $T_p S$ cujo push-forward é $Y(p)$.
+	
+	\textit{2. Prova da Suavidade:}
+	Para provar que $(Y|_S)$ é suave, utilizaremos a representação local. Seja $p \in S$ e seja $(U, \varphi)$ uma carta coordenada para $S$ em torno de $p$. A aplicação $\iota \circ \varphi : U \to M^n$ é uma imersão.
+	Seja $\{E_1, \dots, E_k\}$ a base de $T_p S$ induzida pelas coordenadas de $\varphi$. O campo $(Y|_S)$ pode ser escrito localmente como:
+	\begin{equation*}
+		(Y|_S)(q) = \sum_{i=1}^k a^i(q) E_i, \quad q \in U.
+	\end{equation*}
+	Aplicando o push-forward $\iota_*$:
+	\begin{equation*}
+		\iota_{*,q}((Y|_S)(q)) = \sum_{i=1}^k a^i(q) \iota_{*,q} E_i = Y(q).
+	\end{equation*}
+	Seja $\{W_1, \dots, W_n\}$ uma base de $T_q M$. Podemos escrever $Y(q)$ como $\sum_{j=1}^n Y^j(q) W_j$, onde $Y^j$ são as componentes suaves de $Y$. O sistema de equações lineares para os coeficientes $a^i(q)$ é dado por:
+	\begin{equation*}
+		\sum_{i=1}^k a^i(q) (\iota_* E_i)^j = Y^j(q).
+	\end{equation*}
+	Como $\iota$ é uma imersão, a matriz $(\iota_* E_i)^j$ possui posto $k$ (posto máximo). Pelo Teorema da Inversão (ou via pseudo-inversa de matrizes), os coeficientes $a^i(q)$ são combinações lineares suaves das componentes $Y^j(q)$ e das componentes de $\iota_* E_i$. Como todas essas funções são suaves, as componentes $a^i$ de $(Y|_S)$ são suaves.
+	
+	Logo, $(Y|_S)$ é um campo vetorial suave em $S$.
 }
