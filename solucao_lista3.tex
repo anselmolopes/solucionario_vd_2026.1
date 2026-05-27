@@ -2138,7 +2138,7 @@ Diferente do caso de difeomorfismos locais (\textbf{Questão 26, Lista 02}), ond
 	
 	\textbf{Fundamentação Teórica:}
 	\begin{enumerate}
-		\item \textbf{Definição de Subvariedade Mergulhada (Lee, Cap. 8):} Se $S$ é uma subvariedade mergulhada de dimensão 1, então para cada $p \in S$, deve existir uma parametrização suave $\gamma : (-\epsilon, \epsilon) \to S$ tal que $\gamma(0)=p$ e $\gamma'(0) \neq (0,0)$.
+		\item \textbf{Definição de Subvariedade Mergulhada (Lee, Cap. 8):} Se $S$ é uma subvariedade mergulhada de dimensão 1, então para cada $p \in S$, deve existir uma parametrização suave $\gamma : (-\varepsilon, \varepsilon) \to S$ tal que $\gamma(0)=p$ e $\gamma'(0) \neq (0,0)$.
 		\item \textbf{Propriedade de Funções Suaves (Cálculo):} Se $x(t)$ é uma função suave tal que $x(0)=0$ e $x(t) \geq 0$ para todo $t$, então $t=0$ é um ponto de mínimo local, o que implica obrigatoriamente que $x'(0) = 0$.
 	\end{enumerate}
 	
@@ -2148,7 +2148,7 @@ Diferente do caso de difeomorfismos locais (\textbf{Questão 26, Lista 02}), ond
 	
 	Suponhamos, por absurdo, que $S$ seja uma subvariedade mergulhada. Então, no ponto $p = (0,0)$, deve existir uma curva suave $\gamma(t) = (x(t), y(t))$ tal que $\gamma(0) = (0,0)$ e $\gamma'(0) \neq (0,0)$.
 	
-	Como a curva $\gamma$ deve estar contida em $S$, a condição $x(t) \geq 0$ deve ser satisfeita para todo $t \in (-\epsilon, \epsilon)$. Dado que $x(0)=0$, o ponto $t=0$ é um mínimo local da função $x(t)$. Pela teoria do cálculo, isso implica que:
+	Como a curva $\gamma$ deve estar contida em $S$, a condição $x(t) \geq 0$ deve ser satisfeita para todo $t \in (-\varepsilon, \varepsilon)$. Dado que $x(0)=0$, o ponto $t=0$ é um mínimo local da função $x(t)$. Pela teoria do cálculo, isso implica que:
 	\begin{equation*}
 		x'(0) = 0.
 	\end{equation*}
@@ -2317,39 +2317,33 @@ Diferente do caso de difeomorfismos locais (\textbf{Questão 26, Lista 02}), ond
 	\textbf{Análise do Enunciado:}
 	\begin{itemize}
 		\item \textbf{Hipóteses:} $S$ é uma subvariedade mergulhada de $M^n$; $\Phi: U \to N$ é uma aplicação suave tal que $S \cap U$ é um conjunto de nível regular de $\Phi$.
-		\item \textbf{Tese:} Provar a igualdade de subespaços $T_p S = \ker(d\Phi_p)$ para todo $p \in S \cap U$.
+		\item \textbf{Tese:} Provar a igualdade de subespaços $T_p S = \ker(\Phi_*)$ para todo $p \in S \cap U$.
 	\end{itemize}
 	
 	\textbf{Fundamentação Teórica:}
 	\begin{enumerate}
-		\item \textbf{Definição de $T_p S$ (Lee, Cap. 8):} Para uma subvariedade mergulhada $S$, o espaço tangente $T_p S$ é o subespaço de $T_p M$ consistindo em todos os vetores $\gamma'(0)$ onde $\gamma : (-\epsilon, \epsilon) \to S$ é uma curva suave com $\gamma(0) = p$.
-		\item \textbf{Aplicação que Define Localmente $S$ (Lee, Cap. 7):} Dizer que $\Phi$ define localmente $S$ significa que $S \cap U = \Phi^{-1}(c)$ para algum valor regular $c \in N$. Portanto, $d\Phi_p : T_p M \to T_c N$ é sobrejetiva.
-		\item \textbf{Regra da Cadeia (Lee, Cap. 3):} Se $\gamma$ é uma curva em $S$, então $\Phi \circ \gamma$ é uma curva em $N$. Sua derivada é dada por $d\Phi_p(\gamma'(0))$.
+		\item \textbf{Definição de $T_p S$ (Lee, Cap. 8):} Para uma subvariedade mergulhada $S$, o espaço tangente $T_p S$ é o subespaço de $T_p M$ consistindo nos vetores $\iota_* v$, onde $\iota : S \hookrightarrow M$ é a inclusão e $v \in T_p S$.
+		\item \textbf{Aplicação que Define Localmente $S$ (Lee, Cap. 7):} $\Phi$ define localmente $S$ se $S \cap U = \Phi^{-1}(c)$, implicando que $\Phi_*$ é sobrejetiva em $T_p M$.
+		\item \textbf{Regra da Cadeia (Lee, Cap. 3):} Se $\gamma$ é uma curva em $S$, a derivada da composição $\Phi \circ \gamma$ é dada pelo push-forward: $(\Phi \circ \gamma)'(0) = \Phi_*(\gamma'(0))$.
 	\end{enumerate}
 	
 	\textbf{Desenvolvimento Formal:}
 	
-	Para provar a igualdade de subespaços $T_p S = \ker(d\Phi_p)$, provaremos a inclusão em ambas as direções.
+	Para provar a igualdade $T_p S = \ker(\Phi_*)$, provaremos as duas inclusões.
 	
-	\textit{1. Inclusão $T_p S \subseteq \ker(d\Phi_p)$:}
-	Seja $v \in T_p S$. Por definição, existe uma curva suave $\gamma : (-\epsilon, \epsilon) \to S$ tal que $\gamma(0) = p$ e $\gamma'(0) = v$. Como a imagem de $\gamma$ está contida em $S$, e $S$ é o conjunto de nível $\Phi^{-1}(c)$, temos que:
+	\textit{1. Inclusão $T_p S \subseteq \ker(\Phi_*)$:}
+	Seja $v \in T_p S$. Por definição, existe uma curva suave $\gamma : (-\varepsilon, \varepsilon) \to S$ tal que $\gamma(0) = p$ e $\iota_*(\gamma'(0)) = v$. Como a imagem de $\gamma$ está contida em $S = \Phi^{-1}(c)$, temos que $\Phi(\gamma(t)) = c$ para todo $t$. 
+	Diferenciando em relação a $t$ no ponto $t=0$:
 	\begin{equation*}
-		\Phi(\gamma(t)) = c \quad \text{para todo } t \in (-\epsilon, \epsilon).
+		\Phi_*(\iota_* \gamma'(0)) = \Phi_*(v) = 0.
 	\end{equation*}
-	Diferenciando ambos os lados em relação a $t$ no ponto $t=0$, e utilizando a Regra da Cadeia:
-	\begin{equation*}
-		\frac{d}{dt} (\Phi \circ \gamma)(t) \Big|_{t=0} = d\Phi_p(\gamma'(0)) = d\Phi_p(v).
-	\end{equation*}
-	Como a função constante $\Phi(\gamma(t)) = c$ possui derivada nula, segue que $d\Phi_p(v) = 0$. Portanto, $v \in \ker(d\Phi_p)$.
+	Portanto, $v \in \ker(\Phi_*)$.
 	
-	\textit{2. Inclusão $\ker(d\Phi_p) \subseteq T_p S$:}
-	Utilizaremos a comparação de dimensões. 
-	Pelo Teorema do Valor Regular, como $\Phi$ define localmente $S$, a dimensão de $S$ é $\dim S = \dim M - \dim N = n - \dim N$. Assim, $\dim T_p S = n - \dim N$.
-	Por outro lado, a aplicação $d\Phi_p : T_p M \to T_c N$ é sobrejetiva (posto máximo). Pelo Teorema do Núcleo e da Imagem (Álgebra Linear):
+	\textit{2. Inclusão $\ker(\Phi_*) \subseteq T_p S$:}
+	Utilizamos a comparação de dimensões. Como $\Phi$ define localmente $S$, a dimensão de $S$ é $\dim S = \dim M - \dim N$. Logo, $\dim T_p S = n - \dim N$.
+	Pelo Teorema do Núcleo e da Imagem, como $\Phi_*$ é sobrejetiva:
 	\begin{equation*}
-		\dim(\ker d\Phi_p) = \dim T_p M - \text{posto}(d\Phi_p) = n - \dim N.
+		\dim(\ker \Phi_*) = \dim T_p M - \text{posto}(\Phi_*) = n - \dim N.
 	\end{equation*}
-	Como $T_p S$ é um subespaço de $\ker(d\Phi_p)$ e ambos possuem a mesma dimensão finita $n - \dim N$, eles devem ser obrigatoriamente o mesmo subespaço.
-	
-	Conclui-se que $T_p S = \ker(d\Phi_p)$.
+	Como $T_p S \subseteq \ker(\Phi_*)$ e ambos possuem a mesma dimensão finita, eles coincidem.
 }
