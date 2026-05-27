@@ -1,6 +1,7 @@
 \begin{center}
 	\fbox{\textbf{Resolução da Lista 03}}
 \end{center}
+
 \begin{tcolorbox}[
 	enhanced,
 	sharp corners,
@@ -11,6 +12,7 @@
 	]%
 	\textbf{Resumo:} Este documento apresenta a resolução detalhada da terceira lista de exercícios da disciplina de Variedades Diferenciáveis. O conteúdo aborda a teoria de fibrados vetoriais, incluindo a construção de estruturas suaves em fibrados, a análise de seções locais, a estrutura do fibrado cotangente e a teoria de integração de 1-formas em curvas.
 \end{tcolorbox}
+
 %%%% QUESTÃO 01 %%%%
 \questao{
 	Seja $M^{n}$ uma $n$-variedade suave. Suponha que
@@ -131,6 +133,7 @@
 	
 	Sob esta estrutura suave estabelecida, a aplicação projeção $\pi$ é suave, pois na restrição dos abertos coincide com a projeção cartesiana $U_\alpha \times \mathbb{R}^k \to U_\alpha$. A integridade da estrutura de fibrado vetorial é asseverada pela restrição linear imposta por $\tau_{\alpha\beta}(p)$. Finalmente, a unicidade da referida estrutura suave em $E$ deriva diretamente da \textbf{Questão 1 da Lista 01}: uma vez que as cartas são suavemente compatíveis, elas pertencem e determinam um único atlas suave maximal para $E$.
 }
+
 %%%% QUESTÃO 02 %%%%
 \questao{Mostre que a seção zero de qualquer fibrado vetorial suave é suave.
 }
@@ -209,6 +212,7 @@
 	
 	Visto que o ponto $p$ foi tomado arbitrariamente em $M^n$, a aplicação $\sigma$ é localmente suave na vizinhança de absolutamente todos os pontos de $M^n$. Logo, a seção zero $\sigma: M^n \to E$ é globalmente suave em todo o fibrado.
 }
+
 %%%% QUESTÃO 03 %%%%	
 \questao{Seja $\pi:E\rightarrow M^{n}$ um fibrado vetorial suave de posto k. Mostre que todo referencial local suave $(\sigma_{1},...,\sigma_{k})$ para E em U é associado com alguma trivialização local $\Phi:\pi^{-1}(U)\rightarrow U\times\mathbb{R}^{k}$.
 }
@@ -268,6 +272,7 @@
 	
 	Em ambas as abordagens, $\Phi: \pi^{-1}(U) \to U \times \mathbb{R}^k$ é um difeomorfismo suave que preserva as fibras e age como isomorfismo linear nelas. Portanto, $\Phi$ é a trivialização local associada ao referencial $(\sigma_i)$.
 }
+
 %%%% QUESTÃO 04 %%%%
 \questao{Seja $M^n$ uma $n$-variedade suave. Então a estrutura suave já construída no fibrado tangente $TM$ é a única com respeito a qual $\pi : TM \to M^n$ é um fibrado vetorial suave de posto $n$ sobre $M^n$ e cujos campos vetoriais coordenados são seções locais suaves.}
 
@@ -301,6 +306,7 @@
 	
 	Pela \textbf{Questão 1 da Lista 01}, dois atlas suavemente compatíveis pertencem ao mesmo atlas maximal. Portanto, a estrutura suave $\mathcal{E}$ deve coincidir com a estrutura suave canônica de $TM$. Esta prova demonstra a rigidez da estrutura do fibrado tangente: ela é inteiramente determinada pela suavidade dos campos coordenados da base.
 }
+
 %%%% QUESTÃO 05 %%%%
 \questao{
 	Seja $\pi : E \to M$ um fibrado vetorial suave de posto $k$ e suponha que $\sigma_{1}, \dots, \sigma_{m}$ sejam seções locais suaves independentes sobre um conjunto aberto $U \subset M$. Mostre que, para cada $p \in U$, existem seções suaves $\sigma_{m+1}, \dots, \sigma_{k}$ definidas em alguma vizinhança $V$ de $p$ tal que $(\sigma_{1}, \dots, \sigma_{k})$ é um referencial local suave para $E$ em $U \cap V$.
@@ -354,8 +360,10 @@
 	
 	Como $\{\sigma_\alpha(p)\}$ é base, temos $\mathcal{A}(p) \in GL(k, \mathbb{R})$. Pela continuidade de $\mathcal{A}$, a pré-imagem $\mathcal{A}^{-1}(GL(k, \mathbb{R}))$ é um aberto em $U \cap W$. Definindo $V$ como esse aberto, garantimos que $\mathcal{A}(q)$ é invertível para todo $q \in V$, o que assegura que as seções formam um referencial local suave.
 }
+
 %%% DEFINIÇÃO %%%
 Antes de procedermos à resolução da Questão, convém notar que a análise de certos problemas geométricos pode ser significativamente enriquecida se abordada sob uma perspectiva estrutural. Para viabilizar as \textbf{soluções alternativas} que apresentaremos a seguir, e para evitar a redundância de definições algébricas no corpo das provas, estabelecemos previamente o seguinte resultado fundamental. Este servirá como o suporte teórico necessário para que a transição entre a álgebra e a geometria ocorra de forma natural e rigorosa.
+
 %%%% RESULTADO EXTRA %%%%
 \resultadoextra{Álgebra dos Quatérnios ($\mathbb{H}$)}{
 	O corpo dos quatérnios $\mathbb{H}$ é uma álgebra de divisão sobre os reais com 4 dimensões. Um quatérnio $q \in \mathbb{H}$ é escrito como:
@@ -373,6 +381,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	Consequentemente, o conjunto de quatérnios unitários $\mathbb{S}^3 = \{q \in \mathbb{H} : |q| = 1\}$ forma um grupo sob a multiplicação de quatérnios, sendo, portanto, um Grupo de Lie de dimensão 3.
 }
+
 %%%% QUESTÃO 06 %%%%
 \questao{
 	Considere os seguintes campos vetoriais em $\mathbb{R}^{4}$:
@@ -435,6 +444,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	Como $\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}$ é uma base para o espaço tangente à identidade $T_1\mathbb{S}^3$, e a translação à direita em um Grupo de Lie é um difeomorfismo que preserva a independência linear, os campos $\{V_1, V_2, V_3\}$ formam obrigatoriamente um referencial global suave para $T\mathbb{S}^3$. Assim, a paralelizabilidade de $\mathbb{S}^3$ decorre da sua estrutura de Grupo de Lie.
 }
+
 %%%% QUESTÃO 07 %%%%
 \questao{Seja $M^{n}$ uma n-variedade suave e $T^{*}M$ seu fibrado cotangente. Com sua projeção natural e com a estrutura vetorial de cada fibra, mostre que TM é o único fibrado vetorial suave de posto n sobre $M^{n}$ para o qual todos os campos de covetores coordenados são seções locais suaves.}
 
@@ -490,6 +500,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	Qualquer estrutura de fibrado vetorial $\mathcal{E}$ em $T^*M$ que torne as seções coordenadas $(dx^i)$ suaves será obrigatoriamente \textbf{colada} pelas mesmas funções de transição suaves avaliadas em $GL(n, \mathbb{R})$. Como provamos na \textbf{Questão 1}, a identidade dessas funções de transição dita uma única estrutura de fibrado vetorial suave. Portanto, a estrutura $\mathcal{E}$ coincide topológica e algebricamente com a estrutura padrão.
 }
+
 %%%% QUESTÃO 08 %%%%
 \questao{Sejam $M^{n}$ uma $n$-variedade suave e $\omega:M^{n}\rightarrow T^{*}M$ uma seção áspera.
 	\begin{enumerate}[label=(\alph*)]
@@ -547,6 +558,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	A equivalência $\omega \text{ suave} \iff \omega(X) \text{ suave}$ reflete o fato de que a dualidade entre $TM$ e $T^*M$ é um isomorfismo suave de feixes. Em termos concretos, a avaliação de uma seção do fibrado dual em seções do fibrado original recupera a topologia da variedade base, permitindo a caracterização da suavidade de $\omega$ através da sua ação em campos vetoriais.
 }
+
 %%%% QUESTÃO 09 %%%%
 \questao{Se $M^{n}$ é uma $n$-variedade suave, mostre que $T^*M$ é trivial se, e somente se, $TM$ é trivial.}
 \solucao{
@@ -593,6 +605,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	\end{equation*}
 	A identidade das matrizes de transição implica que $T^*M$ também é trivial. Como a operação de inversão e transposição em $GL(n, \mathbb{R})$ é um difeomorfismo (Questão 35, Lista 01), a trivialidade de um fibrado implica a do seu dual.
 }
+
 %%%% QUESTÃO 10 %%%%
 \questao{
 	Considere $f : \mathbb{R}^3 \to \mathbb{R}$, $f(x,y,z) = x^2 + y^2 + z^2$ e a aplicação $F : \mathbb{R}^2 \to \mathbb{R}^3$ (inversa da projeção estereográfica). Calcule $F^* df$ e $d(f \circ F)$ separadamente, e verifique que são iguais.
@@ -690,3 +703,352 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 
 
 %%%% QUESTÃO 11 %%%%
+\questao{Sejam $[a, b] \subset \mathbb{R}$ e $\omega$ um campo de covetores suave em $[a, b]$. Se $t$ denota a coordenada padrão em $[a, b]$, então $\omega = f(t)dt$ para alguma função suave $f : [a, b] \to \mathbb{R}$. Definimos a integral de $\omega$ em $[a, b]$ por $\int_{[a,b]} \omega = \int_a^b f(t)dt$. Mostre que:
+	\begin{enumerate}[label=(\alph*)]
+		\item Se $\varphi : [c, d] \to [a, b]$ é um difeomorfismo crescente, então $\int_{[c,d]} \varphi^* \omega = \int_{[a,b]} \omega$.
+		\item Se $\varphi : [c, d] \to [a, b]$ é um difeomorfismo decrescente, então $\int_{[c,d]} \varphi^* \omega = -\int_{[a,b]} \omega$.
+\end{enumerate}}
+
+\solucao{
+	
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\omega = f(t)dt$ é uma 1-forma suave em $[a,b]$. $\varphi : [c,d] \to [a,b]$ é um difeomorfismo (aplicação suave, bijetiva, com inversa suave). 
+		\item \textbf{Tese:} Provar que a integral do pullback $\varphi^* \omega$ sobre $[c,d]$ coincide com a integral de $\omega$ sobre $[a,b]$ se $\varphi$ for crescente, e é a negativa desta se $\varphi$ for decrescente.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Pullback de 1-formas (Lee, Cap. 6):} Se $\omega = f dt$ é uma 1-forma em $\mathbb{R}$ e $\varphi : M \to \mathbb{R}$ é uma aplicação suave, o pullback é dado por $\varphi^* \omega = (f \circ \varphi) d\varphi$. Em coordenadas locais $t$ para $[c,d]$, temos $d\varphi = \tfrac{d\varphi}{dt} dt$.
+		\item \textbf{Teorema de Mudança de Variável (Cálculo):} Para funções integráveis, $\int_{\varphi(c)}^{\varphi(d)} f(u) du = \int_c^d f(\varphi(t)) \varphi'(t) dt$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Primeiramente, determinamos a expressão do pullback $\varphi^* \omega$. Como $\omega = f(t)dt$, temos:
+	\begin{equation*}
+		\varphi^* \omega = \varphi^*(f(t)dt) = (f \circ \varphi)(t) d(\varphi(t)) = f(\varphi(t)) \varphi'(t) dt.
+	\end{equation*}
+	A integral de $\varphi^* \omega$ sobre o intervalo $[c,d]$ é, por definição:
+	\begin{equation*}
+		\int_{[c,d]} \varphi^* \omega = \int_c^d f(\varphi(t)) \varphi'(t) dt.
+	\end{equation*}
+	
+	\textit{Análise do caso (a): $\varphi$ é um difeomorfismo crescente.}
+	Como $\varphi$ é crescente e bijetiva de $[c,d]$ para $[a,b]$, temos obrigatoriamente $\varphi(c) = a$ e $\varphi(d) = b$. Aplicando o Teorema de Mudança de Variável com a substituição $u = \varphi(t)$:
+	\begin{equation*}
+		\int_c^d f(\varphi(t)) \varphi'(t) dt = \int_{\varphi(c)}^{\varphi(d)} f(u) du = \int_a^b f(u) du = \int_{[a,b]} \omega.
+	\end{equation*}
+	
+	\textit{Análise do caso (b): $\varphi$ é um difeomorfismo decrescente.}
+	Como $\varphi$ é decrescente e bijetiva de $[c,d]$ para $[a,b]$, temos obrigatoriamente $\varphi(c) = b$ e $\varphi(d) = a$. Aplicando novamente o Teorema de Mudança de Variável:
+	\begin{equation*}
+		\int_c^d f(\varphi(t)) \varphi'(t) dt = \int_{\varphi(c)}^{\varphi(d)} f(u) du = \int_b^a f(u) du.
+	\end{equation*}
+	Utilizando a propriedade de inversão dos limites de integração $\int_b^a = -\int_a^b$, obtemos:
+	\begin{equation*}
+		\int_b^a f(u) du = - \int_a^b f(u) du = - \int_{[a,b]} \omega.
+	\end{equation*}
+	Ambos os casos foram demonstrados exaustivamente.
+}
+
+%%%% QUESTÃO 12 %%%%
+\questao{Seja $M^n$ uma variedade suave. Se $\gamma : [a, b] \to M^n$ é uma curva suave em $M^n$ e $\omega$ é um campo de covetores em $M^n$, então definimos a integral de linha de $\omega$ sobre $\gamma$ por $\int_\gamma \omega = \int_{[a,b]} \gamma^* \omega$. Mostre que $\int_\gamma \omega = \int_a^b \omega_{\gamma(t)}(\gamma'(t)) dt$.}
+
+\solucao{
+	
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma $n$-variedade suave; $\gamma : [a, b] \to M^n$ é uma curva suave; $\omega \in \mathfrak{X}^*(M^n)$ é um campo de covetores suave.
+		\item \textbf{Tese:} Provar que a definição de integral de linha via pullback, $\int_{[a,b]} \gamma^* \omega$, coincide com a integral de Riemann da função $t \mapsto \omega_{\gamma(t)}(\gamma'(t))$ sobre o intervalo $[a,b]$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definição de Integral em Intervalos (Questão 11, Lista 03):} Estabelecemos que, para qualquer campo de covetores $\eta$ em $[a,b]$, se $\eta = f(t) dt$, então $\int_{[a,b]} \eta = \int_a^b f(t) dt$.
+		\item \textbf{Pullback de campos de covetores (Lee, Cap. 6):} O pullback $\gamma^* \omega$ é o campo de covetores em $[a,b]$ definido por $(\gamma^* \omega)_t(X) = \omega_{\gamma(t)}(d\gamma_t X)$ para todo $X \in T_t [a,b]$.
+		\item \textbf{Vetor Velocidade (Lee, Cap. 6):} Para uma curva suave $\gamma$, o vetor velocidade $\gamma'(t)$ é definido como a imagem do vetor base $\tfrac{\partial}{\partial t} \in T_t [a,b]$ pela diferencial de $\gamma$, ou seja, $\gamma'(t) = d\gamma_t(\tfrac{\partial}{\partial t})$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Seja $\eta = \gamma^* \omega$. Como $\eta$ é um campo de covetores em $[a,b]$, ele pode ser escrito na forma $\eta = f(t) dt$, onde $f(t)$ é a função obtida ao avaliar $\eta$ no campo de vetores coordenado $\tfrac{\partial}{\partial t}$. Calculamos então essa função:
+	\begin{align*}
+		f(t) &= \eta_t \left( \left. \tfrac{\partial}{\partial t} \right|_t \right) \\
+		&= (\gamma^* \omega)_t \left( \left. \tfrac{\partial}{\partial t} \right|_t \right) \\
+		&= \omega_{\gamma(t)} \left( d\gamma_t \left( \left. \tfrac{\partial}{\partial t} \right|_t \right) \right).
+	\end{align*}
+	
+	Pela definição de vetor velocidade $\gamma'(t)$ citada na fundamentação, temos que $d\gamma_t(\tfrac{\partial}{\partial t}) = \gamma'(t)$. Substituindo este resultado na expressão acima, obtemos:
+	\begin{equation*}
+		f(t) = \omega_{\gamma(t)}(\gamma'(t)).
+	\end{equation*}
+	
+	Portanto, o campo de covetores $\gamma^* \omega$ em $[a,b]$ é dado por:
+	\begin{equation*}
+		\gamma^* \omega = \omega_{\gamma(t)}(\gamma'(t)) dt.
+	\end{equation*}
+	
+	Agora, aplicando a definição de integral em intervalos estabelecida na \textbf{Questão 11}, temos:
+	\begin{align*}
+		\int_\gamma \omega &= \int_{[a,b]} \gamma^* \omega \\
+		&= \int_{[a,b]} \omega_{\gamma(t)}(\gamma'(t)) dt \\
+		&= \int_a^b \omega_{\gamma(t)}(\gamma'(t)) dt.
+	\end{align*}
+	A igualdade está demonstrada.
+}
+
+%%%% QUESTÃO 13 %%%%
+\questao{Sejam $M = \mathbb{R}^2 \setminus \{0\}$, $\omega = \frac{xdy - ydx}{x^2 + y^2} \in \mathfrak{X}^*(M)$ e $\gamma(t) = (\cos t, \sin t)$, $t \in [0, 2\pi]$. Calcule $\int_\gamma \omega$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} A variedade é o plano menos a origem $M = \mathbb{R}^2 \setminus \{0\}$; o campo de covetores é $\omega = \frac{x}{x^2+y^2}dy - \frac{y}{x^2+y^2}dx$; a curva é o círculo unitário $\gamma : [0, 2\pi] \to M$ dada por $\gamma(t) = (\cos t, \sin t)$.
+		\item \textbf{Tese:} Calcular o valor real da integral de linha $\int_\gamma \omega$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Cálculo da Integral de Linha (Questão 12, Lista 03):} Para calcular a integral de linha de um campo de covetores $\omega$ sobre uma curva $\gamma$, utilizamos a fórmula:
+		\begin{equation*}
+			\int_\gamma \omega = \int_a^b \omega_{\gamma(t)}(\gamma'(t)) dt.
+		\end{equation*}
+		\item \textbf{Avaliação de Covetores em $\mathbb{R}^n$:} Se $\omega = A(x,y)dx + B(x,y)dy$ e $X = X^1 \frac{\partial}{\partial x} + X^2 \frac{\partial}{\partial y}$, então $$\omega_p(X_p) = A(p)X^1(p) + B(p)X^2(p).$$
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Primeiramente, identificamos as componentes do campo de covetores $\omega$ e a parametrização da curva $\gamma$. Temos:
+	\begin{equation*}
+		\omega = \underbrace{\left( \frac{-y}{x^2+y^2} \right)}_{A(x,y)} dx + \underbrace{\left( \frac{x}{x^2+y^2} \right)}_{B(x,y)} dy.
+	\end{equation*}
+	
+	Para a curva $\gamma(t) = (\cos t, \sin t)$, as coordenadas são $x(t) = \cos t$ e $y(t) = \sin t$. O vetor velocidade $\gamma'(t)$ é dado por:
+	\begin{equation*}
+		\gamma'(t) = \frac{d}{dt}(\cos t) \frac{\partial}{\partial x} + \frac{d}{dt}(\sin t) \frac{\partial}{\partial y} = -\sin t \frac{\partial}{\partial x} + \cos t \frac{\partial}{\partial y}.
+	\end{equation*}
+	
+	Agora, avaliamos o campo de covetores $\omega$ no ponto $\gamma(t)$ e o aplicamos ao vetor $\gamma'(t)$. Note que, sobre a curva $\gamma$, temos $x^2+y^2 = \cos^2 t + \sin^2 t = 1$. Assim:
+	\begin{align*}
+		\omega_{\gamma(t)}(\gamma'(t)) &= A(x(t), y(t)) \cdot x'(t) + B(x(t), y(t)) \cdot y'(t) \\
+		&= \left( \frac{-\sin t}{1} \right)(-\sin t) + \left( \frac{\cos t}{1} \right)(\cos t) \\
+		&= \sin^2 t + \cos^2 t \\
+		&= 1.
+	\end{align*}
+	
+	Finalmente, substituímos este resultado na fórmula da integral de linha:
+	\begin{align*}
+		\int_\gamma \omega &= \int_0^{2\pi} \omega_{\gamma(t)}(\gamma'(t)) dt \\
+		&= \int_0^{2\pi} 1 \, dt \\
+		&= \left[ t \right]_0^{2\pi} \\
+		&= 2\pi.
+	\end{align*}
+	O valor da integral de linha é $2\pi$.
+}
+
+%%%% QUESTÃO 14 %%%%
+\questao{Sejam $\gamma : [a, b] \to M^n$ e $\tilde{\gamma} : [c, d] \to M^n$ segmentos de curvas suaves em $M^n$. Dizemos que $\tilde{\gamma}$ é uma reparametrização de $\gamma$ se $\tilde{\gamma} = \gamma \circ \varphi$, para algum difeomorfismo $\varphi : [c, d] \to [a, b]$. Se $\varphi$ é crescente (decrescente), dizemos que $\tilde{\gamma}$ é uma reparametrização para frente (para trás). Mostre que, se $\omega \in \mathfrak{X}^*(M)$, então para qualquer reparametrização $\tilde{\gamma}$ de $\gamma$ temos:
+	\begin{enumerate}[label=(\alph*)]
+		\item $\int_{\tilde{\gamma}} \omega = \int_{\gamma} \omega$, se $\varphi$ é reparametrização para frente.
+		\item $\int_{\tilde{\gamma}} \omega = -\int_{\gamma} \omega$, se $\varphi$ é reparametrização para trás.
+\end{enumerate}}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\gamma$ e $\tilde{\gamma}$ são curvas suaves; $\omega$ é um campo de covetores suave em $M^n$; $\tilde{\gamma}$ é definida pela composição $\gamma \circ \varphi$, onde $\varphi : [c, d] \to [a, b]$ é um difeomorfismo.
+		\item \textbf{Tese:} Provar a invariância da integral de linha sob reparametrizações, distinguindo os casos de preservação (crescente) e inversão (decrescente) de orientação.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definição de Integral de Linha (Questão 12, Lista 03):} $\int_{\gamma} \omega = \int_{[a,b]} \gamma^* \omega$.
+		\item \textbf{Composição de Pullbacks (Lee, Cap. 6):} Para aplicações suaves $F$ e $G$, temos $(F \circ G)^* \omega = G^* (F^* \omega)$. No nosso caso, $\tilde{\gamma}^* \omega = (\gamma \circ \varphi)^* \omega = \varphi^* (\gamma^* \omega)$.
+		\item \textbf{Invariância da Integral em Intervalos (Questão 11, Lista 03):} Se $\eta$ é um campo de covetores em $[a,b]$ e $\varphi : [c,d] \to [a,b]$ é um difeomorfismo, então $\int_{[c,d]} \varphi^* \eta = \int_{[a,b]} \eta$ se $\varphi$ for crescente, e $\int_{[c,d]} \varphi^* \eta = -\int_{[a,b]} \eta$ se $\varphi$ for decrescente.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Iniciamos aplicando a definição de integral de linha para a curva $\tilde{\gamma}$:
+	\begin{equation*}
+		\int_{\tilde{\gamma}} \omega = \int_{[c,d]} \tilde{\gamma}^* \omega.
+	\end{equation*}
+	Utilizando a hipótese de que $\tilde{\gamma} = \gamma \circ \varphi$ e a propriedade de composição de pullbacks citada na fundamentação, temos:
+	\begin{equation*}
+		\tilde{\gamma}^* \omega = (\gamma \circ \varphi)^* \omega = \varphi^* (\gamma^* \omega).
+	\end{equation*}
+	Seja $\eta = \gamma^* \omega$ o campo de covetores resultante do pullback de $\omega$ por $\gamma$. Note que $\eta$ é um campo de covetores suave definido no intervalo $[a,b]$. Substituindo $\eta$ na expressão da integral, obtemos:
+	\begin{equation*}
+		\int_{\tilde{\gamma}} \omega = \int_{[c,d]} \varphi^* \eta.
+	\end{equation*}
+	
+	Agora, aplicamos o resultado provado na \textbf{Questão 11} para a integral de $\eta$ sob o difeomorfismo $\varphi$:
+	
+	\textit{Caso (a): $\varphi$ é uma reparametrização para frente (crescente).}
+	Pela Questão 11(a), sabemos que $\int_{[c,d]} \varphi^* \eta = \int_{[a,b]} \eta$. Logo:
+	\begin{equation*}
+		\int_{\tilde{\gamma}} \omega = \int_{[a,b]} \gamma^* \omega = \int_{\gamma} \omega.
+	\end{equation*}
+	
+	\textit{Caso (b): $\varphi$ é uma reparametrização para trás (decrescente).}
+	Pela Questão 11(b), sabemos que $\int_{[c,d]} \varphi^* \eta = -\int_{[a,b]} \eta$. Logo:
+	\begin{equation*}
+		\int_{\tilde{\gamma}} \omega = -\int_{[a,b]} \gamma^* \omega = -\int_{\gamma} \omega.
+	\end{equation*}
+	A demonstração está completa.
+}
+
+%%%% QUESTÃO 15 %%%%
+\questao{(Teorema Fundamental das integrais de linha) Sejam $M^n$ uma variedade suave, $f \in C^\infty(M)$ e $\gamma : [a, b] \to M^n$ um segmento de curva suave em $M^n$. Mostre que $\int_\gamma df = f(\gamma(b)) - f(\gamma(a))$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma $n$-variedade suave; $f$ é uma função suave em $M^n$ (logo, $df \in \mathfrak{X}^*(M)$ é um campo de covetores suave); $\gamma : [a, b] \to M^n$ é um segmento de curva suave.
+		\item \textbf{Tese:} Provar que a integral de linha do campo de covetores $df$ ao longo de $\gamma$ é igual à diferença dos valores de $f$ nos pontos extremidades da curva.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definição de Integral de Linha (Questão 12, Lista 03):} Para um campo de covetores $\omega$, temos $\int_\gamma \omega = \int_a^b \omega_{\gamma(t)}(\gamma'(t)) dt$. Aplicando ao caso $\omega = df$, temos $\int_\gamma df = \int_a^b df_{\gamma(t)}(\gamma'(t)) dt$.
+		\item \textbf{A Diferencial como Derivação (Lista 02):} Por definição, a diferencial $df$ atua sobre um vetor tangente $X \in T_p M$ como a derivada de $f$ na direção de $X$. Assim, para o vetor velocidade $\gamma'(t) \in T_{\gamma(t)} M$, temos:
+		\begin{equation*}
+			df_{\gamma(t)}(\gamma'(t)) = \gamma'(t)(f).
+		\end{equation*}
+		\item \textbf{Regra da Cadeia para Curvas (Lee, Cap. 3):} A ação do vetor velocidade $\gamma'(t)$ sobre uma função suave $f$ é exatamente a derivada da composição $f \circ \gamma$ em relação ao parâmetro $t$:
+		\begin{equation*}
+			\gamma'(t)(f) = \frac{d}{dt}(f \circ \gamma)(t).
+		\end{equation*}
+		\item \textbf{Teorema Fundamental do Cálculo (TFC):} Para qualquer função $h : [a,b] \to \mathbb{R}$ com derivada contínua, $\int_a^b h'(t) dt = h(b) - h(a)$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Partimos da definição de integral de linha para o campo de covetores $df$:
+	\begin{equation*}
+		\int_\gamma df = \int_a^b df_{\gamma(t)}(\gamma'(t)) dt.
+	\end{equation*}
+	
+	Utilizando a fundamentação teórica (item 2), substituímos a avaliação do covetor $df$ pelo operador de derivação $\gamma'(t)$:
+	\begin{equation*}
+		\int_\gamma df = \int_a^b \gamma'(t)(f) dt.
+	\end{equation*}
+	
+	Agora, aplicamos a Regra da Cadeia (item 3), reconhecendo que a expressão $\gamma'(t)(f)$ é a derivada da função escalar $h(t) = (f \circ \gamma)(t)$ definida no intervalo $[a,b]$:
+	\begin{equation*}
+		\int_\gamma df = \int_a^b \frac{d}{dt}(f \circ \gamma)(t) dt.
+	\end{equation*}
+	
+	Finalmente, aplicando o Teorema Fundamental do Cálculo à função $h(t) = f(\gamma(t))$, obtemos:
+	\begin{align*}
+		\int_\gamma df &= (f \circ \gamma)(b) - (f \circ \gamma)(a) \\
+		&= f(\gamma(b)) - f(\gamma(a)).
+	\end{align*}
+	A tese está provada.
+}
+
+%%%% QUESTÃO 16 %%%%
+\questao{Sejam $M^n$ e $N^m$ variedades suaves, $F : M^n \to N^m$ uma aplicação suave, $\omega \in \mathfrak{X}^*(N)$ e $\gamma : [a, b] \to M^n$ um segmento de curva suave por partes em $M^n$. Mostre que $\int_{\gamma} F^* \omega = \int_{F \circ \gamma} \omega$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ e $N^m$ são variedades suaves; $F : M^n \to N^m$ é uma aplicação suave; $\omega \in \mathfrak{X}^*(N)$ é um campo de covetores suave em $N$; $\gamma : [a, b] \to M^n$ é um segmento de curva suave por partes.
+		\item \textbf{Tese:} Provar que a integral de linha do pullback $F^* \omega$ ao longo de $\gamma$ é igual à integral de linha de $\omega$ ao longo da curva composta $\sigma = F \circ \gamma$ em $N$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definição de Integral de Linha (Questão 12, Lista 03):} Para qualquer campo de covetores $\eta$ e curva $\gamma$, $\int_{\gamma} \eta = \int_a^b \eta_{\gamma(t)}(\gamma'(t)) dt$.
+		\item \textbf{Definição de Pullback de Campos de Covetores (Lee, Cap. 6):} O pullback $F^* \omega$ é o campo de covetores em $M$ definido pontualmente por $(F^* \omega)_p(X) = \omega_{F(p)}(dF_p X)$ para todo $X \in T_p M$.
+		\item \textbf{Diferencial de Composição (Regra da Cadeia):} Seja $\sigma = F \circ \gamma$ a imagem de $\gamma$ em $N$. O vetor velocidade de $\sigma$ no ponto $t$ é dado por:
+		\begin{equation*}
+			\sigma'(t) = dF_{\gamma(t)}(\gamma'(t)).
+		\end{equation*}
+		\item \textbf{Aditividade da Integral:} Como a integral de linha é a soma das integrais sobre cada segmento suave de $\gamma$, basta provar a igualdade para um único segmento suave $\gamma : [a,b] \to M^n$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Seja $\gamma : [a,b] \to M^n$ um segmento suave. Aplicamos a definição de integral de linha ao campo de covetores $F^* \omega$ ao longo de $\gamma$:
+	\begin{equation*}
+		\int_{\gamma} F^* \omega = \int_a^b (F^* \omega)_{\gamma(t)}(\gamma'(t)) dt.
+	\end{equation*}
+	
+	Agora, utilizamos a definição de pullback citada na fundamentação (item 2), avaliando o covetor $(F^* \omega)$ no ponto $p = \gamma(t)$ e aplicando-o ao vetor $X = \gamma'(t)$:
+	\begin{equation*}
+		(F^* \omega)_{\gamma(t)}(\gamma'(t)) = \omega_{F(\gamma(t))} \left( dF_{\gamma(t)} (\gamma'(t)) \right).
+	\end{equation*}
+	
+	Definimos a curva $\sigma : [a,b] \to N^m$ como $\sigma = F \circ \gamma$. Pela regra da cadeia (item 3), o vetor velocidade de $\sigma$ é precisamente $\sigma'(t) = dF_{\gamma(t)}(\gamma'(t))$. Substituindo estas expressões na integral, obtemos:
+	\begin{equation*}
+		\int_{\gamma} F^* \omega = \int_a^b \omega_{\sigma(t)}(\sigma'(t)) dt.
+	\end{equation*}
+	
+	Reconhecemos que a expressão à direita é, por definição (Questão 12), a integral de linha do campo de covetores $\omega$ ao longo da curva $\sigma = F \circ \gamma$:
+	\begin{equation*}
+		\int_a^b \omega_{\sigma(t)}(\sigma'(t)) dt = \int_{\sigma} \omega = \int_{F \circ \gamma} \omega.
+	\end{equation*}
+	
+	Assim, provamos que $\int_{\gamma} F^* \omega = \int_{F \circ \gamma} \omega$ para um segmento suave. Pela aditividade da integral, o resultado estende-se a qualquer curva suave por partes.
+}
+
+%%%% QUESTÃO 17 %%%%
+\questao{Mostre que a composição de submersões é uma submersão, a composição de imersões é uma imersão e que a composição de mergulhos suaves é um mergulho suave.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} Sejam $M, N, P$ variedades suaves. Consideremos aplicações suaves $F : M \to N$ e $G : N \to P$. 
+		\item \textbf{Tese:} 
+		\begin{enumerate}[label=(\roman*)]
+			\item Se $F$ e $G$ são submersões, então $G \circ F$ é uma submersão.
+			\item Se $F$ e $G$ são imersões, então $G \circ F$ é uma imersão.
+			\item Se $F$ e $G$ são mergulhos suaves, então $G \circ F$ é um mergulho suave.
+		\end{enumerate}
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definições (Lee, Cap. 7):}
+		\begin{itemize}
+			\item Uma aplicação $F: M \to N$ é uma \textbf{imersão} se $dF_p : T_p M \to T_{F(p)} N$ é injetiva para todo $p \in M$.
+			\item Uma aplicação $F: M \to N$ é uma \textbf{submersão} se $dF_p : T_p M \to T_{F(p)} N$ é sobrejetiva para todo $p \in M$.
+			\item Uma aplicação $F: M \to N$ é um \textbf{mergulho suave} se é uma imersão e um homeomorfismo sobre sua imagem $F(M)$ (munida da topologia de subespaço de $N$).
+		\end{itemize}
+		\item \textbf{Regra da Cadeia (Lee, Cap. 3):} Para a composição $G \circ F$, a diferencial no ponto $p \in M$ é dada pela composição das diferenciais:
+		\begin{equation*}
+			d(G \circ F)_p = dG_{F(p)} \circ dF_p.
+		\end{equation*}
+		\item \textbf{Álgebra Linear:} A composição de duas aplicações lineares injetivas é injetiva; a composição de duas aplicações lineares sobrejetivas é sobrejetiva.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textit{Parte (i): Composição de Submersões.}
+	Sejam $F: M \to N$ e $G: N \to P$ submersões. Por definição, para qualquer $p \in M$, a aplicação $dF_p : T_p M \to T_{F(p)} N$ é sobrejetiva, e para qualquer $q \in N$ (incluindo $q = F(p)$), a aplicação $dG_q : T_q N \to T_{G(q)} P$ é sobrejetiva. 
+	Pela Regra da Cadeia:
+	\begin{equation*}
+		d(G \circ F)_p = dG_{F(p)} \circ dF_p.
+	\end{equation*}
+	Como a composição de duas aplicações lineares sobrejetivas é sobrejetiva, $d(G \circ F)_p$ é sobrejetiva para todo $p \in M$. Portanto, $G \circ F$ é uma submersão.
+	
+	\textit{Parte (ii): Composição de Imersões.}
+	Sejam $F: M \to N$ e $G: N \to P$ imersões. Por definição, $dF_p$ é injetiva para todo $p \in M$ e $dG_{F(p)}$ é injetiva para todo $p \in M$. 
+	Novamente, pela Regra da Cadeia:
+	\begin{equation*}
+		d(G \circ F)_p = dG_{F(p)} \circ dF_p.
+	\end{equation*}
+	Como a composição de duas aplicações lineares injetivas é injetiva, $d(G \circ F)_p$ é injetiva para todo $p \in M$. Portanto, $G \circ F$ é uma imersão.
+	
+	\textit{Parte (iii): Composição de Mergulhos Suaves.}
+	Sejam $F: M \to N$ e $G: N \to P$ mergulhos suaves.
+	1. Pela Parte (ii), como $F$ e $G$ são imersões, a composição $G \circ F$ é uma imersão.
+	2. Sobre a topologia: $F$ é um homeomorfismo entre $M$ e $F(M) \subseteq N$, e $G$ é um homeomorfismo entre $N$ e $G(N) \subseteq P$. A restrição de $G$ ao subespaço $F(M)$ é, portanto, um homeomorfismo entre $F(M)$ e $G(F(M))$. 
+	A composição de dois homeomorfismos é um homeomorfismo. Logo, $G \circ F$ é um homeomorfismo entre $M$ e a sua imagem $(G \circ F)(M) \subseteq P$.
+	
+	Sendo $G \circ F$ uma imersão e um homeomorfismo sobre sua imagem, conclui-se que $G \circ F$ é um mergulho suave.
+}
+
+%%%% QUESTÃO 18 %%%%
