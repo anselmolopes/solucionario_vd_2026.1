@@ -799,12 +799,12 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 }
 
 %%%% QUESTÃO 13 %%%%
-\questao{Sejam $M = \mathbb{R}^2 \setminus \{0\}$, $\omega = \frac{xdy - ydx}{x^2 + y^2} \in \mathfrak{X}^*(M)$ e $\gamma(t) = (\cos t, \sin t)$, $t \in [0, 2\pi]$. Calcule $\int_\gamma \omega$.}
+\questao{Sejam $M = \mathbb{R}^2 \setminus \{0\}$, $\omega = \frac{xdy - ydx}{x^2 + y^2} \in \mathfrak{X}^*(M)$ e $\gamma(t) = (\cos t, \sen t)$, $t \in [0, 2\pi]$. Calcule $\int_\gamma \omega$.}
 
 \solucao{
 	\textbf{Análise do Enunciado:}
 	\begin{itemize}
-		\item \textbf{Hipóteses:} A variedade é o plano menos a origem $M = \mathbb{R}^2 \setminus \{0\}$; o campo de covetores é $$\omega = \frac{x}{x^2+y^2}dy - \frac{y}{x^2+y^2}dx;$$ a curva é o círculo unitário $\gamma : [0, 2\pi] \to M$ dada por $\gamma(t) = (\cos t, \sin t)$.
+		\item \textbf{Hipóteses:} A variedade é o plano menos a origem $M = \mathbb{R}^2 \setminus \{0\}$; o campo de covetores é $$\omega = \frac{x}{x^2+y^2}dy - \frac{y}{x^2+y^2}dx;$$ a curva é o círculo unitário $\gamma : [0, 2\pi] \to M$ dada por $\gamma(t) = (\cos t, \sen t)$.
 		\item \textbf{Tese:} Calcular o valor real da integral de linha $\int_\gamma \omega$.
 	\end{itemize}
 	
@@ -824,16 +824,16 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 		\omega = \underbrace{\left( \frac{-y}{x^2+y^2} \right)}_{A(x,y)} dx + \underbrace{\left( \frac{x}{x^2+y^2} \right)}_{B(x,y)} dy.
 	\end{equation*}
 	
-	Para a curva $\gamma(t) = (\cos t, \sin t)$, as coordenadas são $x(t) = \cos t$ e $y(t) = \sin t$. O vetor velocidade $\gamma'(t)$ é dado por:
+	Para a curva $\gamma(t) = (\cos t, \sen t)$, as coordenadas são $x(t) = \cos t$ e $y(t) = \sen t$. O vetor velocidade $\gamma'(t)$ é dado por:
 	\begin{equation*}
-		\gamma'(t) = \frac{d}{dt}(\cos t) \frac{\partial}{\partial x} + \frac{d}{dt}(\sin t) \frac{\partial}{\partial y} = -\sin t \frac{\partial}{\partial x} + \cos t \frac{\partial}{\partial y}.
+		\gamma'(t) = \frac{d}{dt}(\cos t) \frac{\partial}{\partial x} + \frac{d}{dt}(\sen t) \frac{\partial}{\partial y} = -\sen t \frac{\partial}{\partial x} + \cos t \frac{\partial}{\partial y}.
 	\end{equation*}
 	
-	Agora, avaliamos o campo de covetores $\omega$ no ponto $\gamma(t)$ e o aplicamos ao vetor $\gamma'(t)$. Note que, sobre a curva $\gamma$, temos $x^2+y^2 = \cos^2 t + \sin^2 t = 1$. Assim:
+	Agora, avaliamos o campo de covetores $\omega$ no ponto $\gamma(t)$ e o aplicamos ao vetor $\gamma'(t)$. Note que, sobre a curva $\gamma$, temos $x^2+y^2 = \cos^2 t + \sen^2 t = 1$. Assim:
 	\begin{align*}
 		\omega_{\gamma(t)}(\gamma'(t)) &= A(x(t), y(t)) \cdot x'(t) + B(x(t), y(t)) \cdot y'(t) \\
-		&= \left( \frac{-\sin t}{1} \right)(-\sin t) + \left( \frac{\cos t}{1} \right)(\cos t) \\
-		&= \sin^2 t + \cos^2 t \\
+		&= \left( \frac{-\sen t}{1} \right)(-\sen t) + \left( \frac{\cos t}{1} \right)(\cos t) \\
+		&= \sen^2 t + \cos^2 t \\
 		&= 1.
 	\end{align*}
 	
@@ -1090,7 +1090,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 }
 
 %%%% QUESTÃO 19 %%%%
-\questao{Mostre que a aplicação $f : (1, +\infty) \to \mathbb{R}^2$ dada por $f(t) = \left( \tfrac{1}{t} \cos(2\pi t), \tfrac{1}{t} \sin(2\pi t) \right)$ é um mergulho suave.}
+\questao{Mostre que a aplicação $f : (1, +\infty) \to \mathbb{R}^2$ dada por $f(t) = \left( \tfrac{1}{t} \cos(2\pi t), \tfrac{1}{t} \sen(2\pi t) \right)$ é um mergulho suave.}
 
 \solucao{
 	\textbf{Análise do Enunciado:}
@@ -1112,7 +1112,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	
 	\textit{2. Imersão:} Calculamos a diferencial $df_t$, representada pelo vetor velocidade $f'(t)$:
 	\begin{align*}
-		f'(t) &= \left( -\tfrac{1}{t^2} \cos(2\pi t) - \tfrac{2\pi}{t} \sin(2\pi t), -\tfrac{1}{t^2} \sin(2\pi t) + \tfrac{2\pi}{t} \cos(2\pi t) \right).
+		f'(t) &= \left( -\tfrac{1}{t^2} \cos(2\pi t) - \tfrac{2\pi}{t} \sen(2\pi t), -\tfrac{1}{t^2} \sen(2\pi t) + \tfrac{2\pi}{t} \cos(2\pi t) \right).
 	\end{align*}
 	Analisando a norma ao quadrado:
 	\begin{equation*}
@@ -1123,7 +1123,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	\textit{3. Injetividade:} Se $f(t_1) = f(t_2)$, então a norma $\|f(t)\|=1/t$ implica $\tfrac{1}{t_1} = \tfrac{1}{t_2} \implies t_1 = t_2$. Logo, $f$ é injetiva.
 	
 	\textit{4. Homeomorfismo sobre a imagem:} Para provar que $f : I \to f(I)$ é um homeomorfismo, devemos mostrar que a aplicação inversa $f^{-1} : f(I) \to I$ é contínua. 
-	Seja $p = (x,y) \in f(I)$. Pela definição de $f(t)$, temos que a norma do vetor é $\|f(t)\| = \sqrt{\tfrac{1}{t^2}(\cos^2(2\pi t) + \sin^2(2\pi t))} = \tfrac{1}{t}$. 
+	Seja $p = (x,y) \in f(I)$. Pela definição de $f(t)$, temos que a norma do vetor é $\|f(t)\| = \sqrt{\tfrac{1}{t^2}(\cos^2(2\pi t) + \sen^2(2\pi t))} = \tfrac{1}{t}$. 
 	Portanto, para qualquer ponto $p \in f(I)$, o valor do parâmetro $t$ é univocamente determinado por:
 	\begin{equation*}
 		t = \frac{1}{\|p\|} = \frac{1}{\sqrt{x^2+y^2}}.
@@ -1162,7 +1162,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 			
 			% 5. Legenda
 			% Legenda
-			\node at (0, -1.3) {\small $\gamma(t) = \left( \frac{1}{t}\cos(2\pi t), \frac{1}{t}\sin(2\pi t) \right)$};
+			\node at (0, -1.3) {\small $\gamma(t) = \left( \frac{1}{t}\cos(2\pi t), \frac{1}{t}\sen(2\pi t) \right)$};
 			
 		\end{tikzpicture}
 	\end{center}
@@ -1250,7 +1250,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 }
 
 %%%% QUESTÃO 21 %%%%
-\questao{Considere a aplicação suave $X : \mathbb{R}^2 \to \mathbb{R}^3$ dada por $X(\varphi, \theta) = ( (2 + \cos \varphi) \cos \theta, (2 + \cos \varphi) \sin \theta, \sin \varphi )$. Mostre que $X$ é uma imersão cuja imagem é a superfície obtida pela rotação do círculo $(y-2)^2 + z^2 = 1$, contido no plano $yz$, ao redor do eixo $z$.}
+\questao{Considere a aplicação suave $X : \mathbb{R}^2 \to \mathbb{R}^3$ dada por $X(\varphi, \theta) = ( (2 + \cos \varphi) \cos \theta, (2 + \cos \varphi) \sen \theta, \sen \varphi )$. Mostre que $X$ é uma imersão cuja imagem é a superfície obtida pela rotação do círculo $(y-2)^2 + z^2 = 1$, contido no plano $yz$, ao redor do eixo $z$.}
 
 \solucao{
 	\textbf{Análise do Enunciado:}
@@ -1280,8 +1280,8 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 			\tfrac{\partial X_3}{\partial \varphi} & \tfrac{\partial X_3}{\partial \theta} 
 		\end{pmatrix} = 
 		\begin{pmatrix} 
-			-\sin \varphi \cos \theta & -(2 + \cos \varphi) \sin \theta \\ 
-			-\sin \varphi \sin \theta & (2 + \cos \varphi) \cos \theta \\ 
+			-\sen \varphi \cos \theta & -(2 + \cos \varphi) \sen \theta \\ 
+			-\sen \varphi \sen \theta & (2 + \cos \varphi) \cos \theta \\ 
 			\cos \varphi & 0 
 		\end{pmatrix}.
 	\end{equation*}
@@ -1290,33 +1290,33 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 		\mathbf{v}_1 \times \mathbf{v}_2 &= 
 		\begin{vmatrix} 
 			\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 
-			-\sin \varphi \cos \theta & -\sin \varphi \sin \theta & \cos \varphi \\ 
-			-(2 + \cos \varphi) \sin \theta & (2 + \cos \varphi) \cos \theta & 0 
+			-\sen \varphi \cos \theta & -\sen \varphi \sen \theta & \cos \varphi \\ 
+			-(2 + \cos \varphi) \sen \theta & (2 + \cos \varphi) \cos \theta & 0 
 		\end{vmatrix} \\
-		&= \left( -(2 + \cos \varphi)\cos \varphi \cos \theta, -(2 + \cos \varphi)\cos \varphi \sin \theta, -(2 + \cos \varphi)\sin \varphi (\cos^2 \theta + \sin^2 \theta) \right) \\
-		&= -(2 + \cos \varphi) \left( \cos \varphi \cos \theta, \cos \varphi \sin \theta, \sin \varphi \right).
+		&= \left( -(2 + \cos \varphi)\cos \varphi \cos \theta, -(2 + \cos \varphi)\cos \varphi \sen \theta, -(2 + \cos \varphi)\sen \varphi (\cos^2 \theta + \sen^2 \theta) \right) \\
+		&= -(2 + \cos \varphi) \left( \cos \varphi \cos \theta, \cos \varphi \sen \theta, \sen \varphi \right).
 	\end{align*}
-	A norma desse vetor é $\|\mathbf{v}_1 \times \mathbf{v}_2\| = |2 + \cos \varphi| \sqrt{\cos^2 \varphi (\cos^2 \theta + \sin^2 \theta) + \sin^2 \varphi} = |2 + \cos \varphi|$.
+	A norma desse vetor é $\|\mathbf{v}_1 \times \mathbf{v}_2\| = |2 + \cos \varphi| \sqrt{\cos^2 \varphi (\cos^2 \theta + \sen^2 \theta) + \sen^2 \varphi} = |2 + \cos \varphi|$.
 	Como $-1 \leq \cos \varphi \leq 1$, temos que $2 + \cos \varphi \geq 1 > 0$ para todo $\varphi$. Logo, o produto vetorial nunca é nulo, as colunas são linearmente independentes e $X$ é, portanto, uma imersão.
 	
 	\textit{2. Análise da Imagem:}
 	Sejam $(x,y,z)$ as coordenadas de um ponto na imagem de $X$. Temos:
 	\begin{equation*}
-		x = (2 + \cos \varphi) \cos \theta, \quad y = (2 + \cos \varphi) \sin \theta, \quad z = \sin \varphi.
+		x = (2 + \cos \varphi) \cos \theta, \quad y = (2 + \cos \varphi) \sen \theta, \quad z = \sen \varphi.
 	\end{equation*}
 	Calculamos a distância do ponto ao eixo $z$:
 	\begin{equation*}
-		\sqrt{x^2 + y^2} = \sqrt{(2 + \cos \varphi)^2 (\cos^2 \theta + \sin^2 \theta)} = |2 + \cos \varphi| = 2 + \cos \varphi.
+		\sqrt{x^2 + y^2} = \sqrt{(2 + \cos \varphi)^2 (\cos^2 \theta + \sen^2 \theta)} = |2 + \cos \varphi| = 2 + \cos \varphi.
 	\end{equation*}
 	Agora, observemos a relação entre $\sqrt{x^2+y^2}$ e $z$:
 	\begin{equation*}
-		(\sqrt{x^2+y^2} - 2)^2 + z^2 = (\cos \varphi)^2 + (\sin \varphi)^2 = 1.
+		(\sqrt{x^2+y^2} - 2)^2 + z^2 = (\cos \varphi)^2 + (\sen \varphi)^2 = 1.
 	\end{equation*}
 	Esta equação descreve exatamente a superfície obtida ao rotacionar o círculo $(\rho - 2)^2 + z^2 = 1$ (onde $\rho$ é a distância ao eixo $z$) ao redor do eixo $z$. No plano $yz$ (onde $x=0$), a distância $\rho$ é simplesmente $|y|$. Assim, a curva geradora é $(|y|-2)^2 + z^2 = 1$, que corresponde ao círculo $(y-2)^2 + z^2 = 1$ e sua imagem refletida. Portanto, a imagem de $X$ é o toro de revolução descrito.
 }
 
 %%%% QUESTÃO 22 %%%%
-\questao{Considere a aplicação suave $F : \mathbb{R}^3 \to \mathbb{R}^3$ dada por $F(\rho, \varphi, \theta) = (\rho \sin \varphi \cos \theta, \rho \sin \varphi \sin \theta, \rho \cos \varphi)$.
+\questao{Considere a aplicação suave $F : \mathbb{R}^3 \to \mathbb{R}^3$ dada por $F(\rho, \varphi, \theta) = (\rho \sen \varphi \cos \theta, \rho \sen \varphi \sen \theta, \rho \cos \varphi)$.
 	\begin{enumerate}[label=(\alph*)]
 		\item Encontre um conjunto aberto $U \subset \mathbb{R}^3$ de tal forma que $F : U \to \mathbb{R}^3$ seja um difeomorfismo local.
 		\item Encontre um conjunto aberto $U_0 \subset U$ de tal forma que $F : U_0 \to F(U_0)$ seja um difeomorfismo.
@@ -1350,20 +1350,20 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 			\tfrac{\partial z}{\partial \rho} & \tfrac{\partial z}{\partial \varphi} & \tfrac{\partial z}{\partial \theta} 
 		\end{pmatrix} = 
 		\begin{pmatrix} 
-			\sin \varphi \cos \theta & \rho \cos \varphi \cos \theta & -\rho \sin \varphi \sin \theta \\ 
-			\sin \varphi \sin \theta & \rho \cos \varphi \sin \theta & \rho \sin \varphi \cos \theta \\ 
-			\cos \varphi & -\rho \sin \varphi & 0 
+			\sen \varphi \cos \theta & \rho \cos \varphi \cos \theta & -\rho \sen \varphi \sen \theta \\ 
+			\sen \varphi \sen \theta & \rho \cos \varphi \sen \theta & \rho \sen \varphi \cos \theta \\ 
+			\cos \varphi & -\rho \sen \varphi & 0 
 		\end{pmatrix}.
 	\end{equation*}
 	Calculamos o determinante $\det(JF)$ expandindo pela terceira linha:
 	\begin{align*}
-		\det(JF) &= \cos \varphi \left[ (\rho \cos \varphi \cos \theta)(\rho \sin \varphi \cos \theta) - (-\rho \sin \varphi \sin \theta)(\rho \cos \varphi \sin \theta) \right] \\
-		&\quad - (-\rho \sin \varphi) \left[ (\sin \varphi \cos \theta)(\rho \sin \varphi \cos \theta) - (-\rho \sin \varphi \sin \theta)(\sin \varphi \sin \theta) \right] \\
-		&= \cos \varphi \left[ \rho^2 \sin \varphi \cos \varphi (\cos^2 \theta + \sin^2 \theta) \right] + \rho \sin \varphi \left[ \rho \sin^2 \varphi (\cos^2 \theta + \sin^2 \theta) \right] \\
-		&= \rho^2 \sin \varphi \cos^2 \varphi + \rho^2 \sin^3 \varphi \\
-		&= \rho^2 \sin \varphi (\cos^2 \varphi + \sin^2 \varphi) = \rho^2 \sin \varphi.
+		\det(JF) &= \cos \varphi \left[ (\rho \cos \varphi \cos \theta)(\rho \sen \varphi \cos \theta) - (-\rho \sen \varphi \sen \theta)(\rho \cos \varphi \sen \theta) \right] \\
+		&\quad - (-\rho \sen \varphi) \left[ (\sen \varphi \cos \theta)(\rho \sen \varphi \cos \theta) - (-\rho \sen \varphi \sen \theta)(\sen \varphi \sen \theta) \right] \\
+		&= \cos \varphi \left[ \rho^2 \sen \varphi \cos \varphi (\cos^2 \theta + \sen^2 \theta) \right] + \rho \sen \varphi \left[ \rho \sen^2 \varphi (\cos^2 \theta + \sen^2 \theta) \right] \\
+		&= \rho^2 \sen \varphi \cos^2 \varphi + \rho^2 \sen^3 \varphi \\
+		&= \rho^2 \sen \varphi (\cos^2 \varphi + \sen^2 \varphi) = \rho^2 \sen \varphi.
 	\end{align*}
-	Pelo Teorema da Função Inversa, $F$ é um difeomorfismo local onde $\det(JF) \neq 0$. Isso ocorre quando $\rho \neq 0$ e $\sin \varphi \neq 0$ (ou seja, $\varphi \neq k\pi, k \in \mathbb{Z}$). Definimos, portanto, o conjunto aberto:
+	Pelo Teorema da Função Inversa, $F$ é um difeomorfismo local onde $\det(JF) \neq 0$. Isso ocorre quando $\rho \neq 0$ e $\sen \varphi \neq 0$ (ou seja, $\varphi \neq k\pi, k \in \mathbb{Z}$). Definimos, portanto, o conjunto aberto:
 	\begin{equation*}
 		U = \{ (\rho, \varphi, \theta) \in \mathbb{R}^3 \mid \rho \in (0, \infty), \varphi \in (0, \pi) \cup (\pi, 2\pi), \theta \in \mathbb{R} \}.
 	\end{equation*}
@@ -1372,13 +1372,13 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 	Para que $F$ seja um difeomorfismo sobre sua imagem, ela deve ser, além de um difeomorfismo local, uma aplicação injetiva. Analisamos as redundâncias de $F$:
 	
 	\begin{enumerate}
-		\item \textbf{Periodicidade de $\theta$:} Note que as funções $\cos \theta$ e $\sin \theta$ são $2\pi$-periódicas. Assim, para qualquer $k \in \mathbb{Z}$, temos $F(\rho, \varphi, \theta) = F(\rho, \varphi, \theta + 2\pi k)$. Para garantir a injetividade, devemos restringir $\theta$ a um intervalo de comprimento $2\pi$, como $(0, 2\pi)$.
+		\item \textbf{Periodicidade de $\theta$:} Note que as funções $\cos \theta$ e $\sen \theta$ são $2\pi$-periódicas. Assim, para qualquer $k \in \mathbb{Z}$, temos $F(\rho, \varphi, \theta) = F(\rho, \varphi, \theta + 2\pi k)$. Para garantir a injetividade, devemos restringir $\theta$ a um intervalo de comprimento $2\pi$, como $(0, 2\pi)$.
 		
-		\item \textbf{Simetria de $\varphi$:} A coordenada $\varphi$ define o ângulo com o eixo $z$. Se tomarmos $\overline{\varphi} = 2\pi - \varphi$, temos $\sin \overline{\varphi} = -\sin \varphi$ e $\cos \overline{\varphi} = \cos \varphi$. Note que:
+		\item \textbf{Simetria de $\varphi$:} A coordenada $\varphi$ define o ângulo com o eixo $z$. Se tomarmos $\overline{\varphi} = 2\pi - \varphi$, temos $\sen \overline{\varphi} = -\sen \varphi$ e $\cos \overline{\varphi} = \cos \varphi$. Note que:
 		\begin{align*}
-			F(\rho, 2\pi - \varphi, \theta + \pi) &= (\rho \sin(2\pi - \varphi) \cos(\theta + \pi), \rho \sin(2\pi - \varphi) \sin(\theta + \pi), \rho \cos(2\pi - \varphi)) \\
-			&= (\rho (-\sin \varphi) (-\cos \theta), \rho (-\sin \varphi) (-\sin \theta), \rho \cos \varphi) \\
-			&= (\rho \sin \varphi \cos \theta, \rho \sin \varphi \sin \theta, \rho \cos \varphi) = F(\rho, \varphi, \theta).
+			F(\rho, 2\pi - \varphi, \theta + \pi) &= (\rho \sen(2\pi - \varphi) \cos(\theta + \pi), \rho \sen(2\pi - \varphi) \sen(\theta + \pi), \rho \cos(2\pi - \varphi)) \\
+			&= (\rho (-\sen \varphi) (-\cos \theta), \rho (-\sen \varphi) (-\sen \theta), \rho \cos \varphi) \\
+			&= (\rho \sen \varphi \cos \theta, \rho \sen \varphi \sen \theta, \rho \cos \varphi) = F(\rho, \varphi, \theta).
 		\end{align*}
 		Portanto, valores de $\varphi$ fora do intervalo $(0, \pi)$ podem gerar a mesma imagem que valores dentro desse intervalo, mudando-se $\theta$. Para evitar isso, restringimos $\varphi \in (0, \pi)$.
 	\end{enumerate}
@@ -1399,9 +1399,9 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 		Primeiro, calculamos a norma euclidiana da imagem:
 		\begin{align*}
 			\|F(p)\|^2 &= x^2 + y^2 + z^2 \\
-			&= (\rho \sin \varphi \cos \theta)^2 + (\rho \sin \varphi \sin \theta)^2 + (\rho \cos \varphi)^2 \\
-			&= \rho^2 \sin^2 \varphi (\cos^2 \theta + \sin^2 \theta) + \rho^2 \cos^2 \varphi \\
-			&= \rho^2 (\sin^2 \varphi + \cos^2 \varphi) = \rho^2.
+			&= (\rho \sen \varphi \cos \theta)^2 + (\rho \sen \varphi \sen \theta)^2 + (\rho \cos \varphi)^2 \\
+			&= \rho^2 \sen^2 \varphi (\cos^2 \theta + \sen^2 \theta) + \rho^2 \cos^2 \varphi \\
+			&= \rho^2 (\sen^2 \varphi + \cos^2 \varphi) = \rho^2.
 		\end{align*}
 		Como $\rho, \rho' > 0$, a igualdade $F(p) = F(p')$ implica $\rho^2 = (\rho')^2$, logo $\rho = \rho'$.
 		
@@ -1413,13 +1413,13 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 		
 		Finalmente, analisamos as componentes $x$ e $y$:
 		\begin{equation*}
-			x = \rho \sin \varphi \cos \theta, \quad y = \rho \sin \varphi \sin \theta.
+			x = \rho \sen \varphi \cos \theta, \quad y = \rho \sen \varphi \sen \theta.
 		\end{equation*}
-		Como $\rho > 0$ e $\sin \varphi > 0$ para $\varphi \in (0, \pi)$, a razão entre as componentes é:
+		Como $\rho > 0$ e $\sen \varphi > 0$ para $\varphi \in (0, \pi)$, a razão entre as componentes é:
 		\begin{equation*}
-			\frac{y}{x} = \frac{\rho \sin \varphi \sin \theta}{\rho \sin \varphi \cos \theta} = \tan \theta.
+			\frac{y}{x} = \frac{\rho \sen \varphi \sen \theta}{\rho \sen \varphi \cos \theta} = \tg \theta.
 		\end{equation*}
-		Visto que $\theta \in (0, 2\pi)$ e temos os sinais de $\sin \theta$ e $\cos \theta$ definidos por $y$ e $x$, o valor de $\theta$ é univocamente determinado. Logo, $\theta = \theta'$.
+		Visto que $\theta \in (0, 2\pi)$ e temos os sinais de $\sen \theta$ e $\cos \theta$ definidos por $y$ e $x$, o valor de $\theta$ é univocamente determinado. Logo, $\theta = \theta'$.
 	\end{enumerate}
 	
 	Sendo $F$ injetiva em $U_0$ e um difeomorfismo local em cada ponto de $U_0$, conclui-se, pelo Teorema da Função Inversa, que $F : U_0 \to F(U_0)$ é um difeomorfismo.
@@ -1451,7 +1451,7 @@ Antes de procedermos à resolução da Questão, convém notar que a análise de
 		\begin{equation*}
 			\hat{\pi}(x^1, \dots, x^m) = (x^1, \dots, x^n).
 		\end{equation*}
-		\item \textbf{Propriedades de Projeções:} A projeção canônica $\text{proj} : \mathbb{R}^m \to \mathbb{R}^n$ é uma aplicação aberta.
+		\item \textbf{Propriedades de Projeções:} A projeção canônica $\pi : \mathbb{R}^m \to \mathbb{R}^n$ é uma aplicação aberta.
 		\item \textbf{Definição de Seção Local:} Uma aplicação suave $s : U \to M$ é uma seção local de $\pi$ se $\pi \circ s = \text{id}_U$.
 	\end{enumerate}
 	
@@ -2546,4 +2546,553 @@ Diferente do caso de difeomorfismos locais (\textbf{Questão 26, Lista 02}), ond
 	Como $\iota$ é uma imersão, a matriz $(\iota_* E_i)^j$ possui posto $k$ (posto máximo). Pelo Teorema da Inversão (ou via pseudo-inversa de matrizes), os coeficientes $a^i(q)$ são combinações lineares suaves das componentes $Y^j(q)$ e das componentes de $\iota_* E_i$. Como todas essas funções são suaves, as componentes $a^i$ de $(Y|_S)$ são suaves.
 	
 	Logo, $(Y|_S)$ é um campo vetorial suave em $S$.
+}
+
+%%%% EXERCÍCIOS EXTRAS %%%%
+A partir daqui iremos apresentar exercícios extras referentes ao conteúdo da terceira lista. 
+\resultadoextra{Multiplicadores de Lagrange em Variedades.}{
+	Seja $M$ uma variedade suave e $S \subset M$ uma subvariedade mergulhada definida globalmente por uma aplicação $\Phi : M \to \mathbb{R}^k$ (ou seja, $S = \Phi^{-1}(c)$ para um valor regular $c$). 
+	
+	Se $f \in C^\infty(M)$ atinge um valor máximo ou mínimo em $p \in S$ quando restrito a $S$, então o vetor tangente a qualquer curva $\gamma$ em $S$ passando por $p$ deve anular a derivada de $f$. Isso implica que o espaço tangente $T_p S$ está contido no núcleo do diferencial $df_p$:
+	\begin{equation*}
+		T_p S \subseteq \ker(df_p).
+	\end{equation*}
+	Como $T_p S = \ker(d\Phi_p)$, a condição de extremo implica que $\ker(d\Phi_p) \subseteq \ker(df_p)$. Por um lema da álgebra linear, se o núcleo de uma aplicação linear $\mathcal{L}_1$ está contido no núcleo de $\mathcal{L}_2$, então $\mathcal{L}_2$ é uma combinação linear de $\mathcal{L}_1$.
+}
+
+%%%% QUESTÃO EXTRA 01 %%%%
+\questao{Sejam $M^n$ uma $n$-variedade suave e $S \subset M^n$ uma $k$-subvariedade mergulhada. Suponha que a aplicação suave $\Phi : M^n \to \mathbb{R}^k$ dada por $\Phi(q) = (\Phi^1(q), \dots, \Phi^k(q))$ defina globalmente $S$. Considere $f \in C^\infty(M)$ e suponha que $p \in S$ seja um ponto em que $f$ atinja seu valor máximo ou mínimo entre todos os pontos em $S$. Mostre que existem números reais $\lambda_1, \dots, \lambda_k$ (chamados de multiplicadores de Lagrange) de modo que $df_p = \lambda_1 d\Phi^1|_p + \dots + \lambda_k d\Phi^k|_p$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\Phi$ define globalmente $S$, logo $S = \Phi^{-1}(c)$ para algum $c \in \mathbb{R}^k$ e $\Phi$ é uma submersão em $S$. $f$ possui um extremo em $p \in S$ quando restrita a $S$.
+		\item \textbf{Tese:} Provar que o covetor $df_p \in T_p^* M$ é uma combinação linear dos covetores $d\Phi^1|_p, \dots, d\Phi^k|_p$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Espaço Tangente a Subvariedades (Questão 36, Lista 03):} Como $S$ é definida por $\Phi$, o espaço tangente em $p$ é $T_p S = \ker(d\Phi_p)$.
+		\item \textbf{Extremos Restritos:} Se $p$ é um extremo de $f|_S$, então para qualquer curva suave $\gamma : (-\varepsilon, \varepsilon) \to S$ com $\gamma(0)=p$, temos que a função $(f \circ \gamma)(t)$ possui um extremo em $t=0$, logo $\frac{d}{dt}(f \circ \gamma)(t) \big|_{t=0} = 0$.
+		\item \textbf{Álgebra Linear (Dualidade):} Se $V$ é um espaço vetorial e $L_1, \dots, L_k$ são funcionais lineares tais que $\bigcap_{i=1}^k \ker(L_i) \subseteq \ker(L)$, então $L = \sum_{i=1}^k \lambda_i L_i$ para alguns $\lambda_i \in \mathbb{R}$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Seja $\gamma : (-\varepsilon, \varepsilon) \to S$ uma curva suave qualquer tal que $\gamma(0)=p$. Como $p$ é um ponto de máximo ou mínimo de $f$ restrita a $S$, a função escalar $h(t) = f(\gamma(t))$ atinge um extremo em $t=0$. Pelo cálculo elementar, a derivada de $h$ em zero deve ser nula:
+	\begin{equation*}
+		h'(0) = \frac{d}{dt}(f \circ \gamma)(t) \Big|_{t=0} = 0.
+	\end{equation*}
+	Utilizando a definição de diferencial e a regra da cadeia, temos:
+	\begin{equation*}
+		h'(0) = df_p(\gamma'(0)) = 0.
+	\end{equation*}
+	Visto que isso vale para qualquer curva $\gamma$ em $S$, e que qualquer vetor $v \in T_p S$ pode ser a velocidade de tal curva, concluímos que:
+	\begin{equation*}
+		df_p(v) = 0, \quad \forall v \in T_p S.
+	\end{equation*}
+	Isso significa que $T_p S \subseteq \ker(df_p)$. 
+	
+	Pela fundamentação teórica (item 1), sabemos que $T_p S = \ker(d\Phi_p)$. A aplicação $d\Phi_p$ é composta pelos funcionais lineares $d\Phi^1|_p, \dots, d\Phi^k|_p$, de modo que:
+	\begin{equation*}
+		\ker(d\Phi_p) = \bigcap_{i=1}^k \ker(d\Phi^i|_p).
+	\end{equation*}
+	Portanto, temos a seguinte inclusão de núcleos:
+	\begin{equation*}
+		\bigcap_{i=1}^k \ker(d\Phi^i|_p) \subseteq \ker(df_p).
+	\end{equation*}
+	Pela propriedade de álgebra linear citada na fundamentação, a existência de tal inclusão implica que o funcional $df_p$ é necessariamente uma combinação linear dos funcionais $d\Phi^i|_p$. Assim, existem $\lambda_1, \dots, \lambda_k \in \mathbb{R}$ tais que:
+	\begin{equation*}
+		df_p = \lambda_1 d\Phi^1|_p + \dots + \lambda_k d\Phi^k|_p.
+	\end{equation*}
+}
+
+%%%% QUESTÃO EXTRA 02 %%%%
+\questao{Sejam $M^n$ uma $n$-variedade suave, $p \in M^n$ um ponto fixado e $\{y^1, \dots, y^k\}$ um conjunto de $k$ funções suaves de valor real definidas em alguma vizinhança de $p$ em $M^n$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Mostre que se $k = n$ e $\{dy^1|_p, \dots, dy^n|_p\}$ é uma base para o espaço cotangente $T_p^*M$, então $(y^1, \dots, y^n)$ é um sistema de coordenadas suave para $M^n$ em uma vizinhança de $p$.
+		\item Mostre que se $\{dy^1|_p, \dots, dy^k|_p\}$ é um conjunto linearmente independente em $T_p^*M$ e $k < n$ então existem funções suaves (de valor real) $y^{k+1}, \dots, y^n$ tais que $(y^1, \dots, y^n)$ é um sistema de coordenadas suave para $M^n$ em uma vizinhança de $p$.
+		\item Mostre que se o conjunto $\{dy^1|_p, \dots, dy^k|_p\}$ gera o espaço cotangente $T_p^*M$ e $k > n$ então existem índices $i_1, \dots, i_n$ tais que $(y^{i_1}, \dots, y^{i_n})$ é um sistema de coordenadas suave para $M^n$ em uma vizinhança de $p$.
+\end{enumerate}}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma $n$-variedade; temos funções suaves $y^i$ definidas em torno de $p \in M$.
+		\item \textbf{Tese:} 
+		\begin{enumerate}[label=(\alph*)]
+			\item Se $k=n$ e as diferenciais formam base, então as funções são coordenadas.
+			\item Se $k < n$ e as diferenciais são L.I., podemos completar o sistema para formar coordenadas.
+			\item Se $k > n$ e as diferenciais geram o espaço, podemos extrair um subconjunto que forme coordenadas.
+		\end{enumerate}
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Teorema da Função Inversa (Lee, Cap. 7):} Seja $F : M \to N$ uma aplicação suave entre variedades de mesma dimensão $n$. Se a diferencial $dF_p : T_p M \to T_{F(p)} N$ é um isomorfismo, então $F$ é um difeomorfismo local em uma vizinhança de $p$.
+		\item \textbf{Sistemas de Coordenadas (Lee, Cap. 1):} Um conjunto de funções $(y^1, \dots, y^n)$ é um sistema de coordenadas suaves em $U$ se a aplicação $\Psi: U \to \mathbb{R}^n$ dada por $\Psi(q) = (y^1(q), \dots, y^n(q))$ é um difeomorfismo sobre sua imagem.
+		\item \textbf{Álgebra Linear (Bases):} Em um espaço vetorial de dimensão $n$, qualquer conjunto de $n$ vetores linearmente independentes forma uma base. Além disso, qualquer conjunto linearmente independente pode ser estendido a uma base, e qualquer conjunto gerador contém uma base.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textbf{(a) Caso $k=n$.}
+	
+	Definimos a aplicação $\Psi : U \to \mathbb{R}^n$ por $\Psi(q) = (y^1(q), \dots, y^n(q))$, onde $U$ é a vizinhança tal que as funções $y^i$ estão definidas. A diferencial de $\Psi$ no ponto $p$ é a aplicação linear $\Psi_{*,p} : T_p M \to T_{\Psi(p)} \mathbb{R}^n$ tal que, para qualquer $X \in T_p M$:
+	\begin{equation*}
+		\Psi_{*,p}(X) = (dy^1|_p(X), \dots, dy^n|_p(X)).
+	\end{equation*}
+	A matriz de $\Psi_{*,p}$ em relação a qualquer base de $T_p M$ e a base canônica de $\mathbb{R}^n$ tem as diferenciais $\{dy^1|_p, \dots, dy^n|_p\}$ como suas linhas. Como estas formam uma base de $T_p^* M$, a matriz é inversível, o que implica que $\Psi_{*,p}$ é um isomorfismo. 
+	Pelo Teorema da Função Inversa, $\Psi$ é um difeomorfismo local em uma vizinhança de $p$. Portanto, $(y^1, \dots, y^n)$ é um sistema de coordenadas suaves.
+	
+	\textbf{(b) Caso $k < n$.}
+	
+	Dado que $\{dy^1|_p, \dots, dy^k|_p\}$ é linearmente independente em $T_p^* M$, e sabendo que $\dim T_p^* M = n$, podemos estender este conjunto a uma base $\{dy^1|_p, \dots, dy^k|_p, \omega^{k+1}, \dots, \omega^n\}$ de $T_p^* M$.
+	Seja $(x^1, \dots, x^n)$ um sistema de coordenadas suave para $M$ em uma vizinhança de $p$. Então $\{dx^1|_p, \dots, dx^n|_p\}$ é uma base de $T_p^* M$. Como qualquer $\omega \in T_p^* M$ pode ser escrita como combinação linear de $dx^i|_p$, podemos definir funções suaves $y^j$ para $j = k+1, \dots, n$ como combinações lineares das funções $x^i$:
+	\begin{equation*}
+		y^j = \sum_{l=1}^n a_{jl} x^l, \quad \text{onde } a_{jl} \in \mathbb{R}.
+	\end{equation*}
+	Escolhemos os coeficientes $a_{jl}$ de modo que a diferencial $dy^j|_p = \sum a_{jl} dx^l|_p$ seja exatamente igual a $\omega^j$. Assim, o conjunto $\{dy^1|_p, \dots, dy^n|_p\}$ forma uma base de $T_p^* M$. Pela item (a), o sistema $(y^1, \dots, y^n)$ é um sistema de coordenadas suaves em uma vizinhança de $p$.
+	
+	\textbf{(c) Caso $k > n$.}
+	
+	Se o conjunto $\{dy^1|_p, \dots, dy^k|_p\}$ gera o espaço cotangente $T_p^* M$, e $\dim T_p^* M = n$, então da álgebra linear sabemos que existe um subconjunto de $n$ elementos deste conjunto que é linearmente independente.
+	Sejam esses índices $i_1, \dots, i_n$ tais que $\{dy^{i_1}|_p, \dots, dy^{i_n}|_p\}$ seja uma base de $T_p^* M$.
+	Definimos a aplicação $\Psi : U \to \mathbb{R}^n$ por $\Psi(q) = (y^{i_1}(q), \dots, y^{i_n}(q))$. Como as diferenciais $\{dy^{i_j}|_p\}_{j=1}^n$ formam uma base de $T_p^* M$, a diferencial $\Psi_{*,p}$ é um isomorfismo. Pelo Teorema da Função Inversa, $\Psi$ é um difeomorfismo local, logo $(y^{i_1}, \dots, y^{i_n})$ é um sistema de coordenadas suave em uma vizinhança de $p$.
+}
+
+\resultadoextra{Trivializações de Fibrados Vetoriais. }{
+	Seja $\pi : E \to M$ um fibrado vetorial suave de posto $k$. Uma \textbf{trivialização local} sobre um aberto $U \subset M$ é um difeomorfismo $\Phi : \pi^{-1}(U) \to U \times \mathbb{R}^k$ tal que:
+	\begin{enumerate}
+		\item $\pi_1 \circ \Phi = \pi$;
+		\item Para cada $p \in U$, a restrição $\Phi|_{E_p} : E_p \to \{p\} \times \mathbb{R}^k \cong \mathbb{R}^k$ é um isomorfismo de espaços vetoriais.
+	\end{enumerate}
+}
+
+%%%% QUESTÃO EXTRA 03 %%%%
+\questao{Seja $\pi : E \to M$ um fibrados vetorial suave e suponha que $\Phi : \pi^{-1}(U) \to U \times \mathbb{R}^k$ e $\Psi : \pi^{-1}(V) \to V \times \mathbb{R}^k$ sejam duas trivializações de $E$ tais que $U \cap V \neq \emptyset$. Mostre que existe uma aplicação suave $\tau : U \cap V \to GL(k, \mathbb{R})$ tal que a composta $\Phi \circ \Psi^{-1} : U \cap V \times \mathbb{R}^k \to U \cap V \times \mathbb{R}^k$ é dada por:
+	\begin{equation*}
+		\Phi \circ \Psi^{-1}(p, v) = (p, \tau(p)v),
+	\end{equation*}
+	onde $\tau(p)v$ denota o produto da matriz $\tau(p)$ com o vetor $v \in \mathbb{R}^k$.
+}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\pi: E \to M$ é um fibrado vetorial; $\Phi$ e $\Psi$ são trivializações locais sobre $U$ e $V$.
+		\item \textbf{Tese:} Provar a existência de uma função de transição $\tau: U \cap V \to GL(k, \mathbb{R})$ que seja suave e que represente a mudança de base nas fibras.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Propriedade de Trivializações (Lee, Cap. 5):} Por definição, $\Phi$ e $\Psi$ são difeomorfismos que preservam a projeção $\pi$. Logo, a composta $\Phi \circ \Psi^{-1}$ deve preservar a primeira componente do produto $U \cap V \times \mathbb{R}^k$.
+		\item \textbf{Isomorfismos de Espaços Vetoriais:} Como $\Phi|_{E_p}$ e $\Psi|_{E_p}$ são isomorfismos lineares entre $E_p$ e $\mathbb{R}^k$, a composição $\Phi|_{E_p} \circ (\Psi|_{E_p})^{-1}$ é um isomorfismo linear de $\mathbb{R}^k$ em $\mathbb{R}^k$.
+		\item \textbf{Representação Matricial:} Todo isomorfismo linear de $\mathbb{R}^k$ em $\mathbb{R}^k$ é representado por uma matriz inversível $\tau(p) \in GL(k, \mathbb{R})$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Seja $(p, v) \in U \cap V \times \mathbb{R}^k$. A aplicação $\Psi^{-1}$ mapeia o par $(p,v)$ para o elemento $e \in E_p$; $\Psi^{-1}(p, v) = e$.
+	\begin{center}
+		\begin{tikzpicture}[node distance=3cm, auto, scale=0.9, every node/.style={transform shape}]
+			% Nós
+			\node (E) {$\pi^{-1}(U \cap V) \subseteq E$};
+			\node (ProdV) [below left of=E] {$(U \cap V) \times \mathbb{R}^k$};
+			\node (ProdU) [below right of=E] {$(U \cap V) \times \mathbb{R}^k$};
+			
+			% Setas
+			\draw[->] (E) -- node[left, xshift=-1pt] {$\Psi$} (ProdV);
+			\draw[->] (ProdV) -- node[right, xshift=1pt] {$\Psi^{-1}$} (E);
+			\draw[->] (E) -- node[right, xshift=1pt] {$\Phi$} (ProdU);
+			\draw[->] (ProdU) -- node[left, xshift=-1.5pt] {$\Phi^{-1}$} (E);
+			
+			% A composição final (a seta de transição)
+			\draw[->] (ProdV) -- node[below, black] {$\Phi \circ \Psi^{-1}$} (ProdU);
+		\end{tikzpicture}
+	\end{center}
+	Agora, aplicamos $\Phi$ a este elemento $e$. Como $\Phi$ é uma trivialização, ela deve preservar a projeção $\pi(e) = p$. Portanto, a imagem deve ser da forma:
+	\begin{equation*}
+		\Phi(e) = (p, v') \quad \text{para algum } v' \in \mathbb{R}^k.
+	\end{equation*}
+	Consideremos a aplicação $\tau_p : \mathbb{R}^k \to \mathbb{R}^k$ definida por $\tau_p(v) = v'$, ou seja:
+	\begin{equation*}
+		\tau_p = \Phi|_{E_p} \circ (\Psi|_{E_p})^{-1}.
+	\end{equation*}
+	Como $\Phi|_{E_p}$ e $(\Psi|_{E_p})^{-1}$ são isomorfismos lineares, a composição $\tau_p$ também é um isomorfismo linear de $\mathbb{R}^k$. Da álgebra linear, sabemos que todo isomorfismo de $\mathbb{R}^k$ é representado por uma matriz $\tau(p) \in GL(k, \mathbb{R})$. Assim:
+	\begin{equation*}
+		\Phi \circ \Psi^{-1}(p, v) = (p, \tau(p)v).
+	\end{equation*}
+	
+	Para provar que $\tau : U \cap V \to GL(k, \mathbb{R})$ é suave, observemos que as entradas da matriz $\tau(p)$ são as componentes da aplicação $\Phi \circ \Psi^{-1}$. Como $\Phi, \Psi^{-1}$ e a projeção são aplicações suaves, a composição $\Phi \circ \Psi^{-1}$ é suave. As componentes de $\tau(p)$ são obtidas avaliando $\Phi \circ \Psi^{-1}$ em vetores da base canônica $\{e_1, \dots, e_k\}$ de $\mathbb{R}^k$:
+	\begin{equation*}
+		\tau(p)_{ij} = (\pi \circ \Phi \circ \Psi^{-1})(p, e_j)_i.
+	\end{equation*}
+	Como cada componente é uma composição de funções suaves, a aplicação $\tau$ é suave.
+}
+
+%%%% QUESTÃO EXTRA 04 %%%%
+\questao{Seja $\Phi : M \to N$ uma aplicação suave entre variedades suaves. $\Phi^{-1}(c)$, com $c \in N$, é chamado conjunto de nível regular se $c$ é um valor regular de $\Phi$. Seja $S \subset M$ uma subvariedade mergulhada. Uma aplicação suave $\Phi : M \to N$ de tal forma que $S \cap U$ é um conjunto de nível regular de $\Phi$, onde $U$ é um subconjunto aberto de $M$, é chamada uma aplicação que define localmente $S$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Mostre que qualquer conjunto de nível regular de uma aplicação suave $\Phi : M \to N$ é uma subvariedade mergulhada fechada, cuja codimensão é a dimensão da imagem de $\Phi$.
+		\item Sejam $S \subset M$ uma subvariedade mergulhada e $\Phi : U \subset M \to N$ uma aplicação que define localmente $S$. Mostre que $T_p S = \ker(\Phi_* : T_p M \to T_{\Phi(p)} N)$, para todo $p \in S \cap U$.
+\end{enumerate}}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses (a):} $\Phi: M \to N$ é suave; $c \in N$ é um valor regular (ou seja, $\Phi_{*,p}$ é sobrejetiva para todo $p \in \Phi^{-1}(c)$).
+		\item \textbf{Tese (a):} Provar que $S = \Phi^{-1}(c)$ é (i) uma subvariedade mergulhada, (ii) um conjunto fechado em $M$, e (iii) possui codimensão $\dim N$.
+		\item \textbf{Hipóteses (b):} $S \subset M$ é subvariedade mergulhada; $\Phi: U \to N$ define localmente $S$ ($S \cap U = \Phi^{-1}(c)$ com $c$ regular).
+		\item \textbf{Tese (b):} Provar que $T_p S = \ker(\Phi_*)$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Teorema do Valor Regular (Lee, Cap. 7):} Se $c$ é um valor regular de $\Phi$, então $\Phi^{-1}(c)$ é uma subvariedade mergulhada de codimensão $\dim N$.
+		\item \textbf{Topologia de Variedades (Lee, Cap. 1):} Toda variedade suave é, por definição, um espaço Hausdorff. Em espaços Hausdorff, conjuntos singleton $\{c\}$ são fechados.
+		\item \textbf{Definição de Espaço Tangente (Lee, Cap. 8):} $T_p S$ é o subespaço de $T_p M$ consistindo em vetores $\gamma'(0)$ para curvas $\gamma$ contidas em $S$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textbf{(a)}
+	
+	1. \textbf{Subvariedade Mergulhada:} Pelo Teorema do Valor Regular (Lee, Cap. 7), como $c$ é um valor regular de $\Phi$, a aplicação $\Phi$ é uma submersão em cada ponto de $\Phi^{-1}(c)$. Consequentemente, $\Phi^{-1}(c)$ admite cartas adaptadas (slice charts) que a tornam uma subvariedade mergulhada de $M$.
+	2. \textbf{Conjunto Fechado:} Por definição, $\Phi^{-1}(c) = \{ p \in M \mid \Phi(p) = c \}$. Como $N$ é uma variedade suave, ela é um espaço Hausdorff, logo o conjunto $\{c\}$ é fechado em $N$. Como $\Phi$ é uma aplicação suave (e, portanto, contínua), a imagem inversa de um conjunto fechado é fechada. Assim, $\Phi^{-1}(c)$ é fechado em $M$.
+	3. \textbf{Codimensão:} Pelo Teorema do Valor Regular, a dimensão da subvariedade $S = \Phi^{-1}(c)$ é $\dim S = \dim M - \dim N$. A codimensão é definida como $\text{codim}(S) = \dim M - \dim S$. Logo, $\text{codim}(S) = \dim N$. Como $\Phi$ é uma submersão no conjunto de nível, a dimensão da imagem de $\Phi$ (localmente) é precisamente $\dim N$.
+	
+	\textbf{(b)} Seja $p \in S \cap U$. Provamos a igualdade $T_p S = \ker(\Phi_*)$ via inclusões mútuas:
+	
+	\textit{Inclusão $T_p S \subseteq \ker(\Phi_*)$:} Seja $v \in T_p S$. Então existe uma curva suave $\gamma : (-\varepsilon, \varepsilon) \to S$ tal que $\gamma(0) = p$ e $\gamma'(0) = v$. Como $\gamma(t) \in S = \Phi^{-1}(c)$, temos que $\Phi(\gamma(t)) = c$ para todo $t$. Diferenciando em relação a $t$ no ponto $t=0$:
+	\begin{equation*}
+		\frac{d}{dt} (\Phi \circ \gamma)(t) \Big|_{t=0} = \Phi_{*,p}(\gamma'(0)) = \Phi_{*,p}(v) = 0.
+	\end{equation*}
+	Portanto, $v \in \ker(\Phi_*)$.
+	
+	\textit{Inclusão $\ker(\Phi_*) \subseteq T_p S$:} Utilizamos a comparação de dimensões. Como $\Phi$ define localmente $S$, $\Phi$ é uma submersão em $U$. Pelo Teorema do Núcleo e da Imagem, temos:
+	\begin{equation*}
+		\dim(\ker \Phi_{*,p}) = \dim T_p M - \text{posto}(\Phi_{*,p}) = \dim M - \dim N.
+	\end{equation*}
+	Sabemos que $\dim T_p S = \dim S = \dim M - \dim N$. Como $T_p S$ é um subespaço de $\ker(\Phi_{*,p})$ e ambos possuem a mesma dimensão finita, eles coincidem obrigatoriamente: $T_p S = \ker(\Phi_*)$.
+}
+
+%%%% QUESTÃO EXTRA 05 %%%%
+\questao{Seja $G : \mathbb{R}^3 \to \mathbb{R}^2$ uma aplicação suave dada por $G(x,y,z) = (x^2y, y \sen z) = (u, v)$. Considere o campo de covetores $\omega = u \, dv + v \, du \in \mathfrak{X}^*(\mathbb{R}^2)$. Calcule o pullback $G^* \omega$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $G: \mathbb{R}^3 \to \mathbb{R}^2$ é a aplicação definida por $u(x,y,z) = x^2y$ e $v(x,y,z) = y \sen z$. O campo de covetores $\omega$ em $\mathbb{R}^2$ é dado por $\omega = u \, dv + v \, du$.
+		\item \textbf{Tese:} Calcular a expressão explícita do campo de covetores $G^* \omega$ em $\mathbb{R}^3$ em termos das coordenadas $(x,y,z)$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definição de Pullback (Lee, Cap. 6):} Se $\omega = A \, du + B \, dv$ é um campo de covetores em $\mathbb{R}^2$, o seu pullback por $G$ é definido por:
+		\begin{equation*}
+			G^* \omega = (A \circ G) \, d(u \circ G) + (B \circ G) \, d(v \circ G).
+		\end{equation*}
+		\item \textbf{Diferencial de Funções Suaves:} Para qualquer função suave $f: \mathbb{R}^3 \to \mathbb{R}$, a sua diferencial é dada por $df = \tfrac{\partial f}{\partial x} dx + \tfrac{\partial f}{\partial y} dy + \tfrac{\partial f}{\partial z} dz$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	Identificamos as componentes do campo $\omega$: $A(u,v) = u$ e $B(u,v) = v$. Assim, temos:
+	\begin{equation*}
+		G^* \omega = (u \circ G) \, d(u \circ G) + (v \circ G) \, d(v \circ G).
+	\end{equation*}
+	
+	Passo 1: Calculamos as diferenciais de $u$ e $v$ em relação às coordenadas $(x,y,z)$.
+	Para $u(x,y,z) = x^2y$:
+	\begin{equation*}
+		du = \tfrac{\partial (x^2y)}{\partial x} dx + \tfrac{\partial (x^2y)}{\partial y} dy + \tfrac{\partial (x^2y)}{\partial z} dz = 2xy \, dx + x^2 \, dy + 0 \, dz.
+	\end{equation*}
+	Para $v(x,y,z) = y \sen z$:
+	\begin{equation*}
+		dv = \frac{\partial (y \sen z)}{\partial x} dx + \frac{\partial (y \sen z)}{\partial y} dy + \frac{\partial (y \sen z)}{\partial z} dz = 0 \, dx + \sen z \, dy + y \cos z \, dz.
+	\end{equation*}
+	
+	Passo 2: Substituímos as expressões de $u, v, du$ e $dv$ na fórmula do pullback:
+	\begin{align*}
+		G^* \omega &= (x^2y) \left( \sen z \, dy + y \cos z \, dz \right) + (y \sen z) \left( 2xy \, dx + x^2 \, dy \right) \\
+		&= (x^2y \sen z) \, dy + (x^2y^2 \cos z) \, dz + (2xy^2 \sen z) \, dx + (x^2y \sen z) \, dy.
+	\end{align*}
+	
+	Passo 3: Agrupamos os termos conforme as bases $dx, dy$ e $dz$:
+	\begin{align*}
+		G^* \omega &= (2xy^2 \sen z) \, dx + (x^2y \sen z + x^2y \sen z) \, dy + (x^2y^2 \cos z) \, dz \\
+		&= 2xy^2 \sen z \, dx + 2x^2y \sen z \, dy + x^2y^2 \cos z \, dz.
+	\end{align*}
+	
+	Portanto, o pullback do campo de covetores $\omega$ é:
+	\begin{equation*}
+		G^* \omega = 2xy^2 \sen z \, dx + 2x^2y \sen z \, dy + x^2y^2 \cos z \, dz.
+	\end{equation*}
+}
+
+%%%% QUESTÃO EXTRA 06 %%%%
+\questao{Mostre que a aplicação $\alpha : (-3, 0) \to \mathbb{R}^2$, definida por 
+	$$\alpha(t) = \begin{cases} (0, -(t+2)) & t \in (-3, -1) \\ \text{uma curva regular} & t \in (-1, -1/\pi) \\ (-t, -\sen(1/t)) & t \in (-1/\pi, 0) \end{cases}$$
+	é uma imersão sem auto-interseções, mas não é um mergulho.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\alpha$ é uma aplicação definida por partes no intervalo $(-3, 0)$. Assume-se que as junções em $t=-1$ e $t=-1/\pi$ são suaves e que a parte central é uma curva regular.
+		\item \textbf{Tese:} Provar que $\alpha$ é uma imersão (velocidade nunca nula), que é injetiva (sem auto-interseções), mas que falha em ser um mergulho (não é homeomorfismo sobre a imagem).
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Definição de Imersão (Lee, Cap. 7):} Uma curva $\alpha: I \to M$ é uma imersão se $\alpha'(t) \neq 0$ para todo $t \in I$.
+		\item \textbf{Definição de Mergulho Suave (Lee, Cap. 7):} $\alpha$ é um mergulho se for uma imersão injetiva e a aplicação $\alpha : I \to \alpha(I)$ for um homeomorfismo (com a topologia de subespaço em $\alpha(I)$).
+		\item \textbf{Injetividade:} $\alpha(t_1) = \alpha(t_2) \implies t_1 = t_2$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textbf{1. Verificação da Imersão:}
+	Analisamos a norma do vetor velocidade $\alpha'(t)$ em cada segmento:
+	\begin{itemize}
+		\item Para $t \in (-3, -1)$, $\alpha'(t) = (0, -1)$. Logo, $\|\alpha'(t)\| = 1 \neq 0$.
+		\item Para $t \in (-1, -1/\pi)$, a curva é dada como regular, logo $\alpha'(t) \neq 0$ por hipótese.
+		\item Para $t \in (-1/\pi, 0)$, temos $\alpha'(t) = (-1, \cos(1/t) \cdot (-1/t^2))$. A primeira componente é constante $-1 \neq 0$, logo $\|\alpha'(t)\| \geq 1 \neq 0$.
+	\end{itemize}
+	Como $\alpha'(t)$ nunca se anula, $\alpha$ é uma imersão.
+	
+	\textbf{2. Ausência de Auto-interseções (Injetividade):}
+	Analisamos a imagem $\alpha(I)$. No primeiro segmento, a imagem é o eixo $y$ (onde $x=0$). No terceiro segmento, $x = -t$, e como $t \in (-1/\pi, 0)$, temos $x \in (0, 1/\pi)$. Como os valores de $x$ são distintos ($x=0$ vs $x>0$), não há interseção entre o 1º e o 3º segmentos. A injetividade nos segmentos individuais é trivial. Assim, $\alpha$ é injetiva.
+	
+	\textbf{3. Prova de que não é um mergulho:}
+	Para ser um mergulho, $\alpha$ deve ser um homeomorfismo sobre sua imagem. Consideremos o comportamento de $\alpha(t)$ quando $t \to 0^-$. 
+	Temos $\alpha(t) = (-t, -\sen(1/t))$. Enquanto $t \to 0$, a primeira coordenada $-t$ tende a $0$, mas a segunda coordenada $-\sen(1/t)$ oscila infinitamente entre $-1$ e $1$.
+	Isso implica que a imagem $\alpha((-1/\pi, 0))$ acumula-se sobre o segmento vertical $\{0\} \times [-1, 1]$ no eixo $y$.
+	
+	Seja $p = (0, 0) \in \mathbb{R}^2$. Embora $p$ não pertença à imagem $\alpha(I)$ (pois $t < 0$), qualquer vizinhança aberta de $p$ em $\mathbb{R}^2$ conterá infinitas "voltas" da curva $\alpha$ para $t$ suficientemente próximo de $0$. 
+	Mais formalmente, a aplicação inversa $\alpha^{-1} : \alpha(I) \to (-3, 0)$ não é contínua no limite $t \to 0$. Podemos escolher uma sequência de pontos $p_n = \alpha(t_n)$ tal que $p_n \to (0,0)$ mas $t_n$ não converge para um único valor, ou que a topologia da imagem não coincide com a topologia da reta (pois a curva "volta" repetidamente para a mesma vizinhança sem que o parâmetro $t$ esteja próximo).
+	
+	Como $\alpha$ não é um homeomorfismo sobre sua imagem, ela não é um mergulho suave.
+}
+%%%% QUESTÃO EXTRA 07 %%%%
+\questao{Considere a aplicação $\varphi : \mathbb{R}^3 \to \mathbb{R}^4$ dada por $\varphi(x,y,z) = (x^2-y^2, xy, xz, yz)$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Mostre que $\varphi$ induz uma imersão $\tilde{\varphi} : \mathbb{RP}^2 \to \mathbb{R}^4$.
+		\item Mostre que $\tilde{\varphi}$ é injetiva.
+		\item Use a compacidade de $\mathbb{RP}^2$ para concluir que $\tilde{\varphi}$ é um mergulho suave.
+\end{enumerate}}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $\varphi$ é uma aplicação de $\mathbb{R}^3$ em $\mathbb{R}^4$. $\mathbb{RP}^2$ é o quociente de $\mathbb{S}^2$ pela relação $p \sim -p$.
+		\item \textbf{Tese:} $\tilde{\varphi}$ é uma imersão injetiva e, por compacidade, um mergulho suave.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Aplicações Induzidas em Quocientes:} Se $\varphi : \mathbb{S}^2 \to \mathbb{R}^4$ satisfaz $\varphi(p) = \varphi(-p)$ para todo $p \in \mathbb{S}^2$, então existe uma única aplicação $\tilde{\varphi} : \mathbb{RP}^2 \to \mathbb{R}^4$ tal que $\tilde{\varphi} \circ \pi = \varphi$, onde $\pi : \mathbb{S}^2 \to \mathbb{RP}^2$ é a projeção canônica.
+		\item \textbf{Imersão:} $\tilde{\varphi}$ é uma imersão se $\tilde{\varphi}_* : T_{[p]} \mathbb{RP}^2 \to T_{\tilde{\varphi}([p])} \mathbb{R}^4$ for injetiva. Isso equivale a $\varphi_* : T_p \mathbb{S}^2 \to T_{\varphi(p)} \mathbb{R}^4$ ser injetiva.
+		\item \textbf{Teorema de Compacidade (Lee, Cap. 7):} Uma imersão injetiva de uma variedade compacta em uma variedade Hausdorff é um mergulho suave.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textbf{(a)}
+	Primeiro, verificamos que $\varphi$ é invariante sob a antípoda:
+	\begin{align*}
+		\varphi(-x, -y, -z) &= ((-x)^2 - (-y)^2, (-x)(-y), (-x)(-z), (-y)(-z)) \\
+		&= (x^2 - y^2, xy, xz, yz) = \varphi(x,y,z).
+	\end{align*}
+	Logo, $\varphi$ induz bem uma aplicação $\tilde{\varphi} : \mathbb{RP}^2 \to \mathbb{R}^4$. 
+	Para provar que é uma imersão, calculamos a diferencial $d\varphi$ em $p \in \mathbb{S}^2$. A matriz Jacobiana de $\varphi$ é:
+	\begin{equation*}
+		J\varphi = \begin{pmatrix} 2x & -2y & 0 \\ y & x & 0 \\ z & 0 & x \\ 0 & z & y \end{pmatrix}.
+	\end{equation*}
+	Para qualquer $p \in \mathbb{S}^2$, devemos mostrar que $\ker(d\varphi_p) = \{0\}$. 
+	
+	Se $d\varphi_p(v) = 0$ para $v=(v_1, v_2, v_3)$, temos:
+	
+	1. $2xv_1 - 2yv_2 = 0 \implies xv_1 = yv_2$.
+	
+	2. $yv_1 + xv_2 = 0$.
+	
+	3. $zv_1 = 0$ e $zv_2 = 0$.
+	
+	Se $z \neq 0$, então $v_1=0$ e $v_2=0$. Agora, se $z=0$, então $x^2+y^2=1$, como $p \in \mathbb{S}^2$, $x^2+y^2+z^2=1$, então $x$ e $y$ não podem ser ambos nulos. Se $xv_1 = yv_2$ e $yv_1 + xv_2 = 0$, multiplicando a primeira por $y$ e a segunda por $x$, obtemos que $xyv_1 = y^2v_2$ e $xv_1 + x^2v_2 = 0$. 
+	
+	Subtraindo essas duas ultimas igualdades, temos que: $$(y^2+x^2)v_2 = 0 \implies v_2=0 \implies v_1=0.$$ 
+	
+	Assim, $d\varphi_p$ é injetiva em $\mathbb{S}^2$, o que implica que $\tilde{\varphi}$ é uma imersão em $\mathbb{RP}^2$.
+	
+	\textbf{(b)}
+	Suponha $\tilde{\varphi}([p]) = \tilde{\varphi}([q])$ para $[p], [q] \in \mathbb{RP}^2$. Então $\varphi(p) = \varphi(q)$.
+	
+	Temos $x^2-y^2 = x'^2-y'^2$ e $xy = x'y'$. Note que $(x+y)^2 = x^2+y^2+2xy$ e $(x-y)^2 = x^2+y^2-2xy$. 
+	A partir de $xy=x'y'$ e $x^2-y^2 = x'^2-y'^2$, podemos deduzir que $$x^2+y^2 = x'^2+y'^2, \ \text{pois } (x^2+y^2)^2 = (x^2-y^2)^2 + 4x^2y^2.$$
+	Assim, $x^2+y^2=x'^2+y'^2$ e $xy=x'y'$. Isso implica $(x+y)^2 = (x'+y')^2$ e $(x-y)^2 = (x'-y')^2$.
+	Analisando as componentes $xz=x'z'$ e $yz=y'z'$, se $z \neq 0$, então $x/x' = z/z = y/y'$. Se $z=0$, a análise de sinais em $\mathbb{S}^2$ garante que $[p] = [q]$. Logo, $\tilde{\varphi}$ é injetiva.
+	
+	\textbf{(c)}
+	A variedade $\mathbb{RP}^2$ é a imagem de $\mathbb{S}^2$ por uma aplicação contínua, e como $\mathbb{S}^2$ é compacta, $\mathbb{RP}^2$ também é compacta. Uma imersão injetiva de uma variedade compacta em uma variedade Hausdorff é um mergulho suave.
+}
+%%%% QUESTÃO EXTRA 08 %%%%
+\questao{Considere os seguintes campos de covetores em $\mathbb{R}^3$:
+	$\omega = -\tfrac{4z dx}{(x^2+1)^2} + \tfrac{2y dy}{y^2+1} + \tfrac{2x dz}{x^2+1}$ e $\eta = -\tfrac{4xz dx}{(x^2+1)^2} + \tfrac{2y dy}{y^2+1} + \tfrac{2 dz}{x^2+1}$.
+	
+	Defina e avalie a integral de linha de cada campo de covetores ao longo do segmento de reta de $(0,0,0)$ até $(1,1,1)$.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} Campos de covetores $\omega, \eta \in \mathfrak{X}^*(\mathbb{R}^3)$; curva $\gamma : [0,1] \to \mathbb{R}^3$ definida por $\gamma(t) = (t,t,t)$.
+		\item \textbf{Tese:} Calcular $\int_\gamma \omega$ e $\int_\gamma \eta$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Integral de Linha (Questão 12, Lista 03):} $\int_\gamma \omega = \int_a^b \omega_{\gamma(t)}(\gamma'(t)) dt$.
+		\item \textbf{Parametrização do Segmento:} Para o segmento de $(0,0,0)$ a $(1,1,1)$, temos $\gamma(t) = (t,t,t)$ com $t \in [0,1]$. O vetor velocidade é $\gamma'(t) = (1,1,1)$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textbf{1. Cálculo de $\int_\gamma \omega$:}
+	
+	Analisemos $\omega$ ao longo de $\gamma(t)$:
+	$$\omega_{\gamma(t)}(\gamma'(t)) = -\frac{4(t)(1)}{(t^2+1)^2} + \frac{2(t)(1)}{t^2+1} + \frac{2(t)(1)}{t^2+1} = -\frac{4t}{(t^2+1)^2} + \frac{4t}{t^2+1}.$$
+	A integral é:
+	\begin{align*}
+		\int_\gamma \omega &= \int_0^1 \left( -\frac{4t}{(t^2+1)^2} + \frac{4t}{t^2+1} \right) dt.
+	\end{align*}
+	Fazendo a substituição $u = t^2+1$, temos $du = 2t dt$:
+	\begin{equation*}
+		\int_\gamma \omega = \int_1^2 \left( -\frac{2}{u^2} + \frac{2}{u} \right) du = \left[ \frac{2}{u} + 2\ln u \right]_1^2 = \left( \frac{2}{2} + 2\ln 2 \right) - \left( \frac{2}{1} + 2\ln 1 \right) = 1 + 2\ln 2 - 2 = 2\ln 2 - 1.
+	\end{equation*}
+	
+	\textbf{2. Cálculo de $\int_\gamma \eta$:}
+	
+	Analisemos $\eta$ ao longo de $\gamma(t)$:
+	$$\eta_{\gamma(t)}(\gamma'(t)) = -\frac{4(t)(t)(1)}{(t^2+1)^2} + \frac{2(t)(1)}{t^2+1} + \frac{2(1)}{t^2+1} = -\frac{4t^2}{(t^2+1)^2} + \frac{2t+2}{t^2+1}.$$
+	A integral é:
+	\begin{equation*}
+		\int_\gamma \eta = \int_0^1 \left( -\frac{4t^2}{(t^2+1)^2} + \frac{2t}{t^2+1} + \frac{2}{t^2+1} \right) \quad (\ast)dt.
+	\end{equation*}
+	Para a primeira parte, usamos a substituição $t = \tg \theta$. Para $\int \frac{4t^2}{(t^2+1)^2} dt$, a substituição $t = \tg \theta$ dá $dt = \sec^2 \theta d\theta$.
+	
+	Logo:
+	$$I=\int \frac{4 \tg^2 \theta}{\sec^4 \theta} \sec^2 \theta d\theta = \int 4 \tg^2 \theta \cos^2 \theta d\theta = \int 4 \sen^2 \theta d\theta = \int 2(1-\cos 2\theta) d\theta = 2\theta - \sen 2\theta.$$
+	Voltando para $t$, temos que: 
+	$$I=\left[2 \arctan t - \frac{2t}{t^2+1}\right]_0^1 = 2(\pi/4) - 2/2 = \pi/2 - 1.$$
+	Nas outras integrais em $(\ast)$, temos que: 
+	$$\int_0^1 \frac{2t}{t^2+1} dt = [\ln(t^2+1)]_0^1 = \ln 2 \quad \text{e} \int_0^1 \frac{2}{t^2+1} dt = [2 \arctan t]_0^1 = 2(\pi/4) = \pi/2.$$
+	Substituindo tudo em $(\ast)$, obtemos:
+	\begin{equation*}
+		\int_\gamma \eta = -(\pi/2 - 1) + \ln 2 + \pi/2 = 1 + \ln 2.
+	\end{equation*}
+}
+%%%% QUESTÃO EXTRA 09 %%%%
+\questao{Seja $F : V \subset \mathbb{R}^n \to \mathbb{R}^k$ uma aplicação suave. Um ponto $p \in V$ é chamado ponto crítico de $F$ se $dF_p : \mathbb{R}^n \to \mathbb{R}^k$ não é sobrejetiva. A imagem $F(p)$ de um ponto crítico é chamada valor crítico de $F$. Um ponto $a \in \mathbb{R}^k$ que não é valor crítico de $F$ é chamado valor regular de $F$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Sejam $F : V \subset \mathbb{R}^n \to \mathbb{R}^k$ uma aplicação suave e $a \in F(V)$ um valor regular de $F$. Mostre que $M := F^{-1}(\{a\}) \subset \mathbb{R}^n$ é uma variedade suave de dimensão $n - k$.
+		\item Nas condições do item (a), mostre que $T_pM = \ker\{dF_p : \mathbb{R}^n \to \mathbb{R}^k\} \quad \forall p \in M$.
+		\item Use os itens (a) e (b) para mostrar que a esfera Euclidiana $\mathbb{S}^n(r) = \{p \in \mathbb{R}^{n+1} : \langle p - p_0, p - p_0 \rangle = r^2\}$, de centro $p_0 \in \mathbb{R}^{n+1}$ e raio $r > 0$, é uma $n$-variedade suave, cujo plano tangente num ponto $p \in \mathbb{S}^n(r)$ é o plano ortogonal ao vetor $p - p_0$.
+\end{enumerate}}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $F$ é uma aplicação suave entre abertos de espaços euclidianos; $a$ é um valor regular de $F$ (ou seja, $dF_p$ é sobrejetiva para todo $p$ tal que $F(p)=a$).
+		\item \textbf{Tese:} 
+		\begin{enumerate}[label=(\alph*)]
+			\item $M = F^{-1}(a)$ é uma variedade suave de dimensão $n-k$.
+			\item O espaço tangente $T_p M$ coincide com o núcleo da diferencial $dF_p$.
+			\item A esfera $\mathbb{S}^n(r)$ é uma variedade suave e seu espaço tangente é o plano ortogonal ao vetor raio $p-p_0$.
+		\end{enumerate}
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Teorema do Valor Regular (Lee, Cap. 7):} Se $a$ é um valor regular de $F$, então $F^{-1}(a)$ é uma subvariedade mergulhada de $M$ com dimensão $\dim M - \dim N$.
+		\item \textbf{Teorema da Função Implícita / Forma Canônica Local (Lee, Cap. 7):} Se $dF_p$ é sobrejetiva, existem coordenadas locais tais que $F$ é representada por uma projeção canônica $\pi(x^1, \dots, x^n) = (x^1, \dots, x^k)$.
+		\item \textbf{Definição de Espaço Tangente (Lee, Cap. 3):} $T_p M$ é o conjunto de vetores $\gamma'(0)$ para curvas suaves $\gamma$ em $M$.
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	\textbf{(a) Estrutura de Variedade de $M$.}
+	Seja $p \in M$. Como $a$ é um valor regular, $dF_p : \mathbb{R}^n \to \mathbb{R}^k$ é sobrejetiva. Pelo Teorema da Forma Canônica Local, existem cartas coordenadas $(U, \varphi)$ em torno de $p$ e $(V, \psi)$ em torno de $a$ tais que a representação local $\hat{F} = \psi \circ F \circ \varphi^{-1}$ é a projeção canônica:
+	\begin{equation*}
+		\hat{F}(x^1, \dots, x^n) = (x^1, \dots, x^k).
+	\end{equation*}
+	O conjunto de nível $M \cap U$ é mapeado por $\varphi$ no conjunto:
+	\begin{equation*}
+		\varphi(M \cap U) = \{ (x^1, \dots, x^n) \in \varphi(U) \mid x^1 = 0, \dots, x^k = 0 \}.
+	\end{equation*}
+	Este conjunto é precisamente um subespaço linear de dimensão $n-k$ dentro de $\mathbb{R}^n$. Como $\varphi$ é um difeomorfismo, $M$ é localmente homeomorfo a $\mathbb{R}^{n-k}$. As funções de transição herdadas de $M$ são suaves, logo $M$ é uma variedade suave de dimensão $n-k$.
+	
+	\textbf{(b) Caracterização do Espaço Tangente.}
+	Provamos a igualdade $T_p M = \ker(dF_p)$ via duas inclusões:
+	\begin{enumerate}
+		\item \textbf{Inclusão $T_p M \subseteq \ker(dF_p)$:} Seja $v \in T_p M$. Então existe uma curva suave $\gamma : (-\varepsilon, \varepsilon) \to M$ tal que $\gamma(0)=p$ e $\gamma'(0)=v$. Como $\gamma(t) \in M$, temos $F(\gamma(t)) = a$ para todo $t$. Diferenciando em relação a $t$ no ponto $t=0$ via Regra da Cadeia:
+		\begin{equation*}
+			\frac{d}{dt}(F \circ \gamma)(t) \Big|_{t=0} = dF_p(\gamma'(0)) = dF_p(v) = 0.
+		\end{equation*}
+		Logo, $v \in \ker(dF_p)$.
+		\item \textbf{Inclusão $\ker(dF_p) \subseteq T_p M$:} Pelo Teorema do Núcleo e da Imagem, $\dim(\ker dF_p) = n - \text{posto}(dF_p) = n - k$. Como provamos na parte (a) que $\dim T_p M = n-k$ e já sabemos que $T_p M \subseteq \ker(dF_p)$, a igualdade de dimensões de subespaços implica que $T_p M = \ker(dF_p)$.
+	\end{enumerate}
+	
+	\textbf{(c) Aplicação à Esfera $\mathbb{S}^n(r)$.}
+	Definimos a aplicação $F : \mathbb{R}^{n+1} \to \mathbb{R}$ por $F(p) = \langle p - p_0, p - p_0 \rangle$. A esfera $\mathbb{S}^n(r)$ é o conjunto de nível $F^{-1}(r^2)$.
+	Calculamos a diferencial $dF_p$ para um vetor $v \in T_p \mathbb{R}^{n+1}$:
+	\begin{equation*}
+		dF_p(v) = \lim_{t \to 0} \frac{\| (p+tv) - p_0 \|^2 - \|p - p_0\|^2}{t} = 2 \langle p - p_0, v \rangle.
+	\end{equation*}
+	Para $p \in \mathbb{S}^n(r)$, temos $p - p_0 \neq 0$ (pois $r > 0$). Logo, a aplicação linear $v \mapsto 2 \langle p - p_0, v \rangle$ é não nula, o que implica que ela é sobrejetiva para $\mathbb{R}$. Assim, $r^2$ é um valor regular de $F$.
+	Pelo item (a), $\mathbb{S}^n(r)$ é uma variedade suave de dimensão $(n+1) - 1 = n$.
+	Pelo item (b), o espaço tangente $T_p \mathbb{S}^n(r)$ é o núcleo de $dF_p$:
+	\begin{equation*}
+		T_p \mathbb{S}^n(r) = \{ v \in \mathbb{R}^{n+1} \mid 2 \langle p - p_0, v \rangle = 0 \} = \{ v \in \mathbb{R}^{n+1} \mid \langle p - p_0, v \rangle = 0 \}.
+	\end{equation*}
+	Este é precisamente o plano ortogonal ao vetor raio $p - p_0$.
+}
+
+%%%% QUESTÃO 50 %%%%
+\questao{Se $M^n$ é uma $n$-variedade suave, mostre que $T^*M$ é trivial se, e somente se, $TM$ é trivial.}
+
+\solucao{
+	\textbf{Análise do Enunciado:}
+	\begin{itemize}
+		\item \textbf{Hipóteses:} $M^n$ é uma variedade suave de dimensão $n$. $TM$ é o fibrado tangente e $T^*M$ é o fibrado cotangente.
+		\item \textbf{Tese:} Provar a equivalência $\text{Trivialidade de } T^*M \iff \text{Trivialidade de } TM$.
+	\end{itemize}
+	
+	\textbf{Fundamentação Teórica:}
+	\begin{enumerate}
+		\item \textbf{Fibrados Triviais (Lee, Cap. 5):} Um fibrado vetorial $E \to M$ de posto $k$ é dito trivial se existe um isomorfismo de fibrados $\Phi : E \to M \times \mathbb{R}^k$. Isso é equivalente à existência de um \textbf{referencial global suave} $\{\sigma_1, \dots, \sigma_k\}$, ou seja, $k$ seções suaves que formam uma base de cada fibra $E_p$ para todo $p \in M$.
+		\item \textbf{Dualidade de Espaços Vetoriais (Álgebra Linear):} Se $V$ é um espaço vetorial de dimensão $n$ com base $\{e_1, \dots, e_n\}$, então o espaço dual $V^*$ possui uma base única $\{\epsilon^1, \dots, \epsilon^n\}$, chamada de base dual, definida pela propriedade:
+		\begin{equation*}
+			\epsilon^i(e_j) = \delta^i_j.
+		\end{equation*}
+	\end{enumerate}
+	
+	\textbf{Desenvolvimento Formal:}
+	
+	$\text{Direção } (\impliedby):$
+	Suponhamos que $TM$ seja trivial. Então, por definição, existe um referencial global suave $\{X_1, \dots, X_n\}$ para $TM$. Isso significa que, para cada $p \in M$, o conjunto $\{X_1(p), \dots, X_n(p)\}$ é uma base para o espaço tangente $T_p M$, e a aplicações $p \mapsto X_i(p)$ são suaves.
+	
+	Para cada $p \in M$, definimos os covetores $\omega^1(p), \dots, \omega^n(p) \in T_p^* M$ como a base dual da base $\{X_1(p), \dots, X_n(p)\}$. Ou seja, impomos:
+	\begin{equation*}
+		\omega^i(p)(X_j(p)) = \delta^i_j, \quad \forall i, j \in \{1, \dots, n\}.
+	\end{equation*}
+	Como os campos de vetores $X_j$ são suaves, as componentes de $\omega^i$ em qualquer carta coordenada são funções suaves (pois são as inversas da matriz de componentes de $X_j$). Logo, $\{\omega^1, \dots, \omega^n\}$ constitui um referencial global suave para o fibrado cotangente $T^*M$. Portanto, $T^*M$ é trivial.
+	
+	$\text{Direção } (\implies):$
+	Suponhamos que $T^*M$ seja trivial. Então, existe um referencial global suave $\{\omega^1, \dots, \omega^n\}$ para $T^*M$, tal que $\{\omega^1(p), \dots, \omega^n(p)\}$ é uma base de $T_p^* M$ para todo $p \in M$.
+	
+	De forma análoga ao caso anterior, definimos para cada $p \in M$ os vetores $X_1(p), \dots, X_n(p) \in T_p M$ como a base dual da base $\{\omega^1(p), \dots, \omega^n(p)\}$. Isto é, impomos a condição:
+	\begin{equation*}
+		\omega^i(p)(X_j(p)) = \delta^i_j.
+	\end{equation*}
+	Visto que os campos de covetores $\omega^i$ são suaves, os campos de vetores $X_j$ resultantes também são suaves. Assim, $\{X_1, \dots, X_n\}$ forma um referencial global suave para $TM$, o que implica que $TM$ é trivial.
 }
